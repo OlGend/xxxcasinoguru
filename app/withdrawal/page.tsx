@@ -1,8 +1,7 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 
 import LoaderMini from "@/components/LoaderMini/LoaderMini";
-
 
 import Link from "next/link";
 
@@ -10,17 +9,63 @@ import { useTranslation } from "react-i18next";
 
 import Select from "react-select";
 
+// Типы для пользователя
+interface User {
+  login: string;
+  balance: number;
+  // Дополнительные поля, если они есть
+}
+
+// Тип для данных о монетах
+interface Coins {
+  selectedCurrencies: { [key: string]: string };
+  // Другие возможные поля
+}
+
+// Тип для данных о комиссии за вывод
+interface MinFee {
+  fee: number;
+  // Другие возможные поля
+}
+
+// Тип для данных об оценке
+interface Estimated {
+  currency_to: string;
+  estimated_amount: number;
+  // Другие возможные поля
+}
+
+// Тип для состояния компонента
+interface WithdrawState {
+  adressPayment: string;
+  loading: boolean;
+  user: User;
+  coins: Coins | null;
+  token: string | null;
+  response: any; // Замените на конкретный тип
+  showModal: boolean;
+  errorWallet: boolean;
+  minFee: MinFee | null;
+  error: boolean;
+  message: string;
+  selectedPaymentMethod: string;
+  withdrawalRequestValue: string;
+  estimated: Estimated | null;
+  minimumAmount: string | null;
+  modalPayout: boolean;
+  modalError: boolean;
+  errorMin: boolean;
+  errorMessage: string;
+}
+
 const Withdraw = () => {
   const { t } = useTranslation();
 
- 
-
-
-
-
   const [adressPayment, setAdressPayment] = useState("");
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState([]);
+  // const [user, setUser] = useState([]);
+  const [user, setUser] = useState<User>({ login: "", balance: 0 });
+
   const [coins, setCoins] = useState(null);
   const [token, setToken] = useState(null);
   const [response, setResponse] = useState(null);
@@ -58,7 +103,7 @@ const Withdraw = () => {
         const myHeaders = new Headers();
         myHeaders.append("x-api-key", apiKey);
 
-        const requestOptions = {
+        const requestOptions: RequestInit = {
           method: "GET",
           headers: myHeaders,
           redirect: "follow",
@@ -86,7 +131,6 @@ const Withdraw = () => {
     fetchCoins();
   }, [api]);
 
-
   ///////////////////////ЗАПРОС НА СУЩЕСТВОВАНИЕ КОШЕЛЬКА///////////////////////////
   const validateAddress = async () => {
     try {
@@ -103,11 +147,11 @@ const Withdraw = () => {
         currency: currency,
       };
 
-      const requestOptions = {
+      const requestOptions: RequestInit = {
         method: "POST",
         headers: myHeaders,
         body: JSON.stringify(data),
-        redirect: "follow",
+        redirect: "follow" as RequestRedirect,
       };
 
       const response = await fetch(url, requestOptions);
@@ -145,61 +189,62 @@ const Withdraw = () => {
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Authorization", `Bearer ${jwtToken}`);
 
-      const payoutData = {
-        ipn_callback_url: "https://nowpayments.io",
-        withdrawals: [
-          {
-            address: adressPayment,
-            currency: selectedPaymentMethod,
-            amount: parseFloat(estimated.estimated_amount),
-            ipn_callback_url: "https://nowpayments.io",
-            userData: user,
-            userWithdraw: withdrawalRequestValue,
-          },
-        ],
-      };
-      console.log("type", user);
+      if (Array.isArray(estimated) && estimated.length > 0) {
+        const payoutData = {
+          ipn_callback_url: "https://nowpayments.io",
+          withdrawals: [
+            {
+              address: adressPayment,
+              currency: selectedPaymentMethod,
+              amount: parseFloat(estimated[0].estimated_amount),
+              ipn_callback_url: "https://nowpayments.io",
+              userData: user,
+              userWithdraw: withdrawalRequestValue,
+            },
+          ],
+        };
+        console.log("type", user);
 
-      const requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: JSON.stringify({ ...payoutData }), // Добавляем токен к данным
-        redirect: "follow",
-      };
+        const requestOptions: RequestInit = {
+          method: "POST",
+          headers: myHeaders,
+          body: JSON.stringify({ ...payoutData }),
+          redirect: "follow" as RequestRedirect,
+        };
 
-      const response = await fetch(phpScriptUrl, requestOptions);
+        const response = await fetch(phpScriptUrl, requestOptions);
+        if (response.ok) {
+          const result = await response.text();
 
-      if (response.ok) {
-        const result = await response.text();
+          // setErrorMin(t("Withdrawal successful"));
 
-        setErrorMin(t("Withdrawal successful"));
-
-        setModalError(!modalError);
-        setModalPayout(!modalPayout);
-      } else {
-        if (response.status === 400) {
-          const result = await response.json();
-          console.error("Failed to make payout request:", result.error);
-          // Тут ви можете вивести повідомлення про помилку користувачу
-          // setError(true);
-          // setErrorMessage(result.error);
-          setMessage(result.error);
-        } else if (response.status === 500) {
-          console.error(
-            "Failed to make payout request:",
-            "Internal Server Error"
-          );
-          // Тут ви можете вивести інше повідомлення про помилку користувачу
-          // setError(true);
-          // setErrorMessage("Internal Server Error");
-          setShowModal(true);
-          setMessage("Internal Server Error");
+          setModalError(!modalError);
+          setModalPayout(!modalPayout);
         } else {
-          console.error("Failed to make payout request:", response.status);
-          // setError(true);
-          setShowModal(true);
+          if (response.status === 400) {
+            const result = await response.json();
+            console.error("Failed to make payout request:", result.error);
+            // Тут ви можете вивести повідомлення про помилку користувачу
+            // setError(true);
+            // setErrorMessage(result.error);
+            setMessage(result.error);
+          } else if (response.status === 500) {
+            console.error(
+              "Failed to make payout request:",
+              "Internal Server Error"
+            );
+            // Тут ви можете вивести інше повідомлення про помилку користувачу
+            // setError(true);
+            // setErrorMessage("Internal Server Error");
+            setShowModal(true);
+            setMessage("Internal Server Error");
+          } else {
+            console.error("Failed to make payout request:", response.status);
+            // setError(true);
+            setShowModal(true);
 
-          setMessage(`Error: ${response.status}`);
+            setMessage(`Error: ${response.status}`);
+          }
         }
       }
     } catch (error) {
@@ -225,11 +270,11 @@ const Withdraw = () => {
         password: "Ytvn3daw!",
       });
 
-      const requestOptions = {
+      const requestOptions: RequestInit = {
         method: "POST",
         headers: myHeaders,
         body: raw,
-        redirect: "follow",
+        redirect: "follow" as RequestRedirect,
       };
 
       const authResponse = await fetch(
@@ -274,17 +319,19 @@ const Withdraw = () => {
   //   setWithdrawalRequestValue(value);
   // };
 
-  const handlePaymentMethodChange = (event) => {
+  const handlePaymentMethodChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setSelectedPaymentMethod(event.target.value);
     setErrorWallet(false);
   };
 
-
   useEffect(() => {
-    handleEstimatedRequest(withdrawalRequestValue); // Используйте текущее значение withdrawalRequestValue
+    handleEstimatedRequest(withdrawalRequestValue);
   }, [selectedPaymentMethod, withdrawalRequestValue]);
 
-  const [estimated, setEstimated] = useState([]);
+  // const [estimated, setEstimated] = useState([]);
+  const [estimated, setEstimated] = useState<any[]>([]);
 
   ///////////////////////КОНВЕРТАЦИЯ//////////////////////
   const handleEstimatedRequest = async () => {
@@ -349,7 +396,7 @@ const Withdraw = () => {
           const myHeaders = new Headers();
           myHeaders.append("x-api-key", "MG5SRC6-HFBMACK-MMSR9QW-1EST6QC");
 
-          const requestOptions = {
+          const requestOptions: RequestInit = {
             method: "GET",
             headers: myHeaders,
             redirect: "follow",
@@ -378,7 +425,6 @@ const Withdraw = () => {
 
   ///////////////////////////////////////////////////////////////
 
- 
   const [modalPayout, setModalPayout] = useState(false);
   const [modalError, setModalError] = useState(false);
   const [errorMin, setErrorMin] = useState(true);
@@ -390,12 +436,11 @@ const Withdraw = () => {
 
   const [errorMessage, setErrorMessage] = useState("");
 
+  const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const enteredValue = parseFloat(e.target.value.trim());
 
-  const handleAmountChange = (e) => {
-    const enteredValue = parseFloat(e.target.value.trim()); // Убираем пробелы в начале и в конце
-  
     setWithdrawalRequestValue(e.target.value);
-  
+
     if (isNaN(enteredValue) || enteredValue < 4) {
       setErrorMin(true);
       setErrorMessage(
@@ -409,214 +454,201 @@ const Withdraw = () => {
       setErrorMessage("");
     }
   };
-  
-
 
   return (
     <div className="withdrawal">
-    
       <div className="top-block">
         <h2>{t("Withdrawal")}</h2>
       </div>
       <div className="ui-methods">
         <div className="container flex">
           <div className="menu">
-            <div
-              className={`menu-item active`}
-          
-            >
-              {t("Withdrawal Request")}
-            </div>
+            <div className={`menu-item active`}>{t("Withdrawal Request")}</div>
           </div>
           <div className="menu-info">
-         
-              <div className="flex menu-content">
-                <h4>{t("Withdrawal Requests")}</h4>
-                <div className="all-balance">
-                  <p>
-                    <span>{user.login}</span> {t("your current balance is:")}
-                  </p>
-                  {Object.keys(user).length > 0 && (
-                    <div className="balance">
-                      <span>{user.balance} USD</span>
-                    </div>
-                  )}
-                </div>
-                <div className="withdrawal-form">
-                  <div className="column">
-                    <label htmlFor="method">{t("Select Payment Method")}</label>
-                  
-                    {coins && (
-                      <Select
-                        options={Object.values(coins.selectedCurrencies).map(
-                          (item) => ({
-                            value: item,
-                            label: (
-                              <div className="option-select">
-                                <img
-                                  src={`./${item}.png`} // Замените на путь к вашим изображениям
-                                  alt={item}
-                                  style={{ width: "24px", marginRight: "8px" }}
-                                />
-                                {item}
-                              </div>
-                            ),
-                          })
-                        )}
-                        value={{
-                          value: selectedPaymentMethod,
+            <div className="flex menu-content">
+              <h4>{t("Withdrawal Requests")}</h4>
+              <div className="all-balance">
+                <p>
+                  <span>{user.login}</span> {t("your current balance is:")}
+                </p>
+                {Object.keys(user).length > 0 && (
+                  <div className="balance">
+                    <span>{user.balance} USD</span>
+                  </div>
+                )}
+              </div>
+              <div className="withdrawal-form">
+                <div className="column">
+                  <label htmlFor="method">{t("Select Payment Method")}</label>
+
+                  {coins && (
+                    <Select
+                      options={Object.values(coins.selectedCurrencies).map(
+                        (item) => ({
+                          value: item as string,
                           label: (
                             <div className="option-select">
                               <img
-                                src={`./${selectedPaymentMethod}.png`} // Замените на путь к вашим изображениям
-                                alt={selectedPaymentMethod}
+                                src={`./${item}.png`}
+                                alt={`${item}`}
                                 style={{ width: "24px", marginRight: "8px" }}
                               />
-                              {selectedPaymentMethod}
+                              {item}
                             </div>
                           ),
-                        }}
-                        onChange={(selectedOption) =>
-                          handlePaymentMethodChange({
-                            target: { value: selectedOption.value },
-                          })
-                        }
-                        isSearchable={false}
-                        styles={{
-                          control: (provided) => ({
-                            ...provided,
-                            borderRadius: "7px",
-                            maxHeight: "36px",
-                            minWidth: "226px",
-                          }),
-                        }}
-                      />
-                    )}
-                  </div>
-                  {selectedPaymentMethod && (
-                    <div className="column">
-                      <label htmlFor="amount">{t("Amount")} USD</label>
-                      <input
-                        type="number"
-                        name="amount"
-                        id="amount"
-                        placeholder="0"
-                        required=""
-                        value={withdrawalRequestValue}
-                        onChange={(e) => {
-                          handleAmountChange(e);
-                        }}
-                        className={errorMin ? "error" : ""}
-                      />
-                      {errorMin && (
-                        <span className="mesSpan error-span">
-                          {errorMessage}
-                        </span>
+                        })
                       )}
-                    </div>
-                  )}
-
-                  <button
-                    className="btn btn-primary"
-                    onClick={modalPay}
-                    disabled={errorMin}
-                  >
-                    {t("Payout")}
-                  </button>
-
-                  {modalPayout && (
-                    <div className="overflow">
-                      <div className="modal">
-                        {loading && <LoaderMini />}
-                        <div
-                          className="close"
-                          onClick={() => setModalPayout(!modalPayout)}
-                        >
-                          {" "}
-                          <svg
-                            width="32"
-                            height="32"
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M8.44487 24L24 8.02771M8 8L23.5551 23.9723"
-                              stroke="#15143D"
-                              strokeWidth="2.8"
-                              strokeLinecap="round"
+                      value={{
+                        value: selectedPaymentMethod,
+                        label: (
+                          <div className="option-select">
+                            <img
+                              src={`./${selectedPaymentMethod}.png`} // Замените на путь к вашим изображениям
+                              alt={selectedPaymentMethod}
+                              style={{ width: "24px", marginRight: "8px" }}
                             />
-                          </svg>
-                        </div>
-                        <div className="column">
-                          <p>
-                            {t("Withdrawal commission:")}{" "}
-                            {minFee.fee.toFixed(6).replace(/\.?0+$/, "")}{" "}
-                            {estimated.currency_to}. <br></br>
-                            {t("You will receive")}{" "}
-                            {(estimated.estimated_amount - minFee.fee)
-                              .toFixed(6)
-                              .replace(/\.?0+$/, "")}{" "}
-                            {estimated.currency_to} {t("in your wallet.")}
-                            <br></br>
-                            {t(
-                              "Enter your wallet details and click ‘Withdraw Funds’"
-                            )}
-                          </p>
-                        </div>
-
-                        <div className="column">
-                          <label htmlFor="wallet">
-                            {t("Wallet Address")} {selectedPaymentMethod}
-                          </label>
-                          <input
-                            type="text"
-                            name="wallet"
-                            id="wallet"
-                            placeholder="Enter wallet address"
-                            required=""
-                            className={`column-input ${
-                              errorWallet ? "error" : ""
-                            }`}
-                            onChange={(e) => setAdressPayment(e.target.value)}
-                          />
-                          {errorWallet && (
-                            <span className="error-span">
-                              {t("Your address is not valid")}
-                            </span>
-                          )}
-                        </div>
-                        <button
-                          className="btn btn-primary btn-modal"
-                          onClick={validateAddress}
-                        >
-                          {t("Send Request")}
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                  {modalError && (
-                    <div className="overflow">
-                      <div className="modal modal-success">
-                        {loading && <LoaderMini />}
-                        <h3>{errorMin}</h3>
-                        <button
-                          className="btn btn-primary"
-                          onClick={() => setModalError(!modalError)}
-                        >
-                          OK
-                        </button>
-                      </div>
-                    </div>
+                            {selectedPaymentMethod}
+                          </div>
+                        ),
+                      }}
+                      onChange={(selectedOption) =>
+                        handlePaymentMethodChange({
+                          target: { value: selectedOption.value },
+                        })
+                      }
+                      isSearchable={false}
+                      styles={{
+                        control: (provided) => ({
+                          ...provided,
+                          borderRadius: "7px",
+                          maxHeight: "36px",
+                          minWidth: "226px",
+                        }),
+                      }}
+                    />
                   )}
                 </div>
+                {selectedPaymentMethod && (
+                  <div className="column">
+                    <label htmlFor="amount">{t("Amount")} USD</label>
+                    <input
+                      type="number"
+                      name="amount"
+                      id="amount"
+                      placeholder="0"
+                      required=""
+                      value={withdrawalRequestValue}
+                      onChange={(e) => {
+                        handleAmountChange(e);
+                      }}
+                      className={errorMin ? "error" : ""}
+                    />
+                    {errorMin && (
+                      <span className="mesSpan error-span">{errorMessage}</span>
+                    )}
+                  </div>
+                )}
+
+                <button
+                  className="btn btn-primary"
+                  onClick={modalPay}
+                  disabled={errorMin}
+                >
+                  {t("Payout")}
+                </button>
+
+                {modalPayout && (
+                  <div className="overflow">
+                    <div className="modal">
+                      {loading && <LoaderMini />}
+                      <div
+                        className="close"
+                        onClick={() => setModalPayout(!modalPayout)}
+                      >
+                        {" "}
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.44487 24L24 8.02771M8 8L23.5551 23.9723"
+                            stroke="#15143D"
+                            strokeWidth="2.8"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div className="column">
+                        <p>
+                          {t("Withdrawal commission:")}{" "}
+                          {minFee.fee.toFixed(6).replace(/\.?0+$/, "")}{" "}
+                          {estimated.currency_to}. <br></br>
+                          {t("You will receive")}{" "}
+                          {(estimated.estimated_amount - minFee.fee)
+                            .toFixed(6)
+                            .replace(/\.?0+$/, "")}{" "}
+                          {estimated.currency_to} {t("in your wallet.")}
+                          <br></br>
+                          {t(
+                            "Enter your wallet details and click ‘Withdraw Funds’"
+                          )}
+                        </p>
+                      </div>
+
+                      <div className="column">
+                        <label htmlFor="wallet">
+                          {t("Wallet Address")} {selectedPaymentMethod}
+                        </label>
+                        <input
+                          type="text"
+                          name="wallet"
+                          id="wallet"
+                          placeholder="Enter wallet address"
+                          required=""
+                          className={`column-input ${
+                            errorWallet ? "error" : ""
+                          }`}
+                          onChange={(e) => setAdressPayment(e.target.value)}
+                        />
+                        {errorWallet && (
+                          <span className="error-span">
+                            {t("Your address is not valid")}
+                          </span>
+                        )}
+                      </div>
+                      <button
+                        className="btn btn-primary btn-modal"
+                        onClick={validateAddress}
+                      >
+                        {t("Send Request")}
+                      </button>
+                    </div>
+                  </div>
+                )}
+                {modalError && (
+                  <div className="overflow">
+                    <div className="modal modal-success">
+                      {loading && <LoaderMini />}
+                      <h3>{errorMin}</h3>
+                      <button
+                        className="btn btn-primary"
+                        onClick={() => setModalError(!modalError)}
+                      >
+                        OK
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
-         
+            </div>
           </div>
         </div>
       </div>
-    
     </div>
   );
-}
+};
 export default Withdraw;

@@ -57,40 +57,6 @@ const Wheel = () => {
   };
 
   const iframe = document.getElementById("myIframe");
-  // const [newUrl, setNewUrl] = useState("");
-  // useEffect(() => {
-  //   const url = window.location.href;
-  //   const urlObj = new URL(url);
-  //   const searchParams = new URLSearchParams(urlObj.search);
-  //   const newUrl = "?" + searchParams.toString();
-  //   setNewUrl(newUrl);
-  // }, []);
-
-  // window.addEventListener("message", function (event) {
-  //   if (event.data) {
-  //     console.log("Повідомлення від iframe: ", event.data);
-  //     // window.location.href = `/${newUrl}`;
-  //   }
-  // });
-
-  // // Додаємо обробник події message для отримання повідомлень від iframe
-  // window.addEventListener("message", function (event) {
-  //   // Перевіряємо, чи не є event.data пустим
-  //   if (event.data) {
-  //     console.log("Повідомлення від iframe: ", event.data);
-  //     // Тут можна виконати подальші дії з event.data, якщо воно не є пустим
-  //   } else {
-  //     console.log("Отримано порожнє повідомлення від iframe.");
-  //   }
-  // });
-
-  // window.addEventListener("message", function (event) {
-  //   if (event.data === "Home") {
-  //     ///дія до дому
-  //     console.log("Повідомлення від iframe: ", event.data);
-  //     window.location.href = `/${newUrl}`;
-  //   }
-  // });
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.href.split("?")[1]);
