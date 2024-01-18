@@ -229,12 +229,12 @@ const Wheel = () => {
         <Link className="back-to-home" href={`/${newUrl}`}>
           {t("Main Page")}
         </Link>
-        {/* <iframe
+        <iframe
           id="myIframe"
           src="https://pickbonus.myawardwallet.com/wheel5/"
           width={iframeWidth}
           height={iframeHeight}
-        ></iframe> */}
+        ></iframe>
       </div>
       <div className="select-brand container">
         <p>{t("select")}</p>
