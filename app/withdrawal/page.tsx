@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 import Select from "react-select";
-import { ChangeEvent } from "react";
+
 
 // Типы для пользователя
 interface User {

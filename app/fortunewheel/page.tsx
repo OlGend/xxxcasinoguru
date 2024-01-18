@@ -1,11 +1,10 @@
-"use client"
+"use client";
 import { useState, useEffect, useRef } from "react";
 
 // import { Link } from "react-router-dom";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import AnotherBrands2 from "@/components/AnotherBrands2/AnotherBrands2";
-
 
 // Типы для состояний
 type WidthHeightState = string | number;
@@ -28,8 +27,6 @@ type Videos = {
   [key: string]: string;
 };
 
-
-
 // Пример определения типа данных для функции изменения страны
 type HandleCountryChange = (country: string) => void;
 
@@ -43,7 +40,6 @@ const Wheel = () => {
   const [iframeWidth, setIframeWidth] = useState<string | number>(1200);
   const [iframeHeight, setIframeHeight] = useState<string | number>(1200);
   const updateIframeSize = () => {
-
     const screenWidth = window.innerWidth;
 
     // Определите свои собственные условия для изменения размеров iframe
@@ -56,7 +52,9 @@ const Wheel = () => {
     }
   };
 
-  const iframe = document.getElementById("myIframe");
+  // if (typeof document !== "undefined") {
+  //   const iframe = document.getElementById("myIframe");
+  // }
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.href.split("?")[1]);
@@ -192,8 +190,6 @@ const Wheel = () => {
   };
   const selectedVideo = videos[i18n.language] || videos.en;
 
-
-
   // Обработчик события клика на кнопку
 
   const iframeRef = useRef<HTMLDivElement>(null);
@@ -209,11 +205,9 @@ const Wheel = () => {
       });
     }
   };
-  
 
   return (
     <div className="game">
-    
       <div className="container container-game">
         <button className="to-instruction" onClick={handleScrollClick}>
           {t("How does it work?")}
@@ -256,7 +250,6 @@ const Wheel = () => {
       />
       <div className="yt" ref={iframeRef}>
         <iframe
-        
           id="myIframe22"
           width={iframeWidth}
           height={iframeHeight}
@@ -266,8 +259,6 @@ const Wheel = () => {
           allowFullScreen
         ></iframe>
       </div>
-
-  
     </div>
   );
 };
