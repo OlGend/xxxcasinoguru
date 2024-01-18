@@ -112,7 +112,7 @@ export default function Home() {
   }, []);
 
   // Добавьте обработчик изменения selectedCountry
-  const handleCountryChange = (country) => {
+  const handleCountryChange = (country: string) => {
     setSelectedCountry(country);
     // Сохранить в localStorage
     localStorage.setItem("selectedCountry", country);
