@@ -55,32 +55,33 @@ const Withdraw = () => {
 
     const fetchCoins = async () => {
       try {
-        const myHeaders = new Headers();
-        myHeaders.append("x-api-key", apiKey);
-
-        const requestOptions = {
+        const requestOptions: RequestInit = {
           method: "GET",
-          headers: myHeaders,
+          headers: new Headers({
+            "x-api-key": apiKey,
+          }),
           redirect: "follow",
         };
-
+    
         const response = await fetch(
           "https://api.nowpayments.io/v1/merchant/coins",
           requestOptions
         );
-
-        if (response.ok) {
-          const result = await response.json();
-          setCoins(result);
-        } else {
+    
+        if (!response.ok) {
           console.error("Failed to fetch coins data:", response.status);
           // setError(true);
+          return;
         }
+    
+        const result = await response.json();
+        setCoins(result);
       } catch (error) {
         console.error("An error occurred while fetching coins data:", error);
         // setError(true);
       }
     };
+    
 
     fetchUser();
     fetchCoins();
