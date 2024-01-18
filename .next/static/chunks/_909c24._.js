@@ -109,7 +109,7 @@ const TheFooter = ()=>{
                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     className: "logo",
                                     src: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$logo$2e$png$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$logo$2e$png__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
-                                    alt: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$logo$2e$png$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$logo$2e$png__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
+                                    alt: `${__TURBOPACK__imported__module__$5b$project$5d2f$public$2f$logo$2e$png$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$logo$2e$png__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"]}`,
                                     loading: "lazy"
                                 }, void 0, false, {
                                     fileName: "<[project]/components/TheFooter.tsx>",
@@ -145,7 +145,7 @@ const TheFooter = ()=>{
                                     children: [
                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                             src: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$18plus$2e$png$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$18plus$2e$png__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
-                                            alt: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$18plus$2e$png$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$18plus$2e$png__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
+                                            alt: `${__TURBOPACK__imported__module__$5b$project$5d2f$public$2f$18plus$2e$png$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$18plus$2e$png__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"]}`,
                                             width: 30,
                                             height: 30,
                                             loading: "lazy"
@@ -156,7 +156,7 @@ const TheFooter = ()=>{
                                         }, this),
                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                             src: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$layer$2e$png$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$layer$2e$png__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
-                                            alt: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$layer$2e$png$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$layer$2e$png__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
+                                            alt: `${__TURBOPACK__imported__module__$5b$project$5d2f$public$2f$layer$2e$png$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$layer$2e$png__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"]}`,
                                             width: 30,
                                             height: 30,
                                             loading: "lazy"
