@@ -81,7 +81,8 @@ const Wheel = () => {
   //   localStorage.getItem("selectedCountry") || ""
   // );
   // const [selectedCountry, setSelectedCountry] = useState();
-  const [selectedCountry, setSelectedCountry] = useState();
+  const [selectedCountry, setSelectedCountry] = useState<string | undefined>(undefined);
+
 
   // ...
 
@@ -181,7 +182,7 @@ const Wheel = () => {
   ];
 
   const handleCountryChange: HandleCountryChange = (country) => {
-    setSelectedCountry(country);
+    setSelectedCountry(country || undefined); 
     // localStorage.setItem("selectedCountry", country);
   };
 
