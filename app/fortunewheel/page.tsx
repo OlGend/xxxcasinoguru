@@ -231,7 +231,7 @@ const Wheel = () => {
         </Link>
         <iframe
           id="myIframe"
-          src="https://pickbonus.myawardwallet.com/wheel5/"
+          src="/app/wheel5/index.html"
           width={iframeWidth}
           height={iframeHeight}
         ></iframe>
