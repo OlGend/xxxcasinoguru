@@ -1,0 +1,53 @@
+{
+  "greeting": "Το επιλεγμένο σας μπόνους",
+  "consider": "Λάβετε υπόψη άλλα brands για την περιοχή σας",
+  "footerText": "Τυχερά παιχνίδια με ευθύνη και μετριοπάθεια. Μην εξετάζετε τα τυχερά παιχνίδια ως τρόπο κερδοσκοπίας, και παίξτε μόνο με χρήματα που μπορείτε να χάσετε. Εάν ανησυχείτε για τις παιχνιδιακές συνήθειές σας ή επηρεάζεστε από το τυχερό παιχνίδι κάποιου άλλου, επικοινωνήστε με το GamCare ή το Gamblers Anonymous για βοήθεια.",
+  "terms": "Όροι και Προϋποθέσεις",
+  "copyright": "Πνευματική ιδιοκτησία © 2023, pickbonus.myawardwallet.com. Με επιφύλαξη παντός δικαιώματος.",
+  "proceed": "Συνεχίστε και πάρτε",
+  "getBonus": "Λάβετε μπόνους",
+  "showMore": "Εμφάνιση περισσότερων",
+  "select": "Επιλέξτε τη χώρα σας",
+  "newbrands": "Κορυφαίες νέες κυκλοφορίες",
+
+  "Wheel of Fortune": "Ρόδα της Τύχης",
+  "Balance": "Ισολογισμός",
+  "Withdraw": "Ανάληψη",
+
+  "Withdrawal": "Ανάληψη",
+  "Your username": "Το όνομα χρήστη σας",
+  "Your current balance is": "Ο τρέχον ισολογισμός σας είναι",
+  "Withdrawal Requests": "Αιτήσεις ανάληψης",
+  "Select Payment Method": "Επιλέξτε τη μέθοδο πληρωμής",
+  "Amount": "Ποσό",
+  "Payout": "Αποδοχή",
+
+  "Wallet Address": "Διεύθυνση πορτοφολιού",
+  "Enter wallet address": "Εισαγάγετε τη διεύθυνση του πορτοφολιού σας",
+  "Your address is not valid": "Η διεύθυνσή σας δεν είναι έγκυρη",
+  "Send Request": "Αποστολή αιτήματος",
+  "Maximum withdrawal: 30 USD. For higher amounts, contact support.": "Μέγιστη ανάληψη: 30 USD. Για υψηλότερα ποσά, επικοινωνήστε με την υποστήριξη.",
+
+  "Not enough funds in the account.": "Δεν υπάρχουν αρκετά κεφάλαια στον λογαριασμό.",
+  "Withdrawal rejected: Minimum withdrawal amount is 4 USD.": "Η ανάληψη απορρίφθηκε: Το ελάχιστο ποσό ανάληψης είναι 4 USD.",
+
+  "FORTUNE WHEEL BRANDS": "ΜΑΡΚΕΣ ΡΟΔΑΣ ΤΥΧΗΣ",
+  "Pick a brand below, make first deposit and win real cash!": "Επιλέξτε μια μάρκα παρακάτω, κάντε την πρώτη κατάθεση και κερδίστε πραγματικά χρήματα!",
+  "Spin the Roulette": "Περιστρέψτε τη ρουλέτα",
+
+  "Withdrawal successful": "Επιτυχημένη ανάληψη",
+  "Withdrawal commission:": " Κομισιόν ανάληψης:",
+  "You will receive": "Θα λάβετε",
+  "in your wallet.": "στο πορτοφόλι σας.",
+  "Enter your wallet details and click ‘Withdraw Funds’": "Εισαγάγετε τα στοιχεία του πορτοφολιού σας και κάντε κλικ στο 'Ανάληψη κεφαλαίου'",
+  "your current balance is:": "ο τρέχον ισολογισμός σας είναι:",
+
+  "Hottest Bonus Deals": "Καυτές προσφορές μπόνους",
+  "Quick Sign-Up: Top Choices": "Γρήγορη εγγραφή: Κορυφαίες επιλογές",
+  "Trendsetting Brands of 2024": "Κορυφαίες μάρκες του 2024",
+  "No brands available for your country": "Δεν υπάρχουν διαθέσιμες μάρκες για τη χώρα σας",
+  "To qualify for withdrawals, ensure your first deposit is at least $20 or the equivalent in other currencies.": "Για να προκηρυχθείτε για αναλήψεις, βεβαιωθείτε ότι η πρώτη σας κατάθεση είναι τουλάχιστον 20 δολάρια ή η ισοδύναμη σε άλλες νομίσματα.",
+
+  "How does it work?": "Πώς λειτουργεί;",
+  "Main Page": "Κύρια Σελίδα"
+}

@@ -1,0 +1,53 @@
+{
+  "greeting": "Seçtiğiniz bonus",
+  "consider": "Bölgeniz için diğer markaları düşünün",
+  "footerText": "Sorumlu ve ölçülü bir şekilde kumar oynayın. Kumarı para kazanmanın bir yolu olarak düşünmeyin ve sadece kaybetmeyi göze alabileceğiniz parayla oynayın. Kumar alışkanlıklarınızdan endişe ediyorsanız veya başka birinin kumarından etkilendiyseniz, lütfen yardım için GamCare veya Gamblers Anonymous ile iletişime geçin.",
+  "terms": "Şartlar ve Koşullar",
+  "copyright": "Telif Hakkı © 2023, pickbonus.myawardwallet.com. Tüm hakları saklıdır.",
+  "proceed": "Devam et ve al",
+  "getBonus": "Bonus al",
+  "showMore": "Daha Fazla Göster",
+  "select": "Ülkenizi Seçin",
+  "newbrands": "En Yeni Çıkışlar",
+
+  "Wheel of Fortune": "Şans Tekerleği",
+  "Balance": "Bakiye",
+  "Withdraw": "Çekme",
+
+  "Withdrawal": "Çekme",
+  "Your username": "Kullanıcı adınız",
+  "Your current balance is": "Mevcut bakiyeniz",
+  "Withdrawal Requests": "Çekme İstekleri",
+  "Select Payment Method": "Ödeme Yöntemi Seçin",
+  "Amount": "Miktar",
+  "Payout": "Ödeme",
+
+  "Wallet Address": "Cüzdan Adresi",
+  "Enter wallet address": "Cüzdan adresini girin",
+  "Your address is not valid": "Adresiniz geçerli değil",
+  "Send Request": "İstek Gönder",
+  "Maximum withdrawal: 30 USD. For higher amounts, contact support.": "Maksimum çekim: 30 USD. Daha yüksek miktarlar için destekle iletişime geçin.",
+
+  "Not enough funds in the account.": "Hesapta yeterli fon yok.",
+  "Withdrawal rejected: Minimum withdrawal amount is 4 USD.": "Çekme reddedildi: Minimum çekme miktarı 4 USD.",
+
+  "FORTUNE WHEEL BRANDS": "ŞANZIMAN MARKALARI",
+  "Pick a brand below, make first deposit and win real cash!": "Aşağıdan bir marka seçin, ilk depozitonuzu yapın ve gerçek para kazanın!",
+  "Spin the Roulette": "Rulet çevir",
+
+  "Withdrawal successful": "Çekme başarılı",
+  "Withdrawal commission:": " Çekim komisyonu:",
+  "You will receive": "Alacaksınız",
+  "in your wallet.": "cüzdanınıza.",
+  "Enter your wallet details and click ‘Withdraw Funds’": "Cüzdan bilgilerinizi girin ve 'Fonları Çek' düğmesine tıklayın",
+  "your current balance is:": "mevcut bakiyeniz:",
+
+  "Hottest Bonus Deals": "En Sıcak Bonus Fırsatları",
+  "Quick Sign-Up: Top Choices": "Hızlı Kayıt: En İyi Seçenekler",
+  "Trendsetting Brands of 2024": "2024'ün Trend Belirleyen Markaları",
+  "No brands available for your country": "Ülkeniz için uygun marka bulunmamaktadır",
+  "To qualify for withdrawals, ensure your first deposit is at least $20 or the equivalent in other currencies.": "Çekilmeler için hak kazanmak için ilk yatırımınızın en az 20 ABD Doları veya diğer para birimlerindeki karşılığı olduğundan emin olun.",
+
+  "How does it work?": "Nasıl çalışır?",
+  "Main Page": "Ana Sayfa"
+}
