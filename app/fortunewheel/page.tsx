@@ -77,9 +77,10 @@ const Wheel = () => {
   const [newUrl, setNewUrl] = useState("");
   const [source, setSource] = useState("");
 
-  const [selectedCountry, setSelectedCountry] = useState(
-    localStorage.getItem("selectedCountry") || ""
-  );
+  // const [selectedCountry, setSelectedCountry] = useState(
+  //   localStorage.getItem("selectedCountry") || ""
+  // );
+  const [selectedCountry, setSelectedCountry] = useState();
 
   // ...
 
@@ -92,10 +93,10 @@ const Wheel = () => {
       .then((data) => {
         setIpData(data.country_name);
         setIpDataCode(data.country);
-        const countryFromLocalStorage = localStorage.getItem("selectedCountry");
-        setSelectedCountry(
-          countryFromLocalStorage || data.country.toLowerCase()
-        );
+        // const countryFromLocalStorage = localStorage.getItem("selectedCountry");
+        // setSelectedCountry(
+        //   countryFromLocalStorage || data.country.toLowerCase()
+        // );
       })
       .catch((error) => {
         console.error("Ошибка при запросе к API:", error);
@@ -170,10 +171,10 @@ const Wheel = () => {
     { code: "all", name: "World", flag: "🌍" },
   ];
 
-  const handleCountryChange: HandleCountryChange = (country) => {
-    setSelectedCountry(country);
-    localStorage.setItem("selectedCountry", country);
-  };
+  // const handleCountryChange: HandleCountryChange = (country) => {
+  //   setSelectedCountry(country);
+  //   localStorage.setItem("selectedCountry", country);
+  // };
 
   const videos: Record<string, string> = {
     en: "https://www.youtube.com/embed/GEeEG393PjU?si=uq_PvG10Hx2LBjFV",
@@ -228,7 +229,7 @@ const Wheel = () => {
           id="countrySelect"
           value={selectedCountry}
           // onChange={(e) => setSelectedCountry(e.target.value)}
-          onChange={(e) => handleCountryChange(e.target.value)}
+          // onChange={(e) => handleCountryChange(e.target.value)}
         >
           {countryOptions.map((country, index) => (
             <option
