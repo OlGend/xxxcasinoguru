@@ -58,6 +58,7 @@ const Withdraw = () => {
         const requestOptions: RequestInit = {
           method: "GET",
           headers: new Headers({
+            "Content-Type": "application/json", 
             "x-api-key": apiKey,
           }),
           redirect: "follow",
