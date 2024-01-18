@@ -6,15 +6,42 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import AnotherBrands2 from "@/components/AnotherBrands2/AnotherBrands2";
 
+
+// Типы для состояний
+type WidthHeightState = string | number;
+type IpData = {
+  country_name: string;
+  country: string;
+  // Дополнительные поля, которые возвращаются из API
+  // Например, можно добавить: region, city, lat, lon и так далее
+};
+
+// Дополнительные типы данных для опций выбора страны
+type CountryOption = {
+  code: string;
+  name: string;
+  flag: string; // Или строка, представляющая флаг
+};
+
+// Дополнительные типы данных для видео
+type Videos = {
+  [key: string]: string;
+};
+
+
+
+// Пример определения типа данных для функции изменения страны
+type HandleCountryChange = (country: string) => void;
+
 const Wheel = () => {
   // const { t } = useTranslation();
   const { t, i18n } = useTranslation();
 
-  const [iframeWidth, setIframeWidth] = useState(1200);
-  const [iframeHeight, setIframeHeight] = useState(675);
+  // const [iframeWidth, setIframeWidth] = useState(1200);
+  // const [iframeHeight, setIframeHeight] = useState(675);
 
-  // const [iframeWidth, setIframeWidth] = useState<string | number>(1200);
-  // const [iframeHeight, setIframeHeight] = useState<string | number>(1200);
+  const [iframeWidth, setIframeWidth] = useState<string | number>(1200);
+  const [iframeHeight, setIframeHeight] = useState<string | number>(1200);
   const updateIframeSize = () => {
 
     const screenWidth = window.innerWidth;
@@ -150,7 +177,7 @@ const Wheel = () => {
     setNewUrl(newUrl);
   }, []);
 
-  const countryOptions = [
+  const countryOptions: CountryOption[] = [
     { code: "au", name: "Australia", flag: "🇦🇺" },
     { code: "at", name: "Austria", flag: "🇦🇹" },
     { code: "be", name: "Belgium", flag: "🇧🇪" },
@@ -179,13 +206,12 @@ const Wheel = () => {
     { code: "all", name: "World", flag: "🌍" },
   ];
 
-  const handleCountryChange = (country) => {
+  const handleCountryChange: HandleCountryChange = (country) => {
     setSelectedCountry(country);
-    // Сохранить в localStorage
     localStorage.setItem("selectedCountry", country);
   };
 
-  const videos = {
+  const videos: Record<string, string> = {
     en: "https://www.youtube.com/embed/GEeEG393PjU?si=uq_PvG10Hx2LBjFV",
     nl: "https://www.youtube.com/embed/suqKh159URk?si=ug0ylBG-ZaPvStHN",
     fi: "https://www.youtube.com/embed/B2dFhVLYI7k?si=w1r2fXk1Dx6cd3qc",
@@ -200,17 +226,24 @@ const Wheel = () => {
   };
   const selectedVideo = videos[i18n.language] || videos.en;
 
-  // Создайте реф для элемента, к которому вы хотите выполнить скролл
-  const iframeRef = useRef(null);
+
+
+  // Обработчик события клика на кнопку
+
+  const iframeRef = useRef<HTMLDivElement>(null);
 
   // Обработчик события клика на кнопку
   const handleScrollClick = () => {
-    // Используйте метод scrollIntoView для выполнения плавного скролла
-    iframeRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start", // Или 'center', 'end', 'nearest'
-    });
+    // Проверяем, что iframeRef.current не является null
+    if (iframeRef.current) {
+      // Используйте метод scrollIntoView для выполнения плавного скролла
+      iframeRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // Или 'center', 'end', 'nearest'
+      });
+    }
   };
+  
 
   return (
     <div className="game">
@@ -250,15 +283,14 @@ const Wheel = () => {
       </div>
       <AnotherBrands2
         newUrl={newUrl}
-        ipData={ipData}
         ipDataCode={ipDataCode}
         currentLanguage={i18n.language}
         source={source}
         selectedCountry={selectedCountry}
-        setSelectedCountry={setSelectedCountry}
       />
       <div className="yt" ref={iframeRef}>
         <iframe
+        
           id="myIframe22"
           width={iframeWidth}
           height={iframeHeight}
