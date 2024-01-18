@@ -15,15 +15,15 @@ const TheFooter = () => {
       <div className="wrapper">
         <div className="container flex-column">
           <div className="top-footer">
-            <Image className="logo" src={logo} alt={logo} loading="lazy" />
+            <Image className="logo" src={logo} alt={`${logo}`} loading="lazy" />
             <div className="all-menu">
               <Link href={`/terms`}>{t("terms")}</Link>
             </div>
           </div>
           <div className="center-footer">
             <div className="images">
-              <Image src={plus} alt={plus} width={30} height={30} loading="lazy" />
-              <Image src={layer} alt={layer} width={30} height={30} loading="lazy" />
+              <Image src={plus} alt={`${plus}`} width={30} height={30} loading="lazy" />
+              <Image src={layer} alt={`${layer}`} width={30} height={30} loading="lazy" />
             </div>
 
             <p>{t("footerText")}</p>
