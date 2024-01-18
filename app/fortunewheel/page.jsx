@@ -10,11 +10,11 @@ const Wheel = () => {
   // const { t } = useTranslation();
   const { t, i18n } = useTranslation();
 
-  // const [iframeWidth, setIframeWidth] = useState(1200);
-  // const [iframeHeight, setIframeHeight] = useState(675);
+  const [iframeWidth, setIframeWidth] = useState(1200);
+  const [iframeHeight, setIframeHeight] = useState(675);
 
-  const [iframeWidth, setIframeWidth] = useState<string | number>(1200);
-  const [iframeHeight, setIframeHeight] = useState<string | number>(675);
+  // const [iframeWidth, setIframeWidth] = useState<string | number>(1200);
+  // const [iframeHeight, setIframeHeight] = useState<string | number>(1200);
   const updateIframeSize = () => {
 
     const screenWidth = window.innerWidth;
