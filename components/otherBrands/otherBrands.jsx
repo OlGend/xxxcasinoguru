@@ -119,8 +119,9 @@ function OtherBrands({
                 {otherData.length > 0 ? (
                   otherData.slice(0, visibleBrands).map((rowData, index) => (
                     <div className="one-brand" key={index}>
+                      
                       <div>
-                        
+
                         <a
                           id="usual_suggestions"
                           target="_blank"
