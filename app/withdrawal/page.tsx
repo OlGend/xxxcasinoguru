@@ -334,7 +334,7 @@ const Withdraw = () => {
   const [estimated, setEstimated] = useState<any[]>([]);
 
   ///////////////////////КОНВЕРТАЦИЯ//////////////////////
-  const handleEstimatedRequest = async () => {
+  const handleEstimatedRequest = async (arg: string) => {
     try {
       // Значения переменных
       const currency_from = "usd"; // Замените на соответствующую валюту отправления
@@ -430,7 +430,7 @@ const Withdraw = () => {
   const [errorMin, setErrorMin] = useState(true);
 
   const modalPay = async () => {
-    handleEstimatedRequest();
+    handleEstimatedRequest(withdrawalRequestValue);
     setModalPayout(!modalPayout);
   };
 
