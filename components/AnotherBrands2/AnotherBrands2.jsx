@@ -14,6 +14,8 @@ function AnotherBrands2({
 }) {
   const { t } = useTranslation();
 
+  console.log("111111111", selectedCountry)
+
   const [loading, setLoading] = useState(true);
   const [otherData, setOtherData] = useState([]);
   const [visibleBrands, setVisibleBrands] = useState(8);

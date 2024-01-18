@@ -28,7 +28,7 @@ type Videos = {
 };
 
 // Пример определения типа данных для функции изменения страны
-type HandleCountryChange = (country: string) => void;
+type HandleCountryChange = (country: string | undefined) => void;
 
 const Wheel = () => {
   // const { t } = useTranslation();
@@ -80,6 +80,7 @@ const Wheel = () => {
   // const [selectedCountry, setSelectedCountry] = useState(
   //   localStorage.getItem("selectedCountry") || ""
   // );
+  // const [selectedCountry, setSelectedCountry] = useState();
   const [selectedCountry, setSelectedCountry] = useState();
 
   // ...
@@ -94,14 +95,22 @@ const Wheel = () => {
         setIpData(data.country_name);
         setIpDataCode(data.country);
         // const countryFromLocalStorage = localStorage.getItem("selectedCountry");
-        // setSelectedCountry(
-        //   countryFromLocalStorage || data.country.toLowerCase()
-        // );
+        console.log("selected 1", selectedCountry);
+        console.log("55555555555555555555555", data.country);
+  
+        setSelectedCountry(data.country);
+  
+        // Выполняйте действия, которые должны произойти после установки selectedCountry
+        console.log("selected 2", data.country);
+  
+        // Например, вы можете вызвать функцию handleCountryChange здесь, если это необходимо
+        // handleCountryChange(data.country);
       })
       .catch((error) => {
         console.error("Ошибка при запросе к API:", error);
       });
   }, []);
+  
 
   useEffect(() => {
     const url = window.location.href;
@@ -171,10 +180,10 @@ const Wheel = () => {
     { code: "all", name: "World", flag: "🌍" },
   ];
 
-  // const handleCountryChange: HandleCountryChange = (country) => {
-  //   setSelectedCountry(country);
-  //   localStorage.setItem("selectedCountry", country);
-  // };
+  const handleCountryChange: HandleCountryChange = (country) => {
+    setSelectedCountry(country);
+    // localStorage.setItem("selectedCountry", country);
+  };
 
   const videos: Record<string, string> = {
     en: "https://www.youtube.com/embed/GEeEG393PjU?si=uq_PvG10Hx2LBjFV",
@@ -207,6 +216,9 @@ const Wheel = () => {
     }
   };
 
+
+  console.log("selectedCountry", selectedCountry)
+
   return (
     <div className="game">
       <div className="container container-game">
@@ -229,7 +241,7 @@ const Wheel = () => {
           id="countrySelect"
           value={selectedCountry}
           // onChange={(e) => setSelectedCountry(e.target.value)}
-          // onChange={(e) => handleCountryChange(e.target.value)}
+          onChange={(e) => handleCountryChange(e.target.value)}
         >
           {countryOptions.map((country, index) => (
             <option
@@ -247,7 +259,8 @@ const Wheel = () => {
         ipDataCode={ipDataCode}
         currentLanguage={i18n.language}
         source={source}
-        selectedCountry={selectedCountry}
+        // selectedCountry={selectedCountry}
+        selectedCountry={selectedCountry || 'default-value'}
       />
       <div className="yt" ref={iframeRef}>
         <iframe
