@@ -530,16 +530,6 @@ const Wheel = ()=>{
                         fileName: "<[project]/app/fortunewheel/page.tsx>",
                         lineNumber: 229,
                         columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("iframe", {
-                        id: "myIframe",
-                        src: "https://pickbonus.myawardwallet.com/wheel5/",
-                        width: iframeWidth,
-                        height: iframeHeight
-                    }, void 0, false, {
-                        fileName: "<[project]/app/fortunewheel/page.tsx>",
-                        lineNumber: 232,
-                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
@@ -600,20 +590,7 @@ const Wheel = ()=>{
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
                 className: "yt",
-                ref: iframeRef,
-                children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("iframe", {
-                    id: "myIframe22",
-                    width: iframeWidth,
-                    height: iframeHeight,
-                    src: selectedVideo,
-                    title: "YouTube video player",
-                    allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
-                    allowFullScreen: true
-                }, void 0, false, {
-                    fileName: "<[project]/app/fortunewheel/page.tsx>",
-                    lineNumber: 267,
-                    columnNumber: 9
-                }, this)
+                ref: iframeRef
             }, void 0, false, {
                 fileName: "<[project]/app/fortunewheel/page.tsx>",
                 lineNumber: 266,
