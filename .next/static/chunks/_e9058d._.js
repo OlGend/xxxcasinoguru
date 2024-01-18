@@ -2524,7 +2524,7 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
-function OtherBrands({ newUrl, ipData, ipDataCode, currentLanguage, country, source, selectedCountry, setSelectedCountry }) {
+function OtherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountry, setSelectedCountry }) {
     _s();
     const { t } = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"]();
     const [loading, setLoading] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"](true);
@@ -3065,7 +3065,6 @@ function Home() {
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$otherBrands$2f$otherBrands$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 newUrl: newUrl,
-                ipData: ipData,
                 ipDataCode: ipDataCode,
                 currentLanguage: i18n.language,
                 source: source,
