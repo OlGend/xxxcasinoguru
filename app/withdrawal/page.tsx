@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 import Select from "react-select";
+import { ChangeEvent } from "react";
 
 // Типы для пользователя
 interface User {
@@ -72,7 +73,7 @@ const Withdraw = () => {
   const [showModal, setShowModal] = useState(false);
   const [errorWallet, setErrorWallet] = useState(false);
   // const [minimumAmount, setMinimumAmount] = useState("");
-  const [minFee, setMinFee] = useState("");
+  const [minFee, setMinFee] = useState([]);
 
   const [error, setError] = useState(false);
 
@@ -320,10 +321,12 @@ const Withdraw = () => {
   // };
 
   const handlePaymentMethodChange = (
-    event: React.ChangeEvent<HTMLInputElement>
+    selectedOption: { value: string; label: JSX.Element } | null
   ) => {
-    setSelectedPaymentMethod(event.target.value);
-    setErrorWallet(false);
+    if (selectedOption && selectedOption.value) {
+      setSelectedPaymentMethod(selectedOption.value);
+      setErrorWallet(false);
+    }
   };
 
   useEffect(() => {
@@ -455,6 +458,8 @@ const Withdraw = () => {
     }
   };
 
+  console.log("COINS", coins);
+
   return (
     <div className="withdrawal">
       <div className="top-block">
@@ -484,27 +489,27 @@ const Withdraw = () => {
 
                   {coins && (
                     <Select
-                      options={Object.values(coins.selectedCurrencies).map(
-                        (item) => ({
-                          value: item as string,
-                          label: (
-                            <div className="option-select">
-                              <img
-                                src={`./${item}.png`}
-                                alt={`${item}`}
-                                style={{ width: "24px", marginRight: "8px" }}
-                              />
-                              {item}
-                            </div>
-                          ),
-                        })
-                      )}
+                      options={(
+                        coins as { selectedCurrencies: string[] }
+                      ).selectedCurrencies.map((item: string) => ({
+                        value: item,
+                        label: (
+                          <div className="option-select">
+                            <img
+                              src={`./${item}.png`}
+                              alt={`${item}`}
+                              style={{ width: "24px", marginRight: "8px" }}
+                            />
+                            {item}
+                          </div>
+                        ),
+                      }))}
                       value={{
                         value: selectedPaymentMethod,
                         label: (
                           <div className="option-select">
                             <img
-                              src={`./${selectedPaymentMethod}.png`} // Замените на путь к вашим изображениям
+                              src={`./${selectedPaymentMethod}.png`}
                               alt={selectedPaymentMethod}
                               style={{ width: "24px", marginRight: "8px" }}
                             />
@@ -513,9 +518,7 @@ const Withdraw = () => {
                         ),
                       }}
                       onChange={(selectedOption) =>
-                        handlePaymentMethodChange({
-                          target: { value: selectedOption.value },
-                        })
+                        handlePaymentMethodChange(selectedOption)
                       }
                       isSearchable={false}
                       styles={{
@@ -537,7 +540,7 @@ const Withdraw = () => {
                       name="amount"
                       id="amount"
                       placeholder="0"
-                      required=""
+                      required={true}
                       value={withdrawalRequestValue}
                       onChange={(e) => {
                         handleAmountChange(e);
@@ -583,20 +586,26 @@ const Withdraw = () => {
                         </svg>
                       </div>
                       <div className="column">
-                        <p>
-                          {t("Withdrawal commission:")}{" "}
-                          {minFee.fee.toFixed(6).replace(/\.?0+$/, "")}{" "}
-                          {estimated.currency_to}. <br></br>
-                          {t("You will receive")}{" "}
-                          {(estimated.estimated_amount - minFee.fee)
-                            .toFixed(6)
-                            .replace(/\.?0+$/, "")}{" "}
-                          {estimated.currency_to} {t("in your wallet.")}
-                          <br></br>
-                          {t(
-                            "Enter your wallet details and click ‘Withdraw Funds’"
+                        {/* <p>
+                          {typeof minFee === "string" ? (
+                            t("Error: Invalid fee data")
+                          ) : (
+                            <>
+                              {t("Withdrawal commission:")}{" "}
+                              {minFee.fee.toFixed(6).replace(/\.?0+$/, "")}{" "}
+                              {estimated.currency_to}. <br></br>
+                              {t("You will receive")}{" "}
+                              {(estimated.estimated_amount - minFee.fee)
+                                .toFixed(6)
+                                .replace(/\.?0+$/, "")}{" "}
+                              {estimated.currency_to} {t("in your wallet.")}
+                              <br></br>
+                              {t(
+                                "Enter your wallet details and click ‘Withdraw Funds’"
+                              )}
+                            </>
                           )}
-                        </p>
+                        </p> */}
                       </div>
 
                       <div className="column">
@@ -608,7 +617,7 @@ const Withdraw = () => {
                           name="wallet"
                           id="wallet"
                           placeholder="Enter wallet address"
-                          required=""
+                          required={true}
                           className={`column-input ${
                             errorWallet ? "error" : ""
                           }`}
