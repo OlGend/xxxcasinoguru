@@ -5,10 +5,10 @@ import Loader from "@/components/Loader/Loader";
 
 function OtherBrands({
   newUrl,
-  ipData,
+
   ipDataCode,
   currentLanguage,
-  country,
+
   source,
   selectedCountry,
   setSelectedCountry,
@@ -119,7 +119,7 @@ function OtherBrands({
                 {otherData.length > 0 ? (
                   otherData.slice(0, visibleBrands).map((rowData, index) => (
                     <div className="one-brand" key={index}>
-                      
+
                       <div>
 
                         <a

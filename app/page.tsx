@@ -198,7 +198,6 @@ export default function Home() {
       </div>
       <OtherBrands
         newUrl={newUrl}
-        ipData={ipData}
         ipDataCode={ipDataCode}
         currentLanguage={i18n.language}
         source={source}
