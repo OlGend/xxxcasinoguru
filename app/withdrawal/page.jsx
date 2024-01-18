@@ -1,23 +1,11 @@
 "use client"
 import { useState, useEffect } from "react";
-
 import LoaderMini from "@/components/LoaderMini/LoaderMini";
-
-
-import Link from "next/link";
-
 import { useTranslation } from "react-i18next";
-
 import Select from "react-select";
 
 const Withdraw = () => {
   const { t } = useTranslation();
-
- 
-
-
-
-
   const [adressPayment, setAdressPayment] = useState("");
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState([]);
@@ -55,34 +43,32 @@ const Withdraw = () => {
 
     const fetchCoins = async () => {
       try {
-        const requestOptions: RequestInit = {
+        const myHeaders = new Headers();
+        myHeaders.append("x-api-key", apiKey);
+
+        const requestOptions = {
           method: "GET",
-          headers: new Headers({
-            "Content-Type": "application/json", 
-            "x-api-key": apiKey,
-          }),
+          headers: myHeaders,
+          redirect: "follow",
         };
-    
+
         const response = await fetch(
           "https://api.nowpayments.io/v1/merchant/coins",
           requestOptions
         );
-    
-        if (!response.ok) {
+
+        if (response.ok) {
+          const result = await response.json();
+          setCoins(result);
+        } else {
           console.error("Failed to fetch coins data:", response.status);
           // setError(true);
-          return;
         }
-    
-        const result = await response.json();
-        setCoins(result);
       } catch (error) {
         console.error("An error occurred while fetching coins data:", error);
         // setError(true);
       }
     };
-    
-    
 
     fetchUser();
     fetchCoins();
@@ -105,17 +91,13 @@ const Withdraw = () => {
         currency: currency,
       };
 
-      const requestOptions: {
-        method: string;
-        headers: Headers;
-        body: string;
-        redirect?: RequestRedirect; // Здесь изменили тип на RequestRedirect
-      } = {
+      const requestOptions = {
         method: "POST",
         headers: myHeaders,
         body: JSON.stringify(data),
         redirect: "follow",
       };
+
       const response = await fetch(url, requestOptions);
 
       if (response.ok) {
