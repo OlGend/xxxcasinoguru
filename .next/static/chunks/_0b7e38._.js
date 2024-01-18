@@ -272,6 +272,8 @@ const Wheel = ()=>{
     _s();
     // const { t } = useTranslation();
     const { t, i18n } = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"]();
+    // const [iframeWidth, setIframeWidth] = useState(1200);
+    // const [iframeHeight, setIframeHeight] = useState(675);
     const [iframeWidth, setIframeWidth] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"](1200);
     const [iframeHeight, setIframeHeight] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"](675);
     const updateIframeSize = ()=>{
@@ -544,7 +546,7 @@ const Wheel = ()=>{
                         children: t("How does it work?")
                     }, void 0, false, {
                         fileName: "<[project]/app/fortunewheel/page.tsx>",
-                        lineNumber: 216,
+                        lineNumber: 219,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -553,7 +555,7 @@ const Wheel = ()=>{
                         children: t("Main Page")
                     }, void 0, false, {
                         fileName: "<[project]/app/fortunewheel/page.tsx>",
-                        lineNumber: 219,
+                        lineNumber: 222,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("iframe", {
@@ -563,13 +565,13 @@ const Wheel = ()=>{
                         height: iframeHeight
                     }, void 0, false, {
                         fileName: "<[project]/app/fortunewheel/page.tsx>",
-                        lineNumber: 222,
+                        lineNumber: 225,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "<[project]/app/fortunewheel/page.tsx>",
-                lineNumber: 215,
+                lineNumber: 218,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -579,7 +581,7 @@ const Wheel = ()=>{
                         children: t("select")
                     }, void 0, false, {
                         fileName: "<[project]/app/fortunewheel/page.tsx>",
-                        lineNumber: 230,
+                        lineNumber: 233,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("select", {
@@ -597,18 +599,18 @@ const Wheel = ()=>{
                                 ]
                             }, index, true, {
                                 fileName: "<[project]/app/fortunewheel/page.tsx>",
-                                lineNumber: 238,
+                                lineNumber: 241,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "<[project]/app/fortunewheel/page.tsx>",
-                        lineNumber: 231,
+                        lineNumber: 234,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "<[project]/app/fortunewheel/page.tsx>",
-                lineNumber: 229,
+                lineNumber: 232,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$AnotherBrands2$2f$AnotherBrands2$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -621,7 +623,7 @@ const Wheel = ()=>{
                 setSelectedCountry: setSelectedCountry
             }, void 0, false, {
                 fileName: "<[project]/app/fortunewheel/page.tsx>",
-                lineNumber: 248,
+                lineNumber: 251,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -638,18 +640,18 @@ const Wheel = ()=>{
                     allowfullscreen: true
                 }, void 0, false, {
                     fileName: "<[project]/app/fortunewheel/page.tsx>",
-                    lineNumber: 258,
+                    lineNumber: 261,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/app/fortunewheel/page.tsx>",
-                lineNumber: 257,
+                lineNumber: 260,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "<[project]/app/fortunewheel/page.tsx>",
-        lineNumber: 213,
+        lineNumber: 216,
         columnNumber: 5
     }, this);
 };
