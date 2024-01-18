@@ -105,13 +105,17 @@ const Withdraw = () => {
         currency: currency,
       };
 
-      const requestOptions = {
+      const requestOptions: {
+        method: string;
+        headers: Headers;
+        body: string;
+        redirect?: RequestRedirect; // Здесь изменили тип на RequestRedirect
+      } = {
         method: "POST",
         headers: myHeaders,
         body: JSON.stringify(data),
         redirect: "follow",
       };
-
       const response = await fetch(url, requestOptions);
 
       if (response.ok) {
