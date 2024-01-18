@@ -2618,25 +2618,25 @@ function OtherBrands({ newUrl, ipData, ipDataCode, currentLanguage, country, sou
                                                             alt: ""
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                                            lineNumber: 130,
+                                                            lineNumber: 131,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                                        lineNumber: 124,
+                                                        lineNumber: 125,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                                                         children: rowData["OurOfferContent"]
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                                        lineNumber: 132,
+                                                        lineNumber: 133,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                                lineNumber: 122,
+                                                lineNumber: 123,
                                                 columnNumber: 23
                                             }, this),
                                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
@@ -2647,7 +2647,7 @@ function OtherBrands({ newUrl, ipData, ipDataCode, currentLanguage, country, sou
                                                 children: t("getBonus")
                                             }, void 0, false, {
                                                 fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                                lineNumber: 134,
+                                                lineNumber: 135,
                                                 columnNumber: 23
                                             }, this)
                                         ]
@@ -2660,7 +2660,7 @@ function OtherBrands({ newUrl, ipData, ipDataCode, currentLanguage, country, sou
                                     children: "No brands available for your country"
                                 }, void 0, false, {
                                     fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                    lineNumber: 146,
+                                    lineNumber: 147,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
@@ -2674,7 +2674,7 @@ function OtherBrands({ newUrl, ipData, ipDataCode, currentLanguage, country, sou
                                 children: t("showMore")
                             }, void 0, false, {
                                 fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                lineNumber: 151,
+                                lineNumber: 152,
                                 columnNumber: 17
                             }, this)
                         ]
