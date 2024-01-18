@@ -264,7 +264,7 @@ const Wheel = () => {
         selectedCountry={selectedCountry || 'default-value'}
       />
       <div className="yt" ref={iframeRef}>
-        {/* <iframe
+        <iframe
           id="myIframe22"
           width={iframeWidth}
           height={iframeHeight}
@@ -272,7 +272,7 @@ const Wheel = () => {
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-        ></iframe> */}
+        ></iframe>
       </div>
     </div>
   );
