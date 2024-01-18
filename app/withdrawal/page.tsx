@@ -61,7 +61,6 @@ const Withdraw = () => {
             "Content-Type": "application/json", 
             "x-api-key": apiKey,
           }),
-          redirect: "follow",
         };
     
         const response = await fetch(
@@ -82,6 +81,7 @@ const Withdraw = () => {
         // setError(true);
       }
     };
+    
     
 
     fetchUser();
