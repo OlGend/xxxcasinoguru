@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -7,6 +8,8 @@ import Loader from "@/components/Loader/Loader";
 import { useSearchParams } from "next/navigation";
 
 import RegistrationModal from "@/components/RegistrationModal/RegistrationModal";
+
+
 
 function TopBrands({
   newUrl,
@@ -134,9 +137,22 @@ function TopBrands({
   function reg() {
     setModal(true);
   }
+  
+  const [userKeyword, setUserKeyword] = useState(null);
+
+  const handleUserKeywordChange = (newUserKeyword) => {
+    setUserKeyword(newUserKeyword);
+    setTimeout(() => {
+      window.location.href = `/?keyword=${newUserKeyword}`;
+    }, 2000);
+  };
   function closereg() {
     setModal(false);
   }
+
+ 
+
+
 
   return (
     <div className="bg1">
@@ -163,7 +179,7 @@ function TopBrands({
                 ></path>
               </svg>
             </div>
-            <RegistrationModal ipDataCode={ipDataCode} />
+            <RegistrationModal ipDataCode={ipDataCode} modalState={closereg} onUserKeywordChange={handleUserKeywordChange} />
           </div>
         </div>
       )}
