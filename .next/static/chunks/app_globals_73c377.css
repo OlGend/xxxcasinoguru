@@ -339,17 +339,14 @@ video {
 .visible {
   visibility: visible;
 }
-.static {
-  position: static;
-}
-.fixed {
-  position: fixed;
-}
 .absolute {
   position: absolute;
 }
 .relative {
   position: relative;
+}
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 .ml-1 {
   margin-left: 0.25rem;
@@ -366,20 +363,8 @@ video {
 .flex {
   display: flex;
 }
-.table {
-  display: table;
-}
-.grid {
-  display: grid;
-}
 .hidden {
   display: none;
-}
-.grow {
-  flex-grow: 1;
-}
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewx(var(--tw-skew-x)) skewy(var(--tw-skew-y)) scalex(var(--tw-scale-x)) scaley(var(--tw-scale-y));
 }
 .resize {
   resize: both;
@@ -387,47 +372,14 @@ video {
 .items-center {
   align-items: center;
 }
+.justify-center {
+  justify-content: center;
+}
 .text-center {
   text-align: center;
 }
-.uppercase {
-  text-transform: uppercase;
-}
-.lowercase {
-  text-transform: lowercase;
-}
-.\!italic {
-  font-style: italic !important;
-}
-.italic {
-  font-style: italic;
-}
-.underline {
-  text-decoration-line: underline;
-}
-.outline {
-  outline-style: solid;
-}
-.blur {
-  --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.invert {
-  --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.\!filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
-}
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 * {
   font-family: "Arial", sans-serif;
@@ -438,6 +390,20 @@ p {
 }
 .App {
   text-align: center;
+}
+.overflowreg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(35, 34, 73, 0.24);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -497,7 +463,8 @@ h3 {
   padding-left: 10px;
   color: #ca4e46;
 }
-.overflow .modal {
+.overflow .modal, 
+.overflowreg .modal {
   max-width: 360px;
   width: 100%;
   min-height: 200px;
@@ -519,7 +486,8 @@ h3 {
   display: flex;
   align-items: center;
 }
-.menu-info .modal .close {
+.menu-info .modal .close, 
+.overflowreg .close {
   display: flex;
   cursor: pointer;
   position: absolute;
@@ -528,6 +496,19 @@ h3 {
   padding: 1px;
   border-radius: 5px;
   border: 1px solid #3a3a3a;
+}
+.overflowreg input {
+  background: #ffffff !important;
+  border: 1px solid rgba(16, 34, 62, 0.25) !important;
+  border-radius: 7px !important;
+  line-height: normal;
+  padding: 8px 16px;
+  font-size: 15px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: textfield;
+  width: 100%;
 }
 .modal-success {
   display: flex;
@@ -1932,7 +1913,8 @@ figure {
   top: 0;
   z-index: 1;
 }
-.menu-content .overflow .modal {
+.menu-content .overflow .modal, 
+.overflowreg .modal {
   padding: 45px 15px 15px;
   border-radius: 24px;
   background: #f8f8fb;

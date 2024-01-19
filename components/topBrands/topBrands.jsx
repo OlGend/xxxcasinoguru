@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import Loader from "@/components/Loader/Loader";
 import { useSearchParams } from "next/navigation";
 
-
+import RegistrationModal from "@/components/RegistrationModal/RegistrationModal";
 
 function TopBrands({
   newUrl,
@@ -15,6 +15,7 @@ function TopBrands({
   source,
   selectedCountry,
   setSelectedCountry,
+  userField,
 }) {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
@@ -121,20 +122,51 @@ function TopBrands({
       }
     };
 
-    console.log("@@@@@@@@@@@@@@", geo, currentLanguage);
-    console.log("@@@@@@@@@@@@@@", ipDataCode, currentLanguage);
-    
     if ((geo && currentLanguage) || (!geo && ipDataCode && currentLanguage)) {
       fetchData();
     }
   }, [ipDataCode, brandValue, currentLanguage, selectedCountry, source]);
 
-
-
   const combinedData = [...topData, ...data];
+
+  const [modal, setModal] = useState(false);
+
+  function reg() {
+    setModal(true);
+  }
+  function closereg() {
+    setModal(false);
+  }
 
   return (
     <div className="bg1">
+      {modal && (
+        <div className="overflowreg">
+          <div className="modal">
+            <div
+              className="close flex justify-center items-center text-center"
+              onClick={closereg}
+            >
+              {" "}
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.44487 24L24 8.02771M8 8L23.5551 23.9723"
+                  stroke="#15143D"
+                  stroke-width="2.8"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+            </div>
+            <RegistrationModal ipDataCode={ipDataCode} />
+          </div>
+        </div>
+      )}
       {isLoading && <Loader />}
       <div className="container api-content">
         <div className="brand">
@@ -149,8 +181,12 @@ function TopBrands({
                         <a
                           id="top_brand"
                           target="_blank"
-                          href={rowData["GoBig"] + newUrl}
-                          // onClick={handleEmail}
+                          onClick={userField === "" ? reg : undefined}
+                          href={
+                            userField === ""
+                              ? undefined
+                              : rowData["GoBig"] + newUrl
+                          }
                         >
                           <img src={rowData["LinkImg"]} alt="" />
                         </a>
@@ -161,8 +197,12 @@ function TopBrands({
                           id="top_brand"
                           className="btn btn-primary big-btn"
                           target="_blank"
-                          href={rowData["GoBig"] + newUrl}
-                          // onClick={handleEmail}
+                          onClick={userField === "" ? reg : undefined}
+                          href={
+                            userField === ""
+                              ? undefined
+                              : rowData["GoBig"] + newUrl
+                          }
                         >
                           {t("proceed")}
                         </a>
@@ -179,8 +219,12 @@ function TopBrands({
                         <a
                           id="top_brand"
                           target="_blank"
-                          href={rowData["GoBig"] + newUrl}
-                          // onClick={handleTop}
+                          onClick={userField === "" ? reg : undefined}
+                          href={
+                            userField === ""
+                              ? undefined
+                              : rowData["GoBig"] + newUrl
+                          }
                         >
                           <img src={rowData["LinkImg"]} alt="" />
                         </a>
@@ -191,8 +235,12 @@ function TopBrands({
                           id="top_brand"
                           className="btn btn-primary big-btn"
                           target="_blank"
-                          href={rowData["GoBig"] + newUrl}
-                          // onClick={handleTop}
+                          onClick={userField === "" ? reg : undefined}
+                          href={
+                            userField === ""
+                              ? undefined
+                              : rowData["GoBig"] + newUrl
+                          }
                         >
                           {t("proceed")}
                         </a>
@@ -212,8 +260,12 @@ function TopBrands({
                       <a
                         id="top_brand"
                         target="_blank"
-                        href={rowData["GoBig"] + newUrl}
-                        // onClick={handleEmail}
+                        onClick={userField === "" ? reg : undefined}
+                        href={
+                          userField === ""
+                            ? undefined
+                            : rowData["GoBig"] + newUrl
+                        }
                       >
                         <img src={rowData["LinkImg"]} alt="" />
                       </a>
@@ -224,8 +276,12 @@ function TopBrands({
                         id="top_brand"
                         className="btn btn-primary big-btn"
                         target="_blank"
-                        href={rowData["GoBig"] + newUrl}
-                        // onClick={handleEmail}
+                        onClick={userField === "" ? reg : undefined}
+                        href={
+                          userField === ""
+                            ? undefined
+                            : rowData["GoBig"] + newUrl
+                        }
                       >
                         {t("proceed")}
                       </a>
@@ -242,8 +298,10 @@ function TopBrands({
                     <a
                       id="top_brand"
                       target="_blank"
-                      href={rowData["GoBig"] + newUrl}
-                      // onClick={handleEmail}
+                      onClick={userField === "" ? reg : undefined}
+                      href={
+                        userField === "" ? undefined : rowData["GoBig"] + newUrl
+                      }
                     >
                       <img src={rowData["LinkImg"]} alt="" />
                     </a>
@@ -254,7 +312,10 @@ function TopBrands({
                       id="top_brand"
                       className="btn btn-primary big-btn"
                       target="_blank"
-                      href={rowData["GoBig"] + newUrl}
+                      onClick={userField === "" ? reg : undefined}
+                      href={
+                        userField === "" ? undefined : rowData["GoBig"] + newUrl
+                      }
                     >
                       {t("proceed")}
                     </a>

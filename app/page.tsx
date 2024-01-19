@@ -18,6 +18,7 @@ export default function Home() {
   const [ipDataCode, setIpDataCode] = useState(null);
   const [newUrl, setNewUrl] = useState("");
   const [source, setSource] = useState("");
+  const [userField, setUserField] = useState<string>("");
 
   const [selectedCountry, setSelectedCountry] = useState("");
 
@@ -75,7 +76,9 @@ export default function Home() {
     const searchParams = new URLSearchParams(urlObj.search);
     searchParams.delete("brand");
 
-    const currentSource = searchParams.get("keyword");
+    // const currentSource = searchParams.get("keyword");
+    const currentSource: string | null = searchParams.get("keyword");
+    setUserField(currentSource !== null ? currentSource : "");
 
     if (
       currentSource !== null &&
@@ -118,7 +121,6 @@ export default function Home() {
     localStorage.setItem("selectedCountry", country);
   };
 
-  console.log("~~~~~~~~~~~~~~~~~~SELECTEDCOUNTRY~~~~~~~~~~~~~~~~~~~~~", selectedCountry)
 
   return (
     <div>
@@ -129,6 +131,7 @@ export default function Home() {
         source={source}
         selectedCountry={selectedCountry}
         setSelectedCountry={setSelectedCountry}
+        userField={userField}
       />
       <div className="select-brand container">
         <p>{t("select")}</p>
