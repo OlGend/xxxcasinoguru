@@ -136,7 +136,7 @@ const TheHeader = () => {
     <header>
       <div className="container">
         <Link className="flex" href={`/${newUrl}`}>
-          <Image src={logo} alt={logo} width={175} height={50} loading="lazy" />
+          <Image className="logo" src={logo} alt={logo} width={175} height={50} loading="lazy" />
         </Link>
         {!isMobile ? (
           <div className="flex ml-auto items-center">
@@ -207,7 +207,14 @@ const TheHeader = () => {
                     href={`/withdrawal/${newUrl}`}
                     className="wallet flex items-center"
                   >
-                    <img src={`.${wallet}`} alt={wallet} />
+                     <Image
+                        src={wallet}
+                        alt={wallet}
+                        width={25}
+                        height={25}
+                        loading="lazy"
+                      />
+                    {/* <img src={`.${wallet}`} alt={wallet} /> */}
                     <p>{user.balance} USD</p>
                   </Link>
                   <div
@@ -215,7 +222,15 @@ const TheHeader = () => {
                     onClick={handleMenuToggle}
                     ref={menuContainerRef}
                   >
-                    <img src={`.${profile}`} alt={profile} />
+                    
+                    <Image
+                        src={profile}
+                        alt={profile}
+                        width={25}
+                        height={25}
+                        loading="lazy"
+                      />
+                    {/* <img src={`.${profile}`} alt={profile} /> */}
                     <strong className="ticketspoint">{user.tickets}</strong>
                   </div>
                 </div>
@@ -227,7 +242,13 @@ const TheHeader = () => {
                       href={`/withdrawal/${newUrl}`}
                       className="balanceWithdraw"
                     >
-                      <img className="mr-1" src={`.${wallet}`} alt={wallet} />
+                      <Image  src={wallet}
+                        alt={wallet}
+                        width={25}
+                        height={25}
+                        loading="lazy"
+                        className="mr-1" />
+                      {/* <img className="mr-1" src={`.${wallet}`} alt={wallet} /> */}
                       {t("Withdraw")} <span>{user.balance} USD</span>
                     </Link>
                   )}
@@ -237,7 +258,13 @@ const TheHeader = () => {
                         href={`/fortunewheel/${newUrl}`}
                         className="balanceWithdraw"
                       >
-                        <img className="mr-1" src={`.${dollar}`} alt={dollar} />
+                          <Image  src={dollar}
+                        alt={dollar}
+                        width={25}
+                        height={25}
+                        loading="lazy"
+                        className="mr-1" />
+                        {/* <img className="mr-1" src={`.${dollar}`} alt={dollar} /> */}
                         {t("Wheel of Fortune")} <span>{user.tickets}</span>
                       </Link>
                     )}

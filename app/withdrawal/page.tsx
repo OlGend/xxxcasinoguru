@@ -586,7 +586,7 @@ const Withdraw = () => {
                         </svg>
                       </div>
                       <div className="column">
-                        {/* <p>
+                        <p>
                           {typeof minFee === "string" ? (
                             t("Error: Invalid fee data")
                           ) : (
@@ -605,7 +605,7 @@ const Withdraw = () => {
                               )}
                             </>
                           )}
-                        </p> */}
+                        </p>
                       </div>
 
                       <div className="column">

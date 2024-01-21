@@ -814,6 +814,7 @@ const TheHeader = ()=>{
                     className: "flex",
                     href: `/${newUrl}`,
                     children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        className: "logo",
                         src: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$logo$2e$png$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$logo$2e$png__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
                         alt: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$logo$2e$png$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$logo$2e$png__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
                         width: 175,
@@ -975,13 +976,16 @@ const TheHeader = ()=>{
                                             href: `/withdrawal/${newUrl}`,
                                             className: "wallet flex items-center",
                                             children: [
-                                                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
-                                                    src: `.${__TURBOPACK__imported__module__$5b$project$5d2f$public$2f$wallet$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$wallet$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"]}`,
-                                                    alt: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$wallet$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$wallet$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
+                                                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                    src: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$wallet$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$wallet$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
+                                                    alt: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$wallet$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$wallet$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
+                                                    width: 25,
+                                                    height: 25,
+                                                    loading: "lazy"
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/TheHeader.jsx>",
                                                     lineNumber: 210,
-                                                    columnNumber: 21
+                                                    columnNumber: 22
                                                 }, this),
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                                                     children: [
@@ -990,7 +994,7 @@ const TheHeader = ()=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "<[project]/components/TheHeader.jsx>",
-                                                    lineNumber: 211,
+                                                    lineNumber: 218,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
@@ -1004,12 +1008,15 @@ const TheHeader = ()=>{
                                             onClick: handleMenuToggle,
                                             ref: menuContainerRef,
                                             children: [
-                                                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
-                                                    src: `.${__TURBOPACK__imported__module__$5b$project$5d2f$public$2f$prof$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$prof$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"]}`,
-                                                    alt: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$prof$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$prof$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
+                                                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                    src: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$prof$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$prof$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
+                                                    alt: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$prof$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$prof$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
+                                                    width: 25,
+                                                    height: 25,
+                                                    loading: "lazy"
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/TheHeader.jsx>",
-                                                    lineNumber: 218,
+                                                    lineNumber: 226,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("strong", {
@@ -1017,13 +1024,13 @@ const TheHeader = ()=>{
                                                     children: user.tickets
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/TheHeader.jsx>",
-                                                    lineNumber: 219,
+                                                    lineNumber: 234,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "<[project]/components/TheHeader.jsx>",
-                                            lineNumber: 213,
+                                            lineNumber: 220,
                                             columnNumber: 19
                                         }, this)
                                     ]
@@ -1039,13 +1046,16 @@ const TheHeader = ()=>{
                                             href: `/withdrawal/${newUrl}`,
                                             className: "balanceWithdraw",
                                             children: [
-                                                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
-                                                    className: "mr-1",
-                                                    src: `.${__TURBOPACK__imported__module__$5b$project$5d2f$public$2f$wallet$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$wallet$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"]}`,
-                                                    alt: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$wallet$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$wallet$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
+                                                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                    src: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$wallet$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$wallet$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
+                                                    alt: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$wallet$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$wallet$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
+                                                    width: 25,
+                                                    height: 25,
+                                                    loading: "lazy",
+                                                    className: "mr-1"
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/TheHeader.jsx>",
-                                                    lineNumber: 230,
+                                                    lineNumber: 245,
                                                     columnNumber: 23
                                                 }, this),
                                                 t("Withdraw"),
@@ -1057,13 +1067,13 @@ const TheHeader = ()=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "<[project]/components/TheHeader.jsx>",
-                                                    lineNumber: 231,
+                                                    lineNumber: 252,
                                                     columnNumber: 39
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "<[project]/components/TheHeader.jsx>",
-                                            lineNumber: 226,
+                                            lineNumber: 241,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -1072,14 +1082,17 @@ const TheHeader = ()=>{
                                                 href: `/fortunewheel/${newUrl}`,
                                                 className: "balanceWithdraw",
                                                 children: [
-                                                    /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
-                                                        className: "mr-1",
-                                                        src: `.${__TURBOPACK__imported__module__$5b$project$5d2f$public$2f$dollar$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$dollar$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"]}`,
-                                                        alt: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$dollar$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$dollar$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
+                                                    /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        src: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$dollar$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$dollar$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
+                                                        alt: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$dollar$2e$svg$2e$mjs$2f28$IMAGE$292f5b$project$5d2f$public$2f$dollar$2e$svg__$5b$app$2d$client$5d$__$28$static$29$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
+                                                        width: 25,
+                                                        height: 25,
+                                                        loading: "lazy",
+                                                        className: "mr-1"
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/TheHeader.jsx>",
-                                                        lineNumber: 240,
-                                                        columnNumber: 25
+                                                        lineNumber: 261,
+                                                        columnNumber: 27
                                                     }, this),
                                                     t("Wheel of Fortune"),
                                                     " ",
@@ -1087,24 +1100,24 @@ const TheHeader = ()=>{
                                                         children: user.tickets
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/TheHeader.jsx>",
-                                                        lineNumber: 241,
+                                                        lineNumber: 268,
                                                         columnNumber: 49
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "<[project]/components/TheHeader.jsx>",
-                                                lineNumber: 236,
+                                                lineNumber: 257,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "<[project]/components/TheHeader.jsx>",
-                                            lineNumber: 234,
+                                            lineNumber: 255,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "<[project]/components/TheHeader.jsx>",
-                                    lineNumber: 224,
+                                    lineNumber: 239,
                                     columnNumber: 17
                                 }, this)
                             ]
@@ -1117,7 +1130,7 @@ const TheHeader = ()=>{
                             ipDataCode: ipDataCode
                         }, void 0, false, {
                             fileName: "<[project]/components/TheHeader.jsx>",
-                            lineNumber: 250,
+                            lineNumber: 277,
                             columnNumber: 13
                         }, this)
                     ]
@@ -1364,8 +1377,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$TheFooter$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/components/TheFooter.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$TheHeader$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/components/TheHeader.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$i18n$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/app/i18n.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$script$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/script.js [app-client] (ecmascript)");
 "__TURBOPACK__ecmascript__hoisting__location__";
 "use client";
+;
 ;
 ;
 ;
@@ -1376,26 +1391,49 @@ function RootLayout({ children }) {
         lang: "en",
         children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("body", {
             children: [
+                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$script$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                    id: "customerio",
+                    type: "text/javascript",
+                    children: `
+            var _cio = _cio || [];
+            (function() {
+              var a,b,c;a=function(f){return function(){_cio.push([f].
+              concat(Array.prototype.slice.call(arguments,0)))}};b=["load","identify",
+              "sidentify","track","page"];for(c=0;c<b.length;c++){_cio[b[c]]=a(b[c])};
+              var t = document.createElement('script'),
+                  s = document.getElementsByTagName('script')[0];
+              t.async = true;
+              t.id    = 'cio-tracker';
+              t.setAttribute('data-site-id', '4ca906c0932369a13963');
+              t.src = 'https://assets.customer.io/assets/track-eu.js';
+              s.parentNode.insertBefore(t, s);
+            })();
+          `
+                }, void 0, false, {
+                    fileName: "<[project]/app/layout.tsx>",
+                    lineNumber: 24,
+                    columnNumber: 7
+                }, this),
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$TheHeader$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TheHeader"], {}, void 0, false, {
                     fileName: "<[project]/app/layout.tsx>",
-                    lineNumber: 23,
+                    lineNumber: 41,
                     columnNumber: 9
                 }, this),
                 children,
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$TheFooter$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TheFooter"], {}, void 0, false, {
                     fileName: "<[project]/app/layout.tsx>",
-                    lineNumber: 27,
+                    lineNumber: 45,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "<[project]/app/layout.tsx>",
-            lineNumber: 22,
+            lineNumber: 23,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "<[project]/app/layout.tsx>",
-        lineNumber: 20,
+        lineNumber: 21,
         columnNumber: 5
     }, this);
 }

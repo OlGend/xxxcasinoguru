@@ -6,8 +6,8 @@
   font-family: "Arial", sans-serif;
 }
 @font-face {
-  font-family: 'BebasNeue';
-  src: url('./fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-family: "BebasNeue";
+  src: url("./fonts/BebasNeue-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -54,15 +54,15 @@ h1 {
   display: block;
   font-size: 2em;
   font-weight: bold;
-  margin-block-start: .67em;
-  margin-block-end: .67em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
 }
 h2 {
   display: block;
   font-size: 1.5em;
   font-weight: bold;
-  margin-block-start: .83em;
-  margin-block-end: .83em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
 }
 h3 {
   display: block;
@@ -91,7 +91,8 @@ h3 {
   padding-left: 10px;
   color: #ca4e46;
 }
-.overflow .modal, .overflowreg .modal {
+.overflow .modal,
+.overflowreg .modal-reg {
   max-width: 360px;
   width: 100%;
   min-height: 200px;
@@ -107,15 +108,68 @@ h3 {
 .tickets {
   color: #fff;
 }
-.menu-info .modal{
+.menu-info .modal {
   position: relative;
-  
 }
 .option-select {
   display: flex;
   align-items: center;
 }
-.menu-info .modal .close, .overflowreg .close {
+.modal-reg {
+  background: #ffffff !important;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.modal-reg .close {
+  border-color: #fff !important;
+}
+.reg-content {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+.modal-reg .column {
+  margin-top: 0;
+}
+.titleh4 {
+  padding: 46px 46px 24px;
+  background: url(../public/maw_email.png) no-repeat center;
+}
+.titleh4 h4 {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+}
+.overflowreg input.error {
+  border-color: #ef4444 !important;
+}
+.overflowreg input.error::placeholder {
+  color: #ef4444 !important;
+}
+.reg-content .btn {
+  max-width: initial;
+  width: 100% !important;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 15px !important;
+  font-size: 16px !important;
+  margin-top: 10px !important;
+}
+.reg-content .error-text {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+.reg-content input {
+  margin-bottom: 0 !important;
+}
+
+.menu-info .modal .close,
+.overflowreg .close {
   display: flex;
   cursor: pointer;
   position: absolute;
@@ -1652,7 +1706,8 @@ figure {
   top: 0;
   z-index: 1;
 }
-.menu-content .overflow .modal, .overflowreg .modal  {
+.menu-content .overflow .modal,
+.overflowreg .modal {
   padding: 45px 15px 15px;
   border-radius: 24px;
   background: #f8f8fb;
@@ -1776,6 +1831,7 @@ a {
 .another-brands .other-brands .all-brands .mindeps {
   font-weight: 700;
 }
+
 @media (min-width: 1260px) and (max-width: 5000px) {
   .another-brands .all-brands .one-brand:nth-child(4n + 4) {
     margin-right: 30px;
@@ -1793,6 +1849,38 @@ a {
   }
 }
 @media (min-width: 320px) and (max-width: 1259px) {
+  .withdrawal .top-block h2 {
+    text-align: center;
+  }
+  .balance span {
+    font-size: 17px;
+    margin-right: 0;
+  }
+  .logo {
+    max-width: 135px;
+  }
+  h1 {
+    text-align: center;
+  }
+  p {
+    margin: 10px 0;
+  }
+  .brand .mobile .flex .bonus {
+    max-height: 80px;
+  }
+  .banner p {
+    text-align: center;
+  }
+  .all-brands .one-brand {
+    flex-basis: 49% !important;
+    padding: 10px !important;
+    margin-top: 0;
+    /* max-width: 49% !important; */
+  }
+  .all-brands .one-brand .btn-primary {
+    position: initial !important;
+    width: auto !important;
+  }
   /* body {
     box-sizing: border-box;
   } */

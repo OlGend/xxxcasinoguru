@@ -1,4 +1,4 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/_4492f5._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/_94c0fe._.js", {
 
 "[project]/components/DoubleBrands2/DoubleBrands2.jsx [app-client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
 "use strict";
@@ -2053,6 +2053,29 @@ var _c;
 __turbopack_refresh__.register(_c, "NewBrands");
 
 })()),
+"[project]/public/maw_email.png [app-client] (static)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname }) => (() => {
+
+__turbopack_export_value__("/_next/static/media/maw_email.3b2fe2cd.png");
+})()),
+"[project]/public/maw_email.png.mjs/(IMAGE)/[project]/public/maw_email.png [app-client] (static) (structured image object, ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "default": ()=>__TURBOPACK__default__export__
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$maw_email$2e$png__$5b$app$2d$client$5d$__$28$static$29$__ = __turbopack_import__("[project]/public/maw_email.png [app-client] (static)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+;
+const __TURBOPACK__default__export__ = {
+    src: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$maw_email$2e$png__$5b$app$2d$client$5d$__$28$static$29$__["default"],
+    width: 360,
+    height: 240,
+    blurDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAdElEQVR42mWNOw5FUBiE/7Xcc+7NFYnEoxAKEo+TIIhOc4IN6DRKK7AzOxpECFF8zXyTGRq6FL3MwVkM9jngTEAUI+KwBWUiQ+SKS57oZo2/koM4f8s7pNkVVKN4hPtFEJSQiQ9yqgZWVD8Kv211lh6W6YsViqZDtbC7Md0AAAAASUVORK5CYII=",
+    blurWidth: 8,
+    blurHeight: 5
+};
+
+})()),
 "[project]/components/RegistrationModal/RegistrationModal.jsx [app-client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
 "use strict";
 
@@ -2062,17 +2085,13 @@ __turbopack_esm__({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Loader$2f$Loader$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/components/Loader/Loader.jsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$7b$module__evaluation$7d$__ = __turbopack_import__("[project]/node_modules/react-i18next/dist/es/index.js [app-client] (ecmascript) {module evaluation}");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react-i18next/dist/es/useTranslation.js [app-client] (ecmascript)");
 "__TURBOPACK__ecmascript__hoisting__location__";
 ;
 var _s = __turbopack_refresh__.signature();
 ;
 ;
-;
 const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
     _s();
-    const { t } = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"]();
     const [email, setEmail] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"]("");
     const [userData, setUserData] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"]([]);
     const [isLoading, setIsLoading] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"](false);
@@ -2080,36 +2099,33 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
     const handleEmailChange = (event)=>{
         setEmail(event.target.value);
     };
-    // const handleCustomerio = () => {
-    //   // Формируем объект с данными для отправки на первый сервер
-    //   const data = {
-    //     email: email,
-    //     id: userData.id,
-    //     login: userData.login,
-    //     balance: userData.balance,
-    //     country: userData.country,
-    //     tickets: userData.tickets,
-    //   };
-    //   // Отправляем POST-запрос на API Customer.io
-    //   fetch(`https://track-eu.customer.io/api/v1/customers/${userData}/events`, {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //       Authorization: "Bearer 6f29015cd0560e7edf40", // Замените YOUR_API_KEY на ваш ключ API
-    //     },
-    //     body: JSON.stringify({
-    //       name: "Registration", // Замените на имя вашего события
-    //       data: data,
-    //     }),
-    //   })
-    //     .then((response) => response.json())
-    //     .then((responseData) => {
-    //       console.log("Response from Customer.io:", responseData);
-    //     })
-    //     .catch((error) => {
-    //       console.error("Error:", error);
-    //     });
-    // };
+    const handleCustomerio = ()=>{
+        // Формируем объект с данными для отправки на первый сервер
+        const data = {
+            email: email,
+            id: userData.id,
+            login: userData.login,
+            balance: userData.balance,
+            country: userData.country,
+            tickets: userData.tickets
+        };
+        // Отправляем POST-запрос на API Customer.io
+        fetch(`https://track-eu.customer.io/api/v1/customers/${userData}/events`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: "Bearer 6f29015cd0560e7edf40"
+            },
+            body: JSON.stringify({
+                name: "Registration",
+                data: data
+            })
+        }).then((response)=>response.json()).then((responseData)=>{
+            console.log("Response from Customer.io:", responseData);
+        }).catch((error)=>{
+            console.error("Error:", error);
+        });
+    };
     const handleSubmit = ()=>{
         setIsLoading(true);
         // Отправляем GET-запрос на первый сервер
@@ -2166,124 +2182,55 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
             console.error("Error:", error);
         });
     };
-    const [error, setError] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"]("");
-    const [loading, setLoading] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"](false);
-    const handleSubscribe = ()=>{
-        setError(""); // Сброс ошибки перед проверкой
-        setLoading(true);
-        // Simulate a loading delay of 2 seconds
-        setTimeout(()=>{
-            setLoading(false);
-            if (!email) {
-                setError(t("The input field cannot be empty"));
-            } else if (!/\S+@\S+\.\S+/.test(email)) {
-                setError(t("Data entered incorrectly"));
-            } else {
-                setIsLoading(false);
-                handleSubmit();
-                console.log("after", email);
-                _cio.identify({
-                    id: email,
-                    email: email
-                });
-                console.log("before", email);
-                setEmail("");
-                setPopupText(t("subscribe.congrats"));
-                setPopupVisible(true);
-                setCountUsers((prevCount)=>prevCount + 1);
-            }
-        }, 1000);
-    };
-    const handleInputFocus = ()=>{
-        setError(""); // Сброс ошибки при фокусировке на инпуте
-    };
-    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"](()=>{
-        const handleClickOutside = ()=>{
-            setError("");
-        };
-        document.addEventListener("click", handleClickOutside);
-        return ()=>{
-            document.removeEventListener("click", handleClickOutside);
-        };
-    }, []);
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
         children: visible && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
             className: "flex column items-center",
             children: [
                 isLoading && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Loader$2f$Loader$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 171,
+                    lineNumber: 125,
                     columnNumber: 25
                 }, this),
-                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
-                    className: "titleh4",
-                    children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("h4", {
-                        children: "Enter your email to become a VIP member and win guaranteed real money instantly!"
-                    }, void 0, false, {
-                        fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                        lineNumber: 173,
-                        columnNumber: 13
-                    }, this)
+                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("h4", {
+                    children: "Enter your email to become a VIP member and win guaranteed real money instantly!"
                 }, void 0, false, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 172,
+                    lineNumber: 126,
                     columnNumber: 11
                 }, this),
-                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
-                    className: "reg-content",
-                    children: [
-                        /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("input", {
-                            className: `mb-3 ${error ? "error" : ""}`,
-                            type: "email",
-                            placeholder: "Email",
-                            value: email,
-                            onChange: handleEmailChange,
-                            onFocus: handleInputFocus
-                        }, void 0, false, {
-                            fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 179,
-                            columnNumber: 13
-                        }, this),
-                        error && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("span", {
-                            className: "text-red-500 error-text",
-                            children: error
-                        }, void 0, false, {
-                            fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 188,
-                            columnNumber: 15
-                        }, this),
-                        /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
-                            className: "btn btn-primary",
-                            onClick: handleSubscribe,
-                            children: "SUBMIT"
-                        }, void 0, false, {
-                            fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 190,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
+                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("input", {
+                    className: "mb-3",
+                    type: "email",
+                    placeholder: "Email",
+                    value: email,
+                    onChange: handleEmailChange
+                }, void 0, false, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 178,
+                    lineNumber: 130,
+                    columnNumber: 11
+                }, this),
+                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
+                    className: "btn btn-primary",
+                    onClick: handleSubmit,
+                    children: "SUBMIT"
+                }, void 0, false, {
+                    fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
+                    lineNumber: 137,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-            lineNumber: 170,
+            lineNumber: 124,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-        lineNumber: 168,
+        lineNumber: 122,
         columnNumber: 5
     }, this);
 };
-_s(RegistrationModal, "tglghcPCFiKU0RXLqPq0pDAX7WY=", false, function() {
-    return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"]
-    ];
-});
+_s(RegistrationModal, "PZtdX8xiSz3xSzHoMm/xmR0Za88=");
 _c = RegistrationModal;
 const __TURBOPACK__default__export__ = RegistrationModal;
 var _c;
@@ -2411,9 +2358,9 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
     const [userKeyword, setUserKeyword] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"](null);
     const handleUserKeywordChange = (newUserKeyword)=>{
         setUserKeyword(newUserKeyword);
-    // setTimeout(() => {
-    //   window.location.href = `/?keyword=${newUserKeyword}`;
-    // }, 2000);
+        setTimeout(()=>{
+            window.location.href = `/?keyword=${newUserKeyword}`;
+        }, 2000);
     };
     function closereg() {
         setModal(false);
@@ -2424,7 +2371,7 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
             modal && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
                 className: "overflowreg",
                 children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
-                    className: "modal-reg",
+                    className: "modal",
                     children: [
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
                             className: "close flex justify-center items-center text-center",
@@ -2432,14 +2379,14 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                             children: [
                                 " ",
                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("svg", {
-                                    width: "24",
-                                    height: "24",
+                                    width: "32",
+                                    height: "32",
                                     viewBox: "0 0 32 32",
                                     fill: "none",
                                     xmlns: "http://www.w3.org/2000/svg",
                                     children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("path", {
                                         d: "M8.44487 24L24 8.02771M8 8L23.5551 23.9723",
-                                        stroke: "#fff",
+                                        stroke: "#15143D",
                                         "stroke-width": "2.8",
                                         "stroke-linecap": "round"
                                     }, void 0, false, {
@@ -3413,4 +3360,4 @@ __turbopack_refresh__.register(_c, "Home");
 })()),
 }]);
 
-//# sourceMappingURL=_4492f5._.js.map
+//# sourceMappingURL=_94c0fe._.js.map

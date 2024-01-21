@@ -696,7 +696,41 @@ const Withdraw = ()=>{
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
-                                                            className: "column"
+                                                            className: "column",
+                                                            children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
+                                                                children: typeof minFee === "string" ? t("Error: Invalid fee data") : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                                                                    children: [
+                                                                        t("Withdrawal commission:"),
+                                                                        " ",
+                                                                        minFee.fee.toFixed(6).replace(/\.?0+$/, ""),
+                                                                        " ",
+                                                                        estimated.currency_to,
+                                                                        ". ",
+                                                                        /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("br", {}, void 0, false, {
+                                                                            fileName: "<[project]/app/withdrawal/page.tsx>",
+                                                                            lineNumber: 596,
+                                                                            columnNumber: 56
+                                                                        }, this),
+                                                                        t("You will receive"),
+                                                                        " ",
+                                                                        (estimated.estimated_amount - minFee.fee).toFixed(6).replace(/\.?0+$/, ""),
+                                                                        " ",
+                                                                        estimated.currency_to,
+                                                                        " ",
+                                                                        t("in your wallet."),
+                                                                        /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("br", {}, void 0, false, {
+                                                                            fileName: "<[project]/app/withdrawal/page.tsx>",
+                                                                            lineNumber: 602,
+                                                                            columnNumber: 31
+                                                                        }, this),
+                                                                        t("Enter your wallet details and click ‘Withdraw Funds’")
+                                                                    ]
+                                                                }, void 0, true)
+                                                            }, void 0, false, {
+                                                                fileName: "<[project]/app/withdrawal/page.tsx>",
+                                                                lineNumber: 589,
+                                                                columnNumber: 25
+                                                            }, this)
                                                         }, void 0, false, {
                                                             fileName: "<[project]/app/withdrawal/page.tsx>",
                                                             lineNumber: 588,

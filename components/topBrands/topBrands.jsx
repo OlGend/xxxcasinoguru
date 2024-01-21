@@ -142,9 +142,9 @@ function TopBrands({
 
   const handleUserKeywordChange = (newUserKeyword) => {
     setUserKeyword(newUserKeyword);
-    setTimeout(() => {
-      window.location.href = `/?keyword=${newUserKeyword}`;
-    }, 2000);
+    // setTimeout(() => {
+    //   window.location.href = `/?keyword=${newUserKeyword}`;
+    // }, 2000);
   };
   function closereg() {
     setModal(false);
@@ -158,22 +158,22 @@ function TopBrands({
     <div className="bg1">
       {modal && (
         <div className="overflowreg">
-          <div className="modal">
+          <div className="modal-reg">
             <div
               className="close flex justify-center items-center text-center"
               onClick={closereg}
             >
               {" "}
               <svg
-                width="32"
-                height="32"
+                width="24"
+                height="24"
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M8.44487 24L24 8.02771M8 8L23.5551 23.9723"
-                  stroke="#15143D"
+                  stroke="#fff"
                   stroke-width="2.8"
                   stroke-linecap="round"
                 ></path>
