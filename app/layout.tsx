@@ -1,7 +1,7 @@
 "use client";
 // import type { Metadata } from "next";
 import "./globals.css";
-import "./fonts/BebasNeue-Regular.ttf"
+// import "./fonts/BebasNeue-Regular.ttf"
 import { TheFooter } from "@/components/TheFooter";
 import { TheHeader } from "@/components/TheHeader";
 import "./i18n";
