@@ -384,6 +384,12 @@ video {
 * {
   font-family: "Arial", sans-serif;
 }
+@font-face{
+  font-family: 'BebasNeue';
+  src: url("../media/BebasNeue-Regular.832d4418.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 p {
   margin: 10px 0 30px;
   line-height: 20px;
@@ -420,7 +426,7 @@ h2,
 h3, 
 h4, 
 .country-text {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "BebasNeue", sans-serif;
 }
 h1 {
   display: block;
