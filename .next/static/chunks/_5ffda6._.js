@@ -1404,7 +1404,7 @@ function RootLayout({ children }) {
                   s = document.getElementsByTagName('script')[0];
               t.async = true;
               t.id    = 'cio-tracker';
-              t.setAttribute('data-site-id', '4ca906c0932369a13963');
+              t.setAttribute('data-site-id', 'e5eea51a28a74ee1810f');
               t.src = 'https://assets.customer.io/assets/track-eu.js';
               s.parentNode.insertBefore(t, s);
             })();
