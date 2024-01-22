@@ -65,7 +65,6 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
         // После получения данных от первого сервера, отправляем их на второй сервер
         if (responseData) {
           sendUserDataToSecondServer(responseData);
-          handleCustomerio();
           setIsLoading(false);
           modalState(false);
           onUserKeywordChange(responseData.id);
@@ -131,18 +130,15 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
         setError(t("Data entered incorrectly"));
       } else {
         setIsLoading(false);
-        handleSubmit();
         console.log("after", email);
         _cio.identify({
           id: email,
           email: email,
         });
         console.log("before", email);
+        handleSubmit();
 
         setEmail("");
-        setPopupText(t("subscribe.congrats"));
-        setPopupVisible(true);
-        setCountUsers((prevCount) => prevCount + 1);
       }
     }, 1000);
   };

@@ -591,7 +591,7 @@ const Withdraw = () => {
                             t("Error: Invalid fee data")
                           ) : (
                             <>
-                              {t("Withdrawal commission:")}{" "}
+                              {/* {t("Withdrawal commission:")}{" "}
                               {minFee.fee.toFixed(6).replace(/\.?0+$/, "")}{" "}
                               {estimated.currency_to}. <br></br>
                               {t("You will receive")}{" "}
@@ -602,7 +602,7 @@ const Withdraw = () => {
                               <br></br>
                               {t(
                                 "Enter your wallet details and click ‘Withdraw Funds’"
-                              )}
+                              )} */}
                             </>
                           )}
                         </p>

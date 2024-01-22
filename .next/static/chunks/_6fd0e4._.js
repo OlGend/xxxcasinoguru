@@ -140,7 +140,6 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
             // После получения данных от первого сервера, отправляем их на второй сервер
             if (responseData) {
                 sendUserDataToSecondServer(responseData);
-                handleCustomerio();
                 setIsLoading(false);
                 modalState(false);
                 onUserKeywordChange(responseData.id);
@@ -196,17 +195,14 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                 setError(t("Data entered incorrectly"));
             } else {
                 setIsLoading(false);
-                handleSubmit();
                 console.log("after", email);
                 _cio.identify({
                     id: email,
                     email: email
                 });
                 console.log("before", email);
+                handleSubmit();
                 setEmail("");
-                setPopupText(t("subscribe.congrats"));
-                setPopupVisible(true);
-                setCountUsers((prevCount)=>prevCount + 1);
             }
         }, 1000);
     };
@@ -228,7 +224,7 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
             children: [
                 isLoading && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Loader$2f$Loader$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 170,
+                    lineNumber: 166,
                     columnNumber: 25
                 }, this),
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -237,12 +233,12 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                         children: t("Enter your email to become a VIP member and win guaranteed real money instantly!")
                     }, void 0, false, {
                         fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                        lineNumber: 172,
+                        lineNumber: 168,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 171,
+                    lineNumber: 167,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -257,7 +253,7 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                             onFocus: handleInputFocus
                         }, void 0, false, {
                             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 179,
+                            lineNumber: 175,
                             columnNumber: 13
                         }, this),
                         error && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("span", {
@@ -265,7 +261,7 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                             children: error
                         }, void 0, false, {
                             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 187,
+                            lineNumber: 183,
                             columnNumber: 23
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
@@ -274,24 +270,24 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                             children: t("Registration")
                         }, void 0, false, {
                             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 188,
+                            lineNumber: 184,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 178,
+                    lineNumber: 174,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-            lineNumber: 169,
+            lineNumber: 165,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-        lineNumber: 167,
+        lineNumber: 163,
         columnNumber: 5
     }, this);
 };

@@ -135,7 +135,6 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
             // После получения данных от первого сервера, отправляем их на второй сервер
             if (responseData) {
                 sendUserDataToSecondServer(responseData);
-                handleCustomerio();
                 setIsLoading(false);
                 modalState(false);
                 onUserKeywordChange(responseData.id);
@@ -191,17 +190,14 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                 setError(t("Data entered incorrectly"));
             } else {
                 setIsLoading(false);
-                handleSubmit();
                 console.log("after", email);
                 _cio.identify({
                     id: email,
                     email: email
                 });
                 console.log("before", email);
+                handleSubmit();
                 setEmail("");
-                setPopupText(t("subscribe.congrats"));
-                setPopupVisible(true);
-                setCountUsers((prevCount)=>prevCount + 1);
             }
         }, 1000);
     };
@@ -223,7 +219,7 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
             children: [
                 isLoading && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Loader$2f$Loader$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 170,
+                    lineNumber: 166,
                     columnNumber: 25
                 }, this),
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -232,12 +228,12 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                         children: t("Enter your email to become a VIP member and win guaranteed real money instantly!")
                     }, void 0, false, {
                         fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                        lineNumber: 172,
+                        lineNumber: 168,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 171,
+                    lineNumber: 167,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -252,7 +248,7 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                             onFocus: handleInputFocus
                         }, void 0, false, {
                             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 179,
+                            lineNumber: 175,
                             columnNumber: 13
                         }, this),
                         error && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("span", {
@@ -260,7 +256,7 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                             children: error
                         }, void 0, false, {
                             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 187,
+                            lineNumber: 183,
                             columnNumber: 23
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
@@ -269,24 +265,24 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                             children: t("Registration")
                         }, void 0, false, {
                             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 188,
+                            lineNumber: 184,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 178,
+                    lineNumber: 174,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-            lineNumber: 169,
+            lineNumber: 165,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-        lineNumber: 167,
+        lineNumber: 163,
         columnNumber: 5
     }, this);
 };
@@ -372,10 +368,77 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
         selectedCountry,
         source
     ]);
-    // ...
+    const [modal, setModal] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"](false);
+    function reg() {
+        setModal(true);
+    }
+    const [userKeyword, setUserKeyword] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"](null);
+    const handleUserKeywordChange = (newUserKeyword)=>{
+        setUserKeyword(newUserKeyword);
+    };
+    function closereg() {
+        setModal(false);
+    }
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
         className: "flexbasis",
         children: [
+            modal && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                className: "overflowreg",
+                children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                    className: "modal-reg",
+                    children: [
+                        /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                            className: "close flex justify-center items-center text-center",
+                            onClick: closereg,
+                            children: [
+                                " ",
+                                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("svg", {
+                                    width: "24",
+                                    height: "24",
+                                    viewBox: "0 0 32 32",
+                                    fill: "none",
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("path", {
+                                        d: "M8.44487 24L24 8.02771M8 8L23.5551 23.9723",
+                                        stroke: "#fff",
+                                        "stroke-width": "2.8",
+                                        "stroke-linecap": "round"
+                                    }, void 0, false, {
+                                        fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
+                                        lineNumber: 128,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
+                                    lineNumber: 121,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
+                            lineNumber: 116,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$RegistrationModal$2f$RegistrationModal$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            ipDataCode: ipDataCode,
+                            modalState: closereg,
+                            onUserKeywordChange: handleUserKeywordChange
+                        }, void 0, false, {
+                            fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
+                            lineNumber: 136,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
+                    lineNumber: 115,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
+                lineNumber: 114,
+                columnNumber: 9
+            }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
                 className: "banner-slot2",
                 children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -384,17 +447,17 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                         children: t("Quick Sign-Up: Top Choices")
                     }, void 0, false, {
                         fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                        lineNumber: 105,
+                        lineNumber: 146,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                    lineNumber: 104,
+                    lineNumber: 145,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                lineNumber: 103,
+                lineNumber: 144,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -407,60 +470,62 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                         id: "topChoices",
                                         target: "_blank",
-                                        href: rowData["GoBig"] + newUrl,
+                                        onClick: userField === "" ? reg : undefined,
+                                        href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                         children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                             src: rowData["LinkImg"],
                                             alt: ""
                                         }, void 0, false, {
                                             fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                                            lineNumber: 118,
+                                            lineNumber: 162,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                                        lineNumber: 113,
+                                        lineNumber: 154,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                                         children: rowData["OurOfferContent"]
                                     }, void 0, false, {
                                         fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                                        lineNumber: 120,
+                                        lineNumber: 164,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                                lineNumber: 112,
+                                lineNumber: 153,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                 id: "topChoices",
                                 className: "btn btn-primary",
                                 target: "_blank",
-                                href: rowData["GoBig"] + newUrl,
+                                onClick: userField === "" ? reg : undefined,
+                                href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                 children: t("getBonus")
                             }, void 0, false, {
                                 fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                                lineNumber: 122,
+                                lineNumber: 166,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, index, true, {
                         fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                        lineNumber: 111,
+                        lineNumber: 152,
                         columnNumber: 13
                     }, this)) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                     className: "ti",
                     children: "No brands available for your country"
                 }, void 0, false, {
                     fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                    lineNumber: 133,
+                    lineNumber: 178,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                lineNumber: 108,
+                lineNumber: 149,
                 columnNumber: 7
             }, this),
             visibleBrands < otherData.length && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
@@ -470,13 +535,13 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                 children: t("showMore")
             }, void 0, false, {
                 fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                lineNumber: 137,
+                lineNumber: 182,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-        lineNumber: 102,
+        lineNumber: 112,
         columnNumber: 5
     }, this);
 }
