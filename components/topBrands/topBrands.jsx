@@ -132,19 +132,15 @@ function TopBrands({
 
   const combinedData = [...topData, ...data];
 
-  const [modal, setModal] = useState(false);
 
+  
+  const [modal, setModal] = useState(false);
   function reg() {
     setModal(true);
   }
-  
   const [userKeyword, setUserKeyword] = useState(null);
-
   const handleUserKeywordChange = (newUserKeyword) => {
     setUserKeyword(newUserKeyword);
-    // setTimeout(() => {
-    //   window.location.href = `/?keyword=${newUserKeyword}`;
-    // }, 2000);
   };
   function closereg() {
     setModal(false);

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Loader from "@/components/Loader/Loader";
 import { useTranslation } from "react-i18next";
 
-
 const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
   const { t } = useTranslation();
 
@@ -171,24 +170,23 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
           {isLoading && <Loader />}
           <div className="titleh4">
             <h4>
-              Enter your email to become a VIP member and win guaranteed real
-              money instantly!
+              {t(
+                "Enter your email to become a VIP member and win guaranteed real money instantly!"
+              )}
             </h4>
           </div>
           <div className="reg-content">
             <input
               className={`mb-3 ${error ? "error" : ""}`}
               type="email"
-              placeholder="Email"
+              placeholder={t("Email")}
               value={email}
               onChange={handleEmailChange}
               onFocus={handleInputFocus}
             />
-            {error && (
-              <span className="text-red-500 error-text">{error}</span>
-            )}
+            {error && <span className="text-red-500 error-text">{error}</span>}
             <button className="btn btn-primary" onClick={handleSubscribe}>
-              SUBMIT
+              {t("Registration")}
             </button>
           </div>
         </div>

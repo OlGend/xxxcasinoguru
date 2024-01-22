@@ -5,6 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
 import Loader from "@/components/Loader/Loader";
 
+import RegistrationModal from "@/components/RegistrationModal/RegistrationModal";
+
+
 // import all from "@/public/all.png";
 
 import allEn from "@/public/all_en.png";
@@ -34,7 +37,8 @@ function TopBrandsOfYear({
   currentLanguage,
   source,
   selectedCountry,
-  setSelectedCountry, // Функция для обновления selectedCountry
+  setSelectedCountry,
+  userField,
 }) {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
@@ -54,10 +58,8 @@ function TopBrandsOfYear({
   //   const urlParams = new URLSearchParams(window.location.search);
   //   const brandValue = urlParams.get("brand");
 
-  const apiOld =
-    "https://pickbonus.myawardwallet.com/api/brands/read.php";
-  const apiNew =
-    "https://pickbonus.myawardwallet.com/api/brands/read2.php";
+  const apiOld = "https://pickbonus.myawardwallet.com/api/brands/read.php";
+  const apiNew = "https://pickbonus.myawardwallet.com/api/brands/read2.php";
 
   function shuffleArray(array) {
     const shuffledArray = array.slice(); // Создаем копию массива
@@ -78,10 +80,7 @@ function TopBrandsOfYear({
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const url =
-          source === "partner1039"
-            ? apiNew
-            : apiOld;
+        const url = source === "partner1039" ? apiNew : apiOld;
 
         const res = await fetch(url);
         if (res.ok) {
@@ -143,7 +142,6 @@ function TopBrandsOfYear({
 
   console.log("SELECTED COUNTRY", selectedCountry);
 
-
   const combinedData = [...topData, ...data];
 
   const allImages = {
@@ -172,8 +170,48 @@ function TopBrandsOfYear({
 
   const allImageSrc = allImages[currentLanguage] || allImages.en;
 
+  const [modal, setModal] = useState(false);
+  function reg() {
+    setModal(true);
+  }
+  const [userKeyword, setUserKeyword] = useState(null);
+  const handleUserKeywordChange = (newUserKeyword) => {
+    setUserKeyword(newUserKeyword);
+  };
+  function closereg() {
+    setModal(false);
+  }
+
+
   return (
     <div className="bg2 bgns">
+      {modal && (
+        <div className="overflowreg">
+          <div className="modal-reg">
+            <div
+              className="close flex justify-center items-center text-center"
+              onClick={closereg}
+            >
+              {" "}
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.44487 24L24 8.02771M8 8L23.5551 23.9723"
+                  stroke="#fff"
+                  stroke-width="2.8"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+            </div>
+            <RegistrationModal ipDataCode={ipDataCode} modalState={closereg} onUserKeywordChange={handleUserKeywordChange} />
+          </div>
+        </div>
+      )}
       {data.length > 0 && (
         <div className="container api-content">
           <div className="brand">
@@ -193,22 +231,28 @@ function TopBrandsOfYear({
                           <a
                             id="brandsOfYear"
                             target="_blank"
-                            href={rowData["GoBig"] + newUrl}
-                       
+                            onClick={userField === "" ? reg : undefined}
+                            href={
+                              userField === ""
+                                ? undefined
+                                : rowData["GoBig"] + newUrl
+                            }
                           >
                             <img src={rowData["LinkImg"]} alt="" />
                           </a>
-                          <p className="bonus">
-                            {rowData["OurOfferContent"]}
-                          </p>
+                          <p className="bonus">{rowData["OurOfferContent"]}</p>
                         </div>
                         <div>
                           <a
                             id="brandsOfYear"
                             className="btn btn-primary big-btn"
                             target="_blank"
-                            href={rowData["GoBig"] + newUrl}
-                       
+                            onClick={userField === "" ? reg : undefined}
+                            href={
+                              userField === ""
+                                ? undefined
+                                : rowData["GoBig"] + newUrl
+                            }
                           >
                             {t("proceed")}
                           </a>
@@ -220,16 +264,20 @@ function TopBrandsOfYear({
                   )}
                 </Slider>
               )}
-                {data.length < 4 && (
-              <div className="nosliders2">
+              {data.length < 4 && (
+                <div className="nosliders2">
                   {data.map((rowData, index) => (
                     <div className={`flex`} key={index}>
                       <div className="imgDiv">
                         <a
                           id="brandsOfYear"
                           target="_blank"
-                          href={rowData["GoBig"] + newUrl}
-                         
+                          onClick={userField === "" ? reg : undefined}
+                          href={
+                            userField === ""
+                              ? undefined
+                              : rowData["GoBig"] + newUrl
+                          }
                         >
                           <img src={rowData["LinkImg"]} alt="" />
                         </a>
@@ -240,16 +288,20 @@ function TopBrandsOfYear({
                           id="brandsOfYear"
                           className="btn btn-primary big-btn"
                           target="_blank"
-                          href={rowData["GoBig"] + newUrl}
-                         
+                          onClick={userField === "" ? reg : undefined}
+                          href={
+                            userField === ""
+                              ? undefined
+                              : rowData["GoBig"] + newUrl
+                          }
                         >
                           {t("proceed")}
                         </a>
                       </div>
                     </div>
                   ))}
-              </div>
-               )}
+                </div>
+              )}
             </div>
             <div className="mobile">
               {combinedData ? (
@@ -259,8 +311,12 @@ function TopBrandsOfYear({
                       <a
                         id="brandsOfYear"
                         target="_blank"
-                        href={rowData["GoBig"] + newUrl}
-                       
+                        onClick={userField === "" ? reg : undefined}
+                        href={
+                          userField === ""
+                            ? undefined
+                            : rowData["GoBig"] + newUrl
+                        }
                       >
                         <img src={rowData["LinkImg"]} alt="" />
                       </a>
@@ -271,7 +327,12 @@ function TopBrandsOfYear({
                         id="brandsOfYear"
                         className="btn btn-primary big-btn"
                         target="_blank"
-                        href={rowData["GoBig"] + newUrl}
+                        onClick={userField === "" ? reg : undefined}
+                        href={
+                          userField === ""
+                            ? undefined
+                            : rowData["GoBig"] + newUrl
+                        }
                       >
                         {t("proceed")}
                       </a>

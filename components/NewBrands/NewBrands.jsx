@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
 import Loader from "@/components/Loader/Loader";
 
+import RegistrationModal from "@/components/RegistrationModal/RegistrationModal";
+
 // import all from "@/public/all.png";
 
 import allEn from "@/public/all_en.png";
@@ -28,15 +30,14 @@ import allSe from "@/public/all_se.png";
 import allSk from "@/public/all_sk.png";
 import allTr from "@/public/all_tr.png";
 
-
-
 function NewBrands({
   newUrl,
   ipDataCode,
   currentLanguage,
   source,
   selectedCountry,
-  setSelectedCountry, // Функция для обновления selectedCountry
+  setSelectedCountry,
+  userField,
 }) {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
@@ -138,8 +139,6 @@ function NewBrands({
     }
   }, [ipDataCode, currentLanguage, selectedCountry, source]);
 
-
-
   const combinedData = [...topData, ...data];
 
   const allImages = {
@@ -168,9 +167,51 @@ function NewBrands({
 
   const allImageSrc = allImages[currentLanguage] || allImages.en;
 
+  const [modal, setModal] = useState(false);
+  function reg() {
+    setModal(true);
+  }
+  const [userKeyword, setUserKeyword] = useState(null);
+  const handleUserKeywordChange = (newUserKeyword) => {
+    setUserKeyword(newUserKeyword);
+  };
+  function closereg() {
+    setModal(false);
+  }
 
   return (
     <div className="bg2 bgns">
+      {modal && (
+        <div className="overflowreg">
+          <div className="modal-reg">
+            <div
+              className="close flex justify-center items-center text-center"
+              onClick={closereg}
+            >
+              {" "}
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.44487 24L24 8.02771M8 8L23.5551 23.9723"
+                  stroke="#fff"
+                  stroke-width="2.8"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+            </div>
+            <RegistrationModal
+              ipDataCode={ipDataCode}
+              modalState={closereg}
+              onUserKeywordChange={handleUserKeywordChange}
+            />
+          </div>
+        </div>
+      )}
       {data.length > 0 && (
         <div className="container api-content">
           <div className="brand">
@@ -189,7 +230,12 @@ function NewBrands({
                           <a
                             id="Top_New_Releases"
                             target="_blank"
-                            href={rowData["GoBig"] + newUrl}
+                            onClick={userField === "" ? reg : undefined}
+                            href={
+                              userField === ""
+                                ? undefined
+                                : rowData["GoBig"] + newUrl
+                            }
                           >
                             <img src={rowData["LinkImg"]} alt="" />
                           </a>
@@ -200,7 +246,12 @@ function NewBrands({
                             id="Top_New_Releases"
                             className="btn btn-primary big-btn"
                             target="_blank"
-                            href={rowData["GoBig"] + newUrl}
+                            onClick={userField === "" ? reg : undefined}
+                            href={
+                              userField === ""
+                                ? undefined
+                                : rowData["GoBig"] + newUrl
+                            }
                           >
                             {t("proceed")}
                           </a>
@@ -220,7 +271,12 @@ function NewBrands({
                         <a
                           id="Top_New_Releases"
                           target="_blank"
-                          href={rowData["GoBig"] + newUrl}
+                          onClick={userField === "" ? reg : undefined}
+                          href={
+                            userField === ""
+                              ? undefined
+                              : rowData["GoBig"] + newUrl
+                          }
                         >
                           <img src={rowData["LinkImg"]} alt="" />
                         </a>
@@ -231,7 +287,12 @@ function NewBrands({
                           id="Top_New_Releases"
                           className="btn btn-primary big-btn"
                           target="_blank"
-                          href={rowData["GoBig"] + newUrl}
+                          onClick={userField === "" ? reg : undefined}
+                          href={
+                            userField === ""
+                              ? undefined
+                              : rowData["GoBig"] + newUrl
+                          }
                         >
                           {t("proceed")}
                         </a>
@@ -249,7 +310,12 @@ function NewBrands({
                       <a
                         id="Top_New_Releases"
                         target="_blank"
-                        href={rowData["GoBig"] + newUrl}
+                        onClick={userField === "" ? reg : undefined}
+                        href={
+                          userField === ""
+                            ? undefined
+                            : rowData["GoBig"] + newUrl
+                        }
                       >
                         <img src={rowData["LinkImg"]} alt="" />
                       </a>
@@ -260,7 +326,12 @@ function NewBrands({
                         id="Top_New_Releases"
                         className="btn btn-primary big-btn"
                         target="_blank"
-                        href={rowData["GoBig"] + newUrl}
+                        onClick={userField === "" ? reg : undefined}
+                        href={
+                          userField === ""
+                            ? undefined
+                            : rowData["GoBig"] + newUrl
+                        }
                       >
                         {t("proceed")}
                       </a>

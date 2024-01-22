@@ -514,6 +514,9 @@ h3 {
 .modal-reg .column {
   margin-top: 0;
 }
+a {
+  cursor: pointer;
+}
 .titleh4 {
   padding: 46px 46px 24px;
   background: url(../media/maw_email.3b2fe2cd.png) no-repeat center;

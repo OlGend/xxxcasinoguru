@@ -49,5 +49,10 @@
   "To qualify for withdrawals, ensure your first deposit is at least $20 or the equivalent in other currencies.": "Jotta voit tehdä kotiutuksen, varmista, että ensimmäinen talletuksesi on vähintään $20 tai vastaava summa muissa valuutoissa.",
 
   "How does it work?": "Kuinka se toimii?",
-  "Main Page": "Pääsivu"
+  "Main Page": "Pääsivu",
+  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Syötä sähköpostiosoitteesi tullaksesi VIP-jäseneksi ja voittaaksesi välittömästi taattua oikeaa rahaa!",
+  "Email": "Sähköposti",
+  "Registration": "Rekisteröinti",
+  "The input field cannot be empty": "Syötekenttä ei voi olla tyhjä",
+  "Data entered incorrectly": "Tiedot syötetty väärin"
 }

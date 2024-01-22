@@ -49,5 +49,11 @@
   "To qualify for withdrawals, ensure your first deposit is at least $20 or the equivalent in other currencies.": "A kifizetés jogosultságának biztosítása érdekében győződjön meg róla, hogy az első befizetése legalább 20 dollár vagy annak megfelelő más devizában.",
 
   "How does it work?": "Hogyan működik?",
-  "Main Page": "Főoldal"
+  "Main Page": "Főoldal",
+
+  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Adja meg az e-mail címét, hogy VIP-tag lehessen, és azonnal nyerjen garantált valódi pénzt!",
+  "Email": "E-mail",
+  "Registration": "Regisztráció",
+  "The input field cannot be empty": "A beviteli mező nem lehet üres",
+  "Data entered incorrectly": "Az adatok hibásan lettek megadva"
 }

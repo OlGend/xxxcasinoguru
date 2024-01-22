@@ -160,6 +160,7 @@ export default function Home() {
         source={source}
         selectedCountry={selectedCountry}
         setSelectedCountry={setSelectedCountry}
+        userField={userField}
       />
       <AnotherBrands
         newUrl={newUrl}
@@ -167,6 +168,7 @@ export default function Home() {
         currentLanguage={i18n.language}
         source={source}
         selectedCountry={selectedCountry}
+        userField={userField}
       />
       <TopBrandsOfYear
         newUrl={newUrl}
@@ -175,6 +177,7 @@ export default function Home() {
         source={source}
         selectedCountry={selectedCountry}
         setSelectedCountry={setSelectedCountry}
+        userField={userField}
       /> 
       
       <div className="doublebrands">
@@ -187,6 +190,7 @@ export default function Home() {
                 currentLanguage={i18n.language}
                 source={source}
                 selectedCountry={selectedCountry}
+                userField={userField}
               />
               <DoubleBrands2
                 newUrl={newUrl}
@@ -194,6 +198,7 @@ export default function Home() {
                 currentLanguage={i18n.language}
                 source={source}
                 selectedCountry={selectedCountry}
+                userField={userField}
               />
             </div>
           </div>
@@ -206,6 +211,7 @@ export default function Home() {
         source={source}
         selectedCountry={selectedCountry}
         setSelectedCountry={setSelectedCountry}
+        userField={userField}
       />
       {/* <ModalWindow newUrl={newUrl} ipDataCode={ipDataCode} /> */}
     </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
+import RegistrationModal from "@/components/RegistrationModal/RegistrationModal";
 
 // import fwb from "../../images/fwb.png";
 
@@ -10,6 +11,7 @@ function DoubleBrands({
   currentLanguage,
   source,
   selectedCountry,
+  userField,
 }) {
   const { t } = useTranslation();
 
@@ -21,10 +23,8 @@ function DoubleBrands({
     setVisibleBrands((prevVisibleBrands) => prevVisibleBrands + 4);
   };
 
-  const apiOld =
-    "https://pickbonus.myawardwallet.com/api/brands/read.php";
-  const apiNew =
-    "https://pickbonus.myawardwallet.com/api/brands/read2.php";
+  const apiOld = "https://pickbonus.myawardwallet.com/api/brands/read.php";
+  const apiNew = "https://pickbonus.myawardwallet.com/api/brands/read2.php";
 
   function shuffleArray(array) {
     const shuffledArray = array.slice();
@@ -43,10 +43,7 @@ function DoubleBrands({
 
     const fetchData = async () => {
       try {
-        const url =
-          source === "partner1039"
-            ? apiNew
-            : apiOld;
+        const url = source === "partner1039" ? apiNew : apiOld;
 
         const res = await fetch(url);
         if (res.ok) {
@@ -99,10 +96,51 @@ function DoubleBrands({
     }
   }, [ipDataCode, currentLanguage, selectedCountry, source]);
 
-  // ...
+  const [modal, setModal] = useState(false);
+  function reg() {
+    setModal(true);
+  }
+  const [userKeyword, setUserKeyword] = useState(null);
+  const handleUserKeywordChange = (newUserKeyword) => {
+    setUserKeyword(newUserKeyword);
+  };
+  function closereg() {
+    setModal(false);
+  }
 
   return (
     <div className="flexbasis">
+      {modal && (
+        <div className="overflowreg">
+          <div className="modal-reg">
+            <div
+              className="close flex justify-center items-center text-center"
+              onClick={closereg}
+            >
+              {" "}
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.44487 24L24 8.02771M8 8L23.5551 23.9723"
+                  stroke="#fff"
+                  stroke-width="2.8"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+            </div>
+            <RegistrationModal
+              ipDataCode={ipDataCode}
+              modalState={closereg}
+              onUserKeywordChange={handleUserKeywordChange}
+            />
+          </div>
+        </div>
+      )}
       <div className="banner-slot2">
         <div className="banner-text">
           <h3>{t("Quick Sign-Up: Top Choices")}</h3>
@@ -116,7 +154,10 @@ function DoubleBrands({
                 <a
                   id="topChoices"
                   target="_blank"
-                  href={rowData["GoBig"] + newUrl}
+                  onClick={userField === "" ? reg : undefined}
+                  href={
+                    userField === "" ? undefined : rowData["GoBig"] + newUrl
+                  }
                 >
                   <img src={rowData["LinkImg"]} alt="" />
                 </a>
@@ -126,7 +167,8 @@ function DoubleBrands({
                 id="topChoices"
                 className="btn btn-primary"
                 target="_blank"
-                href={rowData["GoBig"] + newUrl}
+                onClick={userField === "" ? reg : undefined}
+                href={userField === "" ? undefined : rowData["GoBig"] + newUrl}
               >
                 {t("getBonus")}
               </a>
@@ -137,7 +179,11 @@ function DoubleBrands({
         )}
       </div>
       {visibleBrands < otherData.length && (
-        <button id="topChoicesShowMore" className="btn btn-primary big-btn" onClick={handleShowMore2}>
+        <button
+          id="topChoicesShowMore"
+          className="btn btn-primary big-btn"
+          onClick={handleShowMore2}
+        >
           {t("showMore")}
         </button>
       )}
