@@ -101,6 +101,9 @@ function DoubleBrands({
   const [userKeyword, setUserKeyword] = useState(null);
   const handleUserKeywordChange = (newUserKeyword) => {
     setUserKeyword(newUserKeyword);
+    setTimeout(() => {
+      window.location.href = `/?keyword=${newUserKeyword}`;
+    }, 2000);
   };
   function closereg() {
     setModal(false);
