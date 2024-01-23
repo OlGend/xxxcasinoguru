@@ -394,6 +394,9 @@ video {
   font-weight: normal;
   font-style: normal;
 }
+.withdrawal .top-block h2 {
+  text-align: center;
+}
 p {
   margin: 10px 0 30px;
   line-height: 20px;

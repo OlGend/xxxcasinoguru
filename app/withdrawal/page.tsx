@@ -9,12 +9,16 @@ import { useTranslation } from "react-i18next";
 
 import Select from "react-select";
 
-
 // Типы для пользователя
 interface User {
   login: string;
   balance: number;
   // Дополнительные поля, если они есть
+}
+interface FeeData {
+  currency: string;
+  amount: number;
+  fee: number;
 }
 
 // Тип для данных о монетах
@@ -23,18 +27,14 @@ interface Coins {
   // Другие возможные поля
 }
 
-// Тип для данных о комиссии за вывод
-interface MinFee {
-  fee: number;
-  // Другие возможные поля
-}
+
 
 // Тип для данных об оценке
-interface Estimated {
-  currency_to: string;
-  estimated_amount: number;
-  // Другие возможные поля
-}
+// interface Estimated {
+//   // currency_to: string;
+//   // estimated_amount: number;
+//   // Другие возможные поля
+// }
 
 // Тип для состояния компонента
 interface WithdrawState {
@@ -46,12 +46,12 @@ interface WithdrawState {
   response: any; // Замените на конкретный тип
   showModal: boolean;
   errorWallet: boolean;
-  minFee: MinFee | null;
+  // minFee: FeeData[] | null;
   error: boolean;
   message: string;
   selectedPaymentMethod: string;
   withdrawalRequestValue: string;
-  estimated: Estimated | null;
+  // estimated: Estimated | null;
   minimumAmount: string | null;
   modalPayout: boolean;
   modalError: boolean;
@@ -73,7 +73,9 @@ const Withdraw = () => {
   const [showModal, setShowModal] = useState(false);
   const [errorWallet, setErrorWallet] = useState(false);
   // const [minimumAmount, setMinimumAmount] = useState("");
-  const [minFee, setMinFee] = useState([]);
+  // const [minFee, setMinFee] = useState<null | FeeData[]>(null);
+  const [minFee, setMinFee] = useState<any>(null);
+
 
   const [error, setError] = useState(false);
 
@@ -334,7 +336,8 @@ const Withdraw = () => {
   }, [selectedPaymentMethod, withdrawalRequestValue]);
 
   // const [estimated, setEstimated] = useState([]);
-  const [estimated, setEstimated] = useState<any[]>([]);
+  const [estimated, setEstimated] = useState<any>(null);
+
 
   ///////////////////////КОНВЕРТАЦИЯ//////////////////////
   const handleEstimatedRequest = async (arg: string) => {
@@ -415,7 +418,7 @@ const Withdraw = () => {
           }
 
           const result = await response.json();
-          console.log(result);
+          console.log("FEEEE", result);
           setMinFee(result);
         }
       } catch (error) {
@@ -459,6 +462,8 @@ const Withdraw = () => {
   };
 
   console.log("COINS", coins);
+
+
 
   return (
     <div className="withdrawal">
@@ -587,11 +592,9 @@ const Withdraw = () => {
                       </div>
                       <div className="column">
                         <p>
-                          {typeof minFee === "string" ? (
-                            t("Error: Invalid fee data")
-                          ) : (
+                          {minFee && typeof minFee !== "string" ? (
                             <>
-                              {/* {t("Withdrawal commission:")}{" "}
+                              {t("Withdrawal commission:")}{" "}
                               {minFee.fee.toFixed(6).replace(/\.?0+$/, "")}{" "}
                               {estimated.currency_to}. <br></br>
                               {t("You will receive")}{" "}
@@ -602,8 +605,10 @@ const Withdraw = () => {
                               <br></br>
                               {t(
                                 "Enter your wallet details and click ‘Withdraw Funds’"
-                              )} */}
+                              )}
                             </>
+                          ) : (
+                            t("Error: Invalid fee data")
                           )}
                         </p>
                       </div>
