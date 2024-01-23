@@ -231,7 +231,7 @@ const Wheel = () => {
         </Link>
         <iframe
           id="myIframe"
-          src="https://xxxcasinoguru.vercel.app/wheel5/index.html"
+          src="https://www.xxxcasinoguru.com/wheel5/index.html"
           width={iframeWidth}
           height={iframeHeight}
         ></iframe>
