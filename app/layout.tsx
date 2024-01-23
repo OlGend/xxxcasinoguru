@@ -32,7 +32,7 @@ export default function RootLayout({
                   s = document.getElementsByTagName('script')[0];
               t.async = true;
               t.id    = 'cio-tracker';
-              t.setAttribute('data-site-id', 'e5eea51a28a74ee1810f');
+              t.setAttribute('data-site-id', 'b0e62a74234c966830e3');
               t.src = 'https://assets.customer.io/assets/track-eu.js';
               s.parentNode.insertBefore(t, s);
             })();

@@ -10,120 +10,149 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [visible, setVisible] = useState(true);
 
+
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
 
-  // const handleCustomerio = () => {
-  //   // Формируем объект с данными для отправки на первый сервер
-  //   const data = {
-  //     email: email,
-  //     id: userData.id,
-  //     login: userData.login,
-  //     balance: userData.balance,
-  //     country: userData.country,
-  //     tickets: userData.tickets,
-  //   };
-
-  //   // Отправляем POST-запрос на API Customer.io
-  //   fetch(`https://track-eu.customer.io/api/v1/customers/${userData}/events`, {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Authorization: "Bearer 6f29015cd0560e7edf40", // Замените YOUR_API_KEY на ваш ключ API
-  //     },
-  //     body: JSON.stringify({
-  //       name: "Registration", // Замените на имя вашего события
-  //       data: data,
-  //     }),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((responseData) => {
-  //       console.log("Response from Customer.io:", responseData);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error:", error);
-  //     });
-  // };
-
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setIsLoading(true);
-    // Отправляем GET-запрос на первый сервер
-    fetch(
-      `https://pickbonus.myawardwallet.com/api/registration/readdelete.php?`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
-      .then((response) => response.json())
-      .then((responseData) => {
-        // Обработка данных, сохранение их для дальнейшей обработки
-        setUserData(responseData);
-        // После получения данных от первого сервера, отправляем их на второй сервер
-        if (responseData) {
-          sendUserDataToSecondServer(responseData);
-          setIsLoading(false);
-          modalState(false);
-          onUserKeywordChange(responseData.id);
-        } else {
-          setIsLoading(false);
-          modalState(false);
-        }
 
-        // Дополнительная обработка данных...
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    try {
+      const response = await fetch(
+        `https://pickbonus.myawardwallet.com/api/registration/readdelete.php?`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Error fetching data. HTTP Code: ${response.status}`);
+      }
+
+      const responseData = await response.json();
+      setUserData(responseData);
+
+      if (responseData) {
+        await sendUserDataToSecondServer(responseData);
+        setIsLoading(false);
+        modalState(false);
+        onUserKeywordChange(responseData.id);
+      } else {
+        setIsLoading(false);
+        modalState(false);
+      }
+    } catch (error) {
+      console.error("Error:", error.message);
+      setIsLoading(false);
+    }
   };
 
-  const sendUserDataToSecondServer = (userData) => {
-    // Формируем объект с данными для отправки на второй сервер
+  const sendUserDataToSecondServer = async (userData) => {
     const balanceValue = parseFloat(userData.balance).toFixed(2);
-    const secondServerData = {
-      id: userData.id,
-      login: userData.login,
-      VIP: userData.VIP,
-      balance: balanceValue,
-      country: ipDataCode,
-      input: userData.input,
-      password: userData.password,
-      tickets: userData.tickets,
-      winbalance: userData.winbalance,
-      customer: "GURU",
+
+    try {
+      const response = await fetch(
+        `https://pickbonus.myawardwallet.com/api/user/create.php`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: userData.id,
+            login: userData.login,
+            VIP: userData.VIP,
+            balance: balanceValue,
+            country: ipDataCode,
+            input: userData.input,
+            password: userData.password,
+            tickets: userData.tickets,
+            winbalance: userData.winbalance,
+            customer: "GURU",
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Error sending data to the second server. HTTP Code: ${response.status}`);
+      }
+
+      const responseData = await response.json();
+      console.log("Response from second server:", responseData);
+    } catch (error) {
+      console.error("Error:", error.message);
+    }
+  };
+
+  const sendToCustomerIO = async (email, userData) => {
+    const siteId = 'b0e62a74234c966830e3';
+    const apiKey = '8603e3e2dbd3bac74072';
+
+    const credentials = `${siteId}:${apiKey}`;
+    const base64Credentials = btoa(credentials);
+
+    const url = `https://track-eu.customer.io/api/v1/customers/${email}/events`;
+
+    const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': `Basic ${base64Credentials}`,
     };
 
-    // Отправляем POST-запрос на второй сервер
-    fetch(`https://pickbonus.myawardwallet.com/api/user/create.php`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(secondServerData),
-    })
-      .then((response) => response.json())
-      .then((responseData) => {
-        // Обработка данных от второго сервера
-        console.log("Response from second server:", responseData);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  };
+    const eventPayload = {
+        name: 'NEW USER',
+        data: { 
+          id: userData.id,
+          login: userData.login,
+          balance: userData.balance,
+          country: ipDataCode,
+          tickets: userData.tickets,
+          customer: "GURU"
+        },
+    };
 
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+    const requestOptions = {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(eventPayload),
+    };
 
-  const handleSubscribe = () => {
-    setError(""); // Сброс ошибки перед проверкой
+    try {
+        const response = await fetch(url, requestOptions);
+
+        if (!response.ok) {
+            throw new Error(`CustomerIO error. HTTP Code: ${response.status}, Response: ${await response.text()}`);
+        }
+    } catch (error) {
+        console.error('Error sending data to CustomerIO:', error.message);
+    }
+  }
+
+  const handleSubscribe = async () => {
+    setError("");
     setLoading(true);
-
-    // Simulate a loading delay of 2 seconds
-    setTimeout(() => {
-      setLoading(false);
+  
+    try {
+      const response = await fetch(
+        `https://pickbonus.myawardwallet.com/api/registration/readdelete.php?`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+  
+      if (!response.ok) {
+        throw new Error(`Error fetching data. HTTP Code: ${response.status}`);
+      }
+  
+      const responseData = await response.json();
+      setUserData(responseData);
+  
       if (!email) {
         setError(t("The input field cannot be empty"));
       } else if (!/\S+@\S+\.\S+/.test(email)) {
@@ -132,19 +161,24 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
         setIsLoading(false);
         console.log("after", email);
         _cio.identify({
-          id: email,
           email: email,
+          id: email,
         });
         console.log("before", email);
-        handleSubmit();
-
+        await sendToCustomerIO(email, responseData);
+        await handleSubmit();
         setEmail("");
       }
-    }, 1000);
+    } catch (error) {
+      console.error("Error:", error.message);
+      setIsLoading(false);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleInputFocus = () => {
-    setError(""); // Сброс ошибки при фокусировке на инпуте
+    setError("");
   };
 
   useEffect(() => {
@@ -158,6 +192,9 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
+
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   return (
     <div>
