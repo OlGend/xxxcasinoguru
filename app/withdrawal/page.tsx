@@ -27,8 +27,6 @@ interface Coins {
   // Другие возможные поля
 }
 
-
-
 // Тип для данных об оценке
 // interface Estimated {
 //   // currency_to: string;
@@ -75,7 +73,6 @@ const Withdraw = () => {
   // const [minimumAmount, setMinimumAmount] = useState("");
   // const [minFee, setMinFee] = useState<null | FeeData[]>(null);
   const [minFee, setMinFee] = useState<any>(null);
-
 
   const [error, setError] = useState(false);
 
@@ -175,9 +172,8 @@ const Withdraw = () => {
   };
   ///////////////////////////////////////////////////////////////////////
 
+  ////////////////////////////////ЗАПРОС НА ВЫПЛАТУ////////////////////////////////
   const phpScriptUrl =
-    ////////////////////////////////ЗАПРОС НА ВЫПЛАТУ////////////////////////////////
-
     "https://pickbonus.myawardwallet.com/api/payment/payment.php";
 
   const handlePayoutRequest = async () => {
@@ -186,71 +182,71 @@ const Withdraw = () => {
       const apiKey = "MG5SRC6-HFBMACK-MMSR9QW-1EST6QC";
       const jwtToken = await authenticateUser(); // Получаем новый токен перед каждым запросом
       console.log("JWT", jwtToken);
-      console.log("estimated", estimated)
+      console.log("estimated", estimated);
+
+    
 
       const myHeaders = new Headers();
       myHeaders.append("x-api-key", apiKey);
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Authorization", `Bearer ${jwtToken}`);
 
-    
-        const payoutData = {
-          ipn_callback_url: "https://nowpayments.io",
-          withdrawals: [
-            {
-              address: adressPayment,
-              currency: selectedPaymentMethod,
-              amount: parseFloat(estimated[0].estimated_amount),
-              ipn_callback_url: "https://nowpayments.io",
-              userData: user,
-              userWithdraw: withdrawalRequestValue,
-            },
-          ],
-        };
-        console.log("type", user);
+      const payoutData = {
+        ipn_callback_url: "https://nowpayments.io",
+        withdrawals: [
+          {
+            address: adressPayment,
+            currency: selectedPaymentMethod,
+            amount: parseFloat(estimated.estimated_amount),
+            ipn_callback_url: "https://nowpayments.io",
+            userData: user,
+            userWithdraw: withdrawalRequestValue,
+          },
+        ],
+      };
+      console.log("type", user);
 
-        const requestOptions: RequestInit = {
-          method: "POST",
-          headers: myHeaders,
-          body: JSON.stringify({ ...payoutData }),
-          redirect: "follow" as RequestRedirect,
-        };
+      const requestOptions: RequestInit = {
+        method: "POST",
+        headers: myHeaders,
+        body: JSON.stringify({ ...payoutData }),
+        redirect: "follow",
+      };
 
-        const response = await fetch(phpScriptUrl, requestOptions);
-        if (response.ok) {
-          const result = await response.text();
+      const response = await fetch(phpScriptUrl, requestOptions);
+      if (response.ok) {
+        const result = await response.text();
 
-          // setErrorMin(t("Withdrawal successful"));
+        // setErrorMin(t("Withdrawal successful"));
 
-          setModalError(!modalError);
-          setModalPayout(!modalPayout);
+        setModalError(!modalError);
+        setModalPayout(!modalPayout);
+      } else {
+        if (response.status === 400) {
+          const result = await response.json();
+          console.error("Failed to make payout request:", result.error);
+          // Тут ви можете вивести повідомлення про помилку користувачу
+          // setError(true);
+          // setErrorMessage(result.error);
+          setMessage(result.error);
+        } else if (response.status === 500) {
+          console.error(
+            "Failed to make payout request:",
+            "Internal Server Error"
+          );
+          // Тут ви можете вивести інше повідомлення про помилку користувачу
+          // setError(true);
+          // setErrorMessage("Internal Server Error");
+          setShowModal(true);
+          setMessage("Internal Server Error");
         } else {
-          if (response.status === 400) {
-            const result = await response.json();
-            console.error("Failed to make payout request:", result.error);
-            // Тут ви можете вивести повідомлення про помилку користувачу
-            // setError(true);
-            // setErrorMessage(result.error);
-            setMessage(result.error);
-          } else if (response.status === 500) {
-            console.error(
-              "Failed to make payout request:",
-              "Internal Server Error"
-            );
-            // Тут ви можете вивести інше повідомлення про помилку користувачу
-            // setError(true);
-            // setErrorMessage("Internal Server Error");
-            setShowModal(true);
-            setMessage("Internal Server Error");
-          } else {
-            console.error("Failed to make payout request:", response.status);
-            // setError(true);
-            setShowModal(true);
+          console.error("Failed to make payout request:", response.status);
+          // setError(true);
+          setShowModal(true);
 
-            setMessage(`Error: ${response.status}`);
-          }
+          setMessage(`Error: ${response.status}`);
         }
-      
+      }
     } catch (error) {
       console.error("Error during payout request:", error);
       // setError(true);
@@ -338,7 +334,6 @@ const Withdraw = () => {
 
   // const [estimated, setEstimated] = useState([]);
   const [estimated, setEstimated] = useState<any>(null);
-
 
   ///////////////////////КОНВЕРТАЦИЯ//////////////////////
   const handleEstimatedRequest = async (arg: string) => {
@@ -463,8 +458,6 @@ const Withdraw = () => {
   };
 
   console.log("COINS", coins);
-
-
 
   return (
     <div className="withdrawal">
