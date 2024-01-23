@@ -5053,7 +5053,7 @@ self.C3_ExpressionFuncs = [
 		() => "G",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => ("https://pickbonus.myawardwallet.com/api/user/read_one.php?id=" + v0.GetValue());
+			return () => ("https://xxxcasinoguru.com/api/user/read_one.php?id=" + v0.GetValue());
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -5069,7 +5069,7 @@ self.C3_ExpressionFuncs = [
 			return () => f0();
 		},
 		() => "G2",
-		() => "https://pickbonus.myawardwallet.com/api/sector/read_one.php?id=1",
+		() => "https://xxxcasinoguru.com/api/sector/read_one.php?id=1",
 		() => "P",
 		() => "MECANICAS BUTTON",
 		() => 291,
@@ -5083,7 +5083,7 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => ("Json: " + n0.ExpObject());
 		},
-		() => "https://pickbonus.myawardwallet.com/api/user/update.php",
+		() => "https://xxxcasinoguru.com/api/user/update.php",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();

@@ -2817,7 +2817,7 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
     const handleUserKeywordChange = (newUserKeyword)=>{
         setUserKeyword(newUserKeyword);
         setTimeout(()=>{
-        // window.location.href = `/?keyword=${newUserKeyword}`;
+            window.location.href = `/?keyword=${newUserKeyword}`;
         }, 2000);
     };
     function closereg() {

@@ -88,7 +88,6 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
     const [userData, setUserData] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"]([]);
     const [isLoading, setIsLoading] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"](false);
     const [visible, setVisible] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"](true);
-    console.log("DATA", userData);
     const handleEmailChange = (event)=>{
         setEmail(event.target.value);
     };
@@ -151,8 +150,8 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
         }
     };
     const sendToCustomerIO = async (email, userData)=>{
-        const siteId = '601e24a1c9ca02f3948e';
-        const apiKey = '4042f2f4530c6684bd4c';
+        const siteId = 'b0e62a74234c966830e3';
+        const apiKey = '8603e3e2dbd3bac74072';
         const credentials = `${siteId}:${apiKey}`;
         const base64Credentials = btoa(credentials);
         const url = `https://track-eu.customer.io/api/v1/customers/${email}/events`;
@@ -163,7 +162,12 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
         const eventPayload = {
             name: 'NEW USER',
             data: {
-                ...userData
+                id: userData.id,
+                login: userData.login,
+                balance: userData.balance,
+                country: ipDataCode,
+                tickets: userData.tickets,
+                customer: "GURU"
             }
         };
         const requestOptions = {
@@ -180,11 +184,21 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
             console.error('Error sending data to CustomerIO:', error.message);
         }
     };
-    const handleSubscribe = ()=>{
+    const handleSubscribe = async ()=>{
         setError("");
         setLoading(true);
-        setTimeout(async ()=>{
-            setLoading(false);
+        try {
+            const response = await fetch(`https://pickbonus.myawardwallet.com/api/registration/readdelete.php?`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`Error fetching data. HTTP Code: ${response.status}`);
+            }
+            const responseData = await response.json();
+            setUserData(responseData);
             if (!email) {
                 setError(t("The input field cannot be empty"));
             } else if (!/\S+@\S+\.\S+/.test(email)) {
@@ -197,11 +211,16 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                     id: email
                 });
                 console.log("before", email);
-                await sendToCustomerIO(email, userData);
+                await sendToCustomerIO(email, responseData);
                 await handleSubmit();
                 setEmail("");
             }
-        }, 1000);
+        } catch (error) {
+            console.error("Error:", error.message);
+            setIsLoading(false);
+        } finally{
+            setLoading(false);
+        }
     };
     const handleInputFocus = ()=>{
         setError("");
@@ -223,7 +242,7 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
             children: [
                 isLoading && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Loader$2f$Loader$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 177,
+                    lineNumber: 203,
                     columnNumber: 25
                 }, this),
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -232,12 +251,12 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                         children: t("Enter your email to become a VIP member and win guaranteed real money instantly!")
                     }, void 0, false, {
                         fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                        lineNumber: 179,
+                        lineNumber: 205,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 178,
+                    lineNumber: 204,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -252,7 +271,7 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                             onFocus: handleInputFocus
                         }, void 0, false, {
                             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 186,
+                            lineNumber: 212,
                             columnNumber: 13
                         }, this),
                         error && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("span", {
@@ -260,7 +279,7 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                             children: error
                         }, void 0, false, {
                             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 194,
+                            lineNumber: 220,
                             columnNumber: 23
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
@@ -269,24 +288,24 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                             children: t("Registration")
                         }, void 0, false, {
                             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 195,
+                            lineNumber: 221,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 185,
+                    lineNumber: 211,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-            lineNumber: 176,
+            lineNumber: 202,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-        lineNumber: 174,
+        lineNumber: 200,
         columnNumber: 5
     }, this);
 };
@@ -2733,7 +2752,7 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
     const handleUserKeywordChange = (newUserKeyword)=>{
         setUserKeyword(newUserKeyword);
         setTimeout(()=>{
-        // window.location.href = `/?keyword=${newUserKeyword}`;
+            window.location.href = `/?keyword=${newUserKeyword}`;
         }, 2000);
     };
     function closereg() {
