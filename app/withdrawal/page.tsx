@@ -186,13 +186,14 @@ const Withdraw = () => {
       const apiKey = "MG5SRC6-HFBMACK-MMSR9QW-1EST6QC";
       const jwtToken = await authenticateUser(); // Получаем новый токен перед каждым запросом
       console.log("JWT", jwtToken);
+      console.log("estimated", estimated)
 
       const myHeaders = new Headers();
       myHeaders.append("x-api-key", apiKey);
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Authorization", `Bearer ${jwtToken}`);
 
-      if (Array.isArray(estimated) && estimated.length > 0) {
+    
         const payoutData = {
           ipn_callback_url: "https://nowpayments.io",
           withdrawals: [
@@ -249,7 +250,7 @@ const Withdraw = () => {
             setMessage(`Error: ${response.status}`);
           }
         }
-      }
+      
     } catch (error) {
       console.error("Error during payout request:", error);
       // setError(true);
