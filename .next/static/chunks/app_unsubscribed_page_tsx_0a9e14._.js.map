@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sections": [
+    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/app/unsubscribed/page.tsx"],"sourcesContent":["\"use client\";\n\n\nconst Unsubscribed = () => {\n  return (\n    <div>\n      <div className=\"unsubscribed\">\n        <div className=\"container\">\n          `<h2 className=\"text-center\">You are unsubscribed</h2>\n        </div>\n      </div>\n    </div>\n  );\n};\n\nexport default Unsubscribed;\n"],"names":[],"mappings":";;;;;AAAA;;AAGA,MAAM,eAAe;IACnB,qBACE,wLAAC;kBACC,cAAA,wLAAC;YAAI,WAAU;sBACb,cAAA,wLAAC;gBAAI,WAAU;;oBAAY;kCACxB,wLAAC;wBAAG,WAAU;kCAAc;;;;;;;;;;;;;;;;;;;;;;AAKvC;KAVM;uCAYS"}},
+    {"offset": {"line": 49, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
