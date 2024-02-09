@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -8,7 +7,6 @@ import Loader from "@/components/Loader/Loader";
 import { useSearchParams } from "next/navigation";
 
 import RegistrationModal from "@/components/RegistrationModal/RegistrationModal";
-
 
 
 function TopBrands({
@@ -25,6 +23,7 @@ function TopBrands({
   const [topData, setTopData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -33,6 +32,16 @@ function TopBrands({
     centerPadding: "20px",
     centerMode: true,
   };
+
+  const hash = window.location.hash; // Получаем фрагмент URL-адреса, включая символ #
+  const hashWithoutSymbol = window.location.hash.substring(1); // Получаем фрагмент URL-адреса без символа #
+
+  if (hashWithoutSymbol.includes('unsubscribed')) {
+    // Если содержит, выполните необходимые действия
+    console.log('URL содержит "unsubscribed"');
+    window.location.href = '/unsubscribed'; 
+  }
+  
 
   const urlParams = useSearchParams();
   const brandValue = urlParams.get("brand");
@@ -58,7 +67,7 @@ function TopBrands({
       setIsLoading(true);
       try {
         const url = source === "partner1039" ? apiNew : apiOld;
-        console.log("URL", url);
+     
         const res = await fetch(url);
         if (res.ok) {
           const responseData = await res.json();
@@ -132,8 +141,6 @@ function TopBrands({
 
   const combinedData = [...topData, ...data];
 
-
-  
   const [modal, setModal] = useState(false);
   function reg() {
     setModal(true);
@@ -141,17 +148,13 @@ function TopBrands({
   const [userKeyword, setUserKeyword] = useState(null);
   const handleUserKeywordChange = (newUserKeyword) => {
     setUserKeyword(newUserKeyword);
-      setTimeout(() => {
+    setTimeout(() => {
       window.location.href = `/?keyword=${newUserKeyword}`;
     }, 2000);
   };
   function closereg() {
     setModal(false);
   }
-
- 
-
-
 
   return (
     <div className="bg1">
@@ -178,7 +181,11 @@ function TopBrands({
                 ></path>
               </svg>
             </div>
-            <RegistrationModal ipDataCode={ipDataCode} modalState={closereg} onUserKeywordChange={handleUserKeywordChange} />
+            <RegistrationModal
+              ipDataCode={ipDataCode}
+              modalState={closereg}
+              onUserKeywordChange={handleUserKeywordChange}
+            />
           </div>
         </div>
       )}

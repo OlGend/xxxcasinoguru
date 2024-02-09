@@ -9,10 +9,10 @@ import TopBrandsOfYear from "@/components/TopBrandsOfYear/TopBrandsOfYear";
 import DoubleBrands from "@/components/DoubleBrands/DoubleBrands";
 import DoubleBrands2 from "@/components/DoubleBrands2/DoubleBrands2";
 
-
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
+
 
   const [ipData, setIpData] = useState(null);
   const [ipDataCode, setIpDataCode] = useState(null);
@@ -63,7 +63,6 @@ export default function Home() {
         setIpData(data.country_name);
         setIpDataCode(data.country);
         setSelectedCountry(data.country.toLowerCase());
-      
       })
       .catch((error) => {
         console.error("Ошибка при запросе к API:", error);
@@ -80,10 +79,7 @@ export default function Home() {
     const currentSource: string | null = searchParams.get("keyword");
     setUserField(currentSource !== null ? currentSource : "");
 
-    if (
-      currentSource !== null &&
-      (currentSource.includes("partner1039"))
-    ) {
+    if (currentSource !== null && currentSource.includes("partner1039")) {
       // Если в строке есть "partner1039" или "partner1041", вырезаем и добавляем в setSource
       const partnerIndex = currentSource.indexOf("partner");
       const partnerText = currentSource.substring(
@@ -120,7 +116,6 @@ export default function Home() {
     // Сохранить в localStorage
     localStorage.setItem("selectedCountry", country);
   };
-
 
   return (
     <div>
@@ -178,8 +173,8 @@ export default function Home() {
         selectedCountry={selectedCountry}
         setSelectedCountry={setSelectedCountry}
         userField={userField}
-      /> 
-      
+      />
+
       <div className="doublebrands">
         <div className="another-brands">
           <div className="other-brands">
