@@ -36,7 +36,7 @@ function TopBrands({
   const hash = window.location.hash; // Получаем фрагмент URL-адреса, включая символ #
   const hashWithoutSymbol = window.location.hash.substring(1); // Получаем фрагмент URL-адреса без символа #
 
-  if (hashWithoutSymbol.includes('unsubscribed')) {
+  if (typeof window !== 'undefined' && hashWithoutSymbol.includes('unsubscribed')) {
     // Если содержит, выполните необходимые действия
     console.log('URL содержит "unsubscribed"');
     window.location.href = '/unsubscribed'; 
