@@ -98,9 +98,7 @@ function OtherBrands({
   }, [ipDataCode, currentLanguage, selectedCountry, source]);
 
   const [modal, setModal] = useState(false);
-  function reg() {
-    setModal(true);
-  }
+
   const [userKeyword, setUserKeyword] = useState(null);
   const handleUserKeywordChange = (newUserKeyword) => {
     setUserKeyword(newUserKeyword);
