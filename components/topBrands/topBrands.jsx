@@ -145,10 +145,9 @@ function TopBrands({
   const handleUserKeywordChange = (newUserKeyword) => {
     setUserKeyword(newUserKeyword);
     setTimeout(() => {
-
-      window.location.href = `/?keyword=${newUserKeyword}`;
       const url = `${registrationLink}/?keyword=${newUserKeyword}&source=0&creative_id=MAW`;
       window.open(url, '_blank');
+      window.location.href = `/?keyword=${newUserKeyword}`;
     }, 2000);
   };
   function closereg() {
