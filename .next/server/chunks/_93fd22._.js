@@ -399,11 +399,17 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
     const handleUserKeywordChange = (newUserKeyword)=>{
         setUserKeyword(newUserKeyword);
         setTimeout(()=>{
-            window.location.href = `/?keyword=${newUserKeyword}`;
+            window.location.href = `${registrationLink}/?keyword=${newUserKeyword}&source=0&creative_id=MAW`;
         }, 2000);
     };
     function closereg() {
         setModal(false);
+    }
+    const [registrationLink, setRegistrationLink] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"]("");
+    // Остальной код компонента
+    function reg(rowData) {
+        setRegistrationLink(rowData["GoBig"]);
+        setModal(true);
     }
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
         className: "flexbasis",
@@ -431,18 +437,18 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                                         "stroke-linecap": "round"
                                     }, void 0, false, {
                                         fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                                        lineNumber: 131,
+                                        lineNumber: 139,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                                    lineNumber: 124,
+                                    lineNumber: 132,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                            lineNumber: 119,
+                            lineNumber: 127,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$RegistrationModal$2f$RegistrationModal$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -451,18 +457,18 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                             onUserKeywordChange: handleUserKeywordChange
                         }, void 0, false, {
                             fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                            lineNumber: 139,
+                            lineNumber: 147,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                    lineNumber: 118,
+                    lineNumber: 126,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                lineNumber: 117,
+                lineNumber: 125,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -473,17 +479,17 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                         children: t("Quick Sign-Up: Top Choices")
                     }, void 0, false, {
                         fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                        lineNumber: 149,
+                        lineNumber: 157,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                    lineNumber: 148,
+                    lineNumber: 156,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                lineNumber: 147,
+                lineNumber: 155,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -496,62 +502,62 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                         id: "topChoices",
                                         target: "_blank",
-                                        onClick: userField === "" ? reg : undefined,
+                                        onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                         href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                         children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                             src: rowData["LinkImg"],
                                             alt: ""
                                         }, void 0, false, {
                                             fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                                            lineNumber: 165,
+                                            lineNumber: 173,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                                        lineNumber: 157,
+                                        lineNumber: 165,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                                         children: rowData["OurOfferContent"]
                                     }, void 0, false, {
                                         fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                                        lineNumber: 167,
+                                        lineNumber: 175,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                                lineNumber: 156,
+                                lineNumber: 164,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                 id: "topChoices",
                                 className: "btn btn-primary",
                                 target: "_blank",
-                                onClick: userField === "" ? reg : undefined,
+                                onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                 href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                 children: t("getBonus")
                             }, void 0, false, {
                                 fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                                lineNumber: 169,
+                                lineNumber: 177,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, index, true, {
                         fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                        lineNumber: 155,
+                        lineNumber: 163,
                         columnNumber: 13
                     }, this)) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                     className: "ti",
                     children: "No brands available for your country"
                 }, void 0, false, {
                     fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                    lineNumber: 181,
+                    lineNumber: 189,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                lineNumber: 152,
+                lineNumber: 160,
                 columnNumber: 7
             }, this),
             visibleBrands < otherData.length && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
@@ -561,13 +567,13 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                 children: t("showMore")
             }, void 0, false, {
                 fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-                lineNumber: 185,
+                lineNumber: 193,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "<[project]/components/DoubleBrands2/DoubleBrands2.jsx>",
-        lineNumber: 115,
+        lineNumber: 123,
         columnNumber: 5
     }, this);
 }
@@ -660,11 +666,17 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
     const handleUserKeywordChange = (newUserKeyword)=>{
         setUserKeyword(newUserKeyword);
         setTimeout(()=>{
-            window.location.href = `/?keyword=${newUserKeyword}`;
+            window.location.href = `${registrationLink}/?keyword=${newUserKeyword}&source=0&creative_id=MAW`;
         }, 2000);
     };
     function closereg() {
         setModal(false);
+    }
+    const [registrationLink, setRegistrationLink] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"]("");
+    // Остальной код компонента
+    function reg(rowData) {
+        setRegistrationLink(rowData["GoBig"]);
+        setModal(true);
     }
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
         className: "flexbasis",
@@ -692,18 +704,18 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                                         "stroke-linecap": "round"
                                     }, void 0, false, {
                                         fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                                        lineNumber: 129,
+                                        lineNumber: 138,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                                    lineNumber: 122,
+                                    lineNumber: 131,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                            lineNumber: 117,
+                            lineNumber: 126,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$RegistrationModal$2f$RegistrationModal$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -712,18 +724,18 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                             onUserKeywordChange: handleUserKeywordChange
                         }, void 0, false, {
                             fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                            lineNumber: 137,
+                            lineNumber: 146,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                    lineNumber: 116,
+                    lineNumber: 125,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                lineNumber: 115,
+                lineNumber: 124,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -734,17 +746,17 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                         children: t("Hottest Bonus Deals")
                     }, void 0, false, {
                         fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                        lineNumber: 147,
+                        lineNumber: 156,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                    lineNumber: 146,
+                    lineNumber: 155,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                lineNumber: 145,
+                lineNumber: 154,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -757,62 +769,62 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                         id: "hottestBonus",
                                         target: "_blank",
-                                        onClick: userField === "" ? reg : undefined,
+                                        onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                         href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                         children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                             src: rowData["LinkImg"],
                                             alt: ""
                                         }, void 0, false, {
                                             fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                                            lineNumber: 163,
+                                            lineNumber: 172,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                                        lineNumber: 155,
+                                        lineNumber: 164,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                                         children: rowData["OurOfferContent"]
                                     }, void 0, false, {
                                         fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                                        lineNumber: 165,
+                                        lineNumber: 174,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                                lineNumber: 154,
+                                lineNumber: 163,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                 id: "hottestBonus",
                                 className: "btn btn-primary",
                                 target: "_blank",
-                                onClick: userField === "" ? reg : undefined,
+                                onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                 href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                 children: t("getBonus")
                             }, void 0, false, {
                                 fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                                lineNumber: 167,
+                                lineNumber: 176,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, index, true, {
                         fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                        lineNumber: 153,
+                        lineNumber: 162,
                         columnNumber: 13
                     }, this)) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                     className: "ti",
                     children: t("No brands available for your country")
                 }, void 0, false, {
                     fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                    lineNumber: 179,
+                    lineNumber: 188,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                lineNumber: 150,
+                lineNumber: 159,
                 columnNumber: 7
             }, this),
             visibleBrands < otherData.length && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
@@ -822,13 +834,13 @@ function DoubleBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCou
                 children: t("showMore")
             }, void 0, false, {
                 fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-                lineNumber: 183,
+                lineNumber: 192,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "<[project]/components/DoubleBrands/DoubleBrands.jsx>",
-        lineNumber: 113,
+        lineNumber: 122,
         columnNumber: 5
     }, this);
 }
@@ -1466,11 +1478,17 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
     const handleUserKeywordChange = (newUserKeyword)=>{
         setUserKeyword(newUserKeyword);
         setTimeout(()=>{
-            window.location.href = `/?keyword=${newUserKeyword}`;
+            window.location.href = `${registrationLink}/?keyword=${newUserKeyword}&source=0&creative_id=MAW`;
         }, 2000);
     };
     function closereg() {
         setModal(false);
+    }
+    const [registrationLink, setRegistrationLink] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"]("");
+    // Остальной код компонента
+    function reg(rowData) {
+        setRegistrationLink(rowData["GoBig"]);
+        setModal(true);
     }
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
         className: "bg2 bgns",
@@ -1498,18 +1516,18 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                                         "stroke-linecap": "round"
                                     }, void 0, false, {
                                         fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                        lineNumber: 206,
+                                        lineNumber: 213,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                    lineNumber: 199,
+                                    lineNumber: 206,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                            lineNumber: 194,
+                            lineNumber: 201,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$RegistrationModal$2f$RegistrationModal$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1518,18 +1536,18 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                             onUserKeywordChange: handleUserKeywordChange
                         }, void 0, false, {
                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                            lineNumber: 214,
+                            lineNumber: 221,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                    lineNumber: 193,
+                    lineNumber: 200,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                lineNumber: 192,
+                lineNumber: 199,
                 columnNumber: 9
             }, this),
             data.length > 0 && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -1541,7 +1559,7 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                             children: t("Trendsetting Brands of 2024")
                         }, void 0, false, {
                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                            lineNumber: 221,
+                            lineNumber: 228,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -1553,12 +1571,12 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                                         children: t("Trendsetting Brands of 2024")
                                     }, void 0, false, {
                                         fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                        lineNumber: 225,
+                                        lineNumber: 232,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                    lineNumber: 224,
+                                    lineNumber: 231,
                                     columnNumber: 15
                                 }, this),
                                 data.length > 3 && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$slick$2f$lib$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1572,19 +1590,19 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                             id: "brandsOfYear",
                                                             target: "_blank",
-                                                            onClick: userField === "" ? reg : undefined,
+                                                            onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                             href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                             children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                                                 src: rowData["LinkImg"],
                                                                 alt: ""
                                                             }, void 0, false, {
                                                                 fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                                lineNumber: 244,
+                                                                lineNumber: 253,
                                                                 columnNumber: 29
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                            lineNumber: 234,
+                                                            lineNumber: 241,
                                                             columnNumber: 27
                                                         }, this),
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
@@ -1592,13 +1610,13 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                                                             children: rowData["OurOfferContent"]
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                            lineNumber: 246,
+                                                            lineNumber: 255,
                                                             columnNumber: 27
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                    lineNumber: 233,
+                                                    lineNumber: 240,
                                                     columnNumber: 25
                                                 }, this),
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -1606,34 +1624,34 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                                                         id: "brandsOfYear",
                                                         className: "btn btn-primary big-btn",
                                                         target: "_blank",
-                                                        onClick: userField === "" ? reg : undefined,
+                                                        onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                         href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                         children: t("proceed")
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                        lineNumber: 249,
+                                                        lineNumber: 258,
                                                         columnNumber: 27
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                    lineNumber: 248,
+                                                    lineNumber: 257,
                                                     columnNumber: 25
                                                 }, this)
                                             ]
                                         }, index, true, {
                                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                            lineNumber: 232,
+                                            lineNumber: 239,
                                             columnNumber: 23
                                         }, this)) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("li", {
                                         children: t("No brands available for your country")
                                     }, void 0, false, {
                                         fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                        lineNumber: 266,
+                                        lineNumber: 277,
                                         columnNumber: 21
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                    lineNumber: 229,
+                                    lineNumber: 236,
                                     columnNumber: 17
                                 }, this),
                                 data.length < 4 && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -1647,19 +1665,19 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                             id: "brandsOfYear",
                                                             target: "_blank",
-                                                            onClick: userField === "" ? reg : undefined,
+                                                            onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                             href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                             children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                                                 src: rowData["LinkImg"],
                                                                 alt: ""
                                                             }, void 0, false, {
                                                                 fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                                lineNumber: 285,
+                                                                lineNumber: 298,
                                                                 columnNumber: 27
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                            lineNumber: 275,
+                                                            lineNumber: 286,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
@@ -1667,13 +1685,13 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                                                             children: rowData["OurOfferContent"]
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                            lineNumber: 287,
+                                                            lineNumber: 300,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                    lineNumber: 274,
+                                                    lineNumber: 285,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -1681,34 +1699,34 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                                                         id: "brandsOfYear",
                                                         className: "btn btn-primary big-btn",
                                                         target: "_blank",
-                                                        onClick: userField === "" ? reg : undefined,
+                                                        onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                         href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                         children: t("proceed")
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                        lineNumber: 290,
+                                                        lineNumber: 303,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                    lineNumber: 289,
+                                                    lineNumber: 302,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, index, true, {
                                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                            lineNumber: 273,
+                                            lineNumber: 284,
                                             columnNumber: 21
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                    lineNumber: 271,
+                                    lineNumber: 282,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                            lineNumber: 223,
+                            lineNumber: 230,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -1722,19 +1740,19 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                     id: "brandsOfYear",
                                                     target: "_blank",
-                                                    onClick: userField === "" ? reg : undefined,
+                                                    onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                     href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                     children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                                         src: rowData["LinkImg"],
                                                         alt: ""
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                        lineNumber: 324,
+                                                        lineNumber: 341,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                    lineNumber: 314,
+                                                    lineNumber: 329,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
@@ -1742,13 +1760,13 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                                                     children: rowData["OurOfferContent"]
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                    lineNumber: 326,
+                                                    lineNumber: 343,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                            lineNumber: 313,
+                                            lineNumber: 328,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -1756,51 +1774,51 @@ function TopBrandsOfYear({ newUrl, ipDataCode, currentLanguage, source, selected
                                                 id: "brandsOfYear",
                                                 className: "btn btn-primary big-btn",
                                                 target: "_blank",
-                                                onClick: userField === "" ? reg : undefined,
+                                                onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                 href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                 children: t("proceed")
                                             }, void 0, false, {
                                                 fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                                lineNumber: 329,
+                                                lineNumber: 346,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                            lineNumber: 328,
+                                            lineNumber: 345,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                    lineNumber: 312,
+                                    lineNumber: 327,
                                     columnNumber: 19
                                 }, this)) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("li", {
                                 children: t("No brands available for your country")
                             }, void 0, false, {
                                 fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                                lineNumber: 346,
+                                lineNumber: 365,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
                             fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                            lineNumber: 309,
+                            lineNumber: 324,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                    lineNumber: 220,
+                    lineNumber: 227,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-                lineNumber: 219,
+                lineNumber: 226,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "<[project]/components/TopBrandsOfYear/TopBrandsOfYear.jsx>",
-        lineNumber: 190,
+        lineNumber: 197,
         columnNumber: 5
     }, this);
 }
@@ -1894,11 +1912,17 @@ function AnotherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCo
     const handleUserKeywordChange = (newUserKeyword)=>{
         setUserKeyword(newUserKeyword);
         setTimeout(()=>{
-            window.location.href = `/?keyword=${newUserKeyword}`;
+            window.location.href = `${registrationLink}/?keyword=${newUserKeyword}&source=0&creative_id=MAW`;
         }, 2000);
     };
     function closereg() {
         setModal(false);
+    }
+    const [registrationLink, setRegistrationLink] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"]("");
+    // Остальной код компонента
+    function reg(rowData) {
+        setRegistrationLink(rowData["GoBig"]);
+        setModal(true);
     }
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
         children: [
@@ -1925,18 +1949,18 @@ function AnotherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCo
                                         "stroke-linecap": "round"
                                     }, void 0, false, {
                                         fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                        lineNumber: 132,
+                                        lineNumber: 139,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                    lineNumber: 125,
+                                    lineNumber: 132,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                            lineNumber: 120,
+                            lineNumber: 127,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$RegistrationModal$2f$RegistrationModal$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1945,18 +1969,18 @@ function AnotherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCo
                             onUserKeywordChange: handleUserKeywordChange
                         }, void 0, false, {
                             fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                            lineNumber: 140,
+                            lineNumber: 147,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                    lineNumber: 119,
+                    lineNumber: 126,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                lineNumber: 118,
+                lineNumber: 125,
                 columnNumber: 9
             }, this),
             otherData.length > 0 && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -1975,14 +1999,14 @@ function AnotherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCo
                                             children: t("FORTUNE WHEEL BRANDS")
                                         }, void 0, false, {
                                             fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                            lineNumber: 155,
+                                            lineNumber: 162,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                                             children: t("Pick a brand below, make first deposit and win real cash!")
                                         }, void 0, false, {
                                             fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                            lineNumber: 156,
+                                            lineNumber: 163,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1992,18 +2016,18 @@ function AnotherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCo
                                             children: t("Spin the Roulette")
                                         }, void 0, false, {
                                             fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                            lineNumber: 161,
+                                            lineNumber: 168,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                    lineNumber: 154,
+                                    lineNumber: 161,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                lineNumber: 153,
+                                lineNumber: 160,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2014,7 +2038,7 @@ function AnotherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCo
                                         children: t("To qualify for withdrawals, ensure your first deposit is at least $20 or the equivalent in other currencies.")
                                     }, void 0, false, {
                                         fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                        lineNumber: 172,
+                                        lineNumber: 179,
                                         columnNumber: 17
                                     }, this),
                                     otherData.length > 0 ? otherData.slice(0, visibleBrands).map((rowData, index)=>/*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2025,63 +2049,63 @@ function AnotherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCo
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                             id: "FW_Brands_Main",
                                                             target: "_blank",
-                                                            onClick: userField === "" ? reg : undefined,
+                                                            onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                             href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                             children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                                                 src: rowData["LinkImg"],
                                                                 alt: ""
                                                             }, void 0, false, {
                                                                 fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                                                lineNumber: 191,
+                                                                lineNumber: 200,
                                                                 columnNumber: 27
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                                            lineNumber: 181,
+                                                            lineNumber: 188,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                                                             children: rowData["OurOfferContent"]
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                                            lineNumber: 193,
+                                                            lineNumber: 202,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                                    lineNumber: 180,
+                                                    lineNumber: 187,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                     id: "FW_Brands_Main",
                                                     className: "btn btn-primary",
                                                     target: "_blank",
-                                                    onClick: userField === "" ? reg : undefined,
+                                                    onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                     href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                     children: t("getBonus")
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                                    lineNumber: 195,
+                                                    lineNumber: 204,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, index, true, {
                                             fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                            lineNumber: 179,
+                                            lineNumber: 186,
                                             columnNumber: 21
                                         }, this)) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                                         className: "ti",
                                         children: t("No brands available for your country")
                                     }, void 0, false, {
                                         fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                        lineNumber: 211,
+                                        lineNumber: 222,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                lineNumber: 171,
+                                lineNumber: 178,
                                 columnNumber: 15
                             }, this),
                             visibleBrands < otherData.length && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
@@ -2091,29 +2115,29 @@ function AnotherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCo
                                 children: t("showMore")
                             }, void 0, false, {
                                 fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                                lineNumber: 218,
+                                lineNumber: 229,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                        lineNumber: 151,
+                        lineNumber: 158,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                    lineNumber: 150,
+                    lineNumber: 157,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-                lineNumber: 149,
+                lineNumber: 156,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "<[project]/components/AnotherBrands/AnotherBrands.jsx>",
-        lineNumber: 116,
+        lineNumber: 123,
         columnNumber: 5
     }, this);
 }
@@ -2208,7 +2232,6 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
         }
         return shuffledArray;
     }
-    console.log("============", source);
     __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"](()=>{
         const geo = selectedCountry.toUpperCase();
         console.log("GEO", geo);
@@ -2283,18 +2306,21 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
     };
     const allImageSrc = allImages[currentLanguage] || allImages.en;
     const [modal, setModal] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"](false);
-    function reg() {
-        setModal(true);
-    }
     const [userKeyword, setUserKeyword] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"](null);
     const handleUserKeywordChange = (newUserKeyword)=>{
         setUserKeyword(newUserKeyword);
         setTimeout(()=>{
-            window.location.href = `/?keyword=${newUserKeyword}`;
+            window.location.href = `${registrationLink}/?keyword=${newUserKeyword}&source=0&creative_id=MAW`;
         }, 2000);
     };
     function closereg() {
         setModal(false);
+    }
+    const [registrationLink, setRegistrationLink] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"]("");
+    // Остальной код компонента
+    function reg(rowData) {
+        setRegistrationLink(rowData["GoBig"]);
+        setModal(true);
     }
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
         className: "bg2 bgns",
@@ -2322,18 +2348,18 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                         "stroke-linecap": "round"
                                     }, void 0, false, {
                                         fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                        lineNumber: 202,
+                                        lineNumber: 214,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                    lineNumber: 195,
+                                    lineNumber: 207,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                            lineNumber: 190,
+                            lineNumber: 202,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$RegistrationModal$2f$RegistrationModal$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2342,18 +2368,18 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                             onUserKeywordChange: handleUserKeywordChange
                         }, void 0, false, {
                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                            lineNumber: 210,
+                            lineNumber: 222,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                    lineNumber: 189,
+                    lineNumber: 201,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                lineNumber: 188,
+                lineNumber: 200,
                 columnNumber: 9
             }, this),
             data.length > 0 && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2365,7 +2391,7 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                             children: t("newbrands")
                         }, void 0, false, {
                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                            lineNumber: 221,
+                            lineNumber: 233,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2378,12 +2404,12 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                         alt: `all_${currentLanguage}`
                                     }, void 0, false, {
                                         fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                        lineNumber: 225,
+                                        lineNumber: 237,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                    lineNumber: 224,
+                                    lineNumber: 236,
                                     columnNumber: 15
                                 }, this),
                                 data.length > 2 && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$slick$2f$lib$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2397,19 +2423,19 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                             id: "Top_New_Releases",
                                                             target: "_blank",
-                                                            onClick: userField === "" ? reg : undefined,
+                                                            onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                             href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                             children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                                                 src: rowData["LinkImg"],
                                                                 alt: ""
                                                             }, void 0, false, {
                                                                 fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                                lineNumber: 243,
+                                                                lineNumber: 257,
                                                                 columnNumber: 29
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                            lineNumber: 233,
+                                                            lineNumber: 245,
                                                             columnNumber: 27
                                                         }, this),
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
@@ -2417,13 +2443,13 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                             children: rowData["OurOfferContent"]
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                            lineNumber: 245,
+                                                            lineNumber: 259,
                                                             columnNumber: 27
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                    lineNumber: 232,
+                                                    lineNumber: 244,
                                                     columnNumber: 25
                                                 }, this),
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2431,34 +2457,34 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                         id: "Top_New_Releases",
                                                         className: "btn btn-primary big-btn",
                                                         target: "_blank",
-                                                        onClick: userField === "" ? reg : undefined,
+                                                        onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                         href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                         children: t("proceed")
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                        lineNumber: 248,
+                                                        lineNumber: 262,
                                                         columnNumber: 27
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                    lineNumber: 247,
+                                                    lineNumber: 261,
                                                     columnNumber: 25
                                                 }, this)
                                             ]
                                         }, index, true, {
                                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                            lineNumber: 231,
+                                            lineNumber: 243,
                                             columnNumber: 23
                                         }, this)) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("li", {
                                         children: "No matching data found."
                                     }, void 0, false, {
                                         fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                        lineNumber: 265,
+                                        lineNumber: 281,
                                         columnNumber: 21
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                    lineNumber: 228,
+                                    lineNumber: 240,
                                     columnNumber: 17
                                 }, this),
                                 data.length <= 2 && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2472,19 +2498,19 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                             id: "Top_New_Releases",
                                                             target: "_blank",
-                                                            onClick: userField === "" ? reg : undefined,
+                                                            onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                             href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                             children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                                                 src: rowData["LinkImg"],
                                                                 alt: ""
                                                             }, void 0, false, {
                                                                 fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                                lineNumber: 284,
+                                                                lineNumber: 302,
                                                                 columnNumber: 27
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                            lineNumber: 274,
+                                                            lineNumber: 290,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
@@ -2492,13 +2518,13 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                             children: rowData["OurOfferContent"]
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                            lineNumber: 286,
+                                                            lineNumber: 304,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                    lineNumber: 273,
+                                                    lineNumber: 289,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2506,34 +2532,34 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                         id: "Top_New_Releases",
                                                         className: "btn btn-primary big-btn",
                                                         target: "_blank",
-                                                        onClick: userField === "" ? reg : undefined,
+                                                        onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                         href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                         children: t("proceed")
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                        lineNumber: 289,
+                                                        lineNumber: 307,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                    lineNumber: 288,
+                                                    lineNumber: 306,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, index, true, {
                                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                            lineNumber: 272,
+                                            lineNumber: 288,
                                             columnNumber: 21
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                    lineNumber: 270,
+                                    lineNumber: 286,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                            lineNumber: 223,
+                            lineNumber: 235,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2547,19 +2573,19 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                     id: "Top_New_Releases",
                                                     target: "_blank",
-                                                    onClick: userField === "" ? reg : undefined,
+                                                    onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                     href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                     children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                                         src: rowData["LinkImg"],
                                                         alt: ""
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                        lineNumber: 323,
+                                                        lineNumber: 345,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                    lineNumber: 313,
+                                                    lineNumber: 333,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
@@ -2567,13 +2593,13 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                     children: rowData["OurOfferContent"]
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                    lineNumber: 325,
+                                                    lineNumber: 347,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                            lineNumber: 312,
+                                            lineNumber: 332,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2581,51 +2607,51 @@ function NewBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                 id: "Top_New_Releases",
                                                 className: "btn btn-primary big-btn",
                                                 target: "_blank",
-                                                onClick: userField === "" ? reg : undefined,
+                                                onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                 href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                 children: t("proceed")
                                             }, void 0, false, {
                                                 fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                                lineNumber: 328,
+                                                lineNumber: 350,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                            lineNumber: 327,
+                                            lineNumber: 349,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                    lineNumber: 311,
+                                    lineNumber: 331,
                                     columnNumber: 19
                                 }, this)) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("li", {
                                 children: "No matching data found."
                             }, void 0, false, {
                                 fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                                lineNumber: 345,
+                                lineNumber: 369,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
                             fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                            lineNumber: 308,
+                            lineNumber: 328,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                    lineNumber: 220,
+                    lineNumber: 232,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-                lineNumber: 219,
+                lineNumber: 231,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "<[project]/components/NewBrands/NewBrands.jsx>",
-        lineNumber: 186,
+        lineNumber: 198,
         columnNumber: 5
     }, this);
 }
@@ -2669,12 +2695,12 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
         centerPadding: "20px",
         centerMode: true
     };
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
         const hashWithoutSymbol = window.location.hash.substring(1); // Получаем фрагмент URL-адреса без символа #
-        if (hashWithoutSymbol.includes('unsubscribed')) {
+        if (hashWithoutSymbol.includes("unsubscribed")) {
             // Если содержит, выполните необходимые действия
             console.log('URL содержит "unsubscribed"');
-            window.location.href = '/unsubscribed';
+            window.location.href = "/unsubscribed";
         }
     }
     const urlParams = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useSearchParams"]();
@@ -2752,19 +2778,25 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
         ...data
     ];
     const [modal, setModal] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"](false);
-    function reg() {
-        setModal(true);
-    }
     const [userKeyword, setUserKeyword] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"](null);
     const handleUserKeywordChange = (newUserKeyword)=>{
         setUserKeyword(newUserKeyword);
         setTimeout(()=>{
             window.location.href = `/?keyword=${newUserKeyword}`;
+            const url = `${registrationLink}/?keyword=${newUserKeyword}&source=0&creative_id=MAW`;
+            window.open(url, '_blank');
         }, 2000);
     };
     function closereg() {
         setModal(false);
     }
+    const [registrationLink, setRegistrationLink] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"]("");
+    // Остальной код компонента
+    function reg(rowData) {
+        setRegistrationLink(rowData["GoBig"]);
+        setModal(true);
+    }
+    console.log("REHLINK", registrationLink);
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
         className: "bg1",
         children: [
@@ -2791,18 +2823,18 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                         "stroke-linecap": "round"
                                     }, void 0, false, {
                                         fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                        lineNumber: 179,
+                                        lineNumber: 185,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                    lineNumber: 172,
+                                    lineNumber: 178,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                            lineNumber: 167,
+                            lineNumber: 173,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$RegistrationModal$2f$RegistrationModal$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2811,23 +2843,23 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                             onUserKeywordChange: handleUserKeywordChange
                         }, void 0, false, {
                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                            lineNumber: 187,
+                            lineNumber: 193,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                    lineNumber: 166,
+                    lineNumber: 172,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                lineNumber: 165,
+                lineNumber: 171,
                 columnNumber: 9
             }, this),
             isLoading && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Loader$2f$Loader$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                lineNumber: 195,
+                lineNumber: 201,
                 columnNumber: 21
             }, this),
             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2839,7 +2871,7 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                             children: t("greeting")
                         }, void 0, false, {
                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                            lineNumber: 198,
+                            lineNumber: 204,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2857,19 +2889,19 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                                 id: "top_brand",
                                                                 target: "_blank",
-                                                                onClick: userField === "" ? reg : undefined,
+                                                                onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                                 href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                                 children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                                                     src: rowData["LinkImg"],
                                                                     alt: ""
                                                                 }, void 0, false, {
                                                                     fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                                    lineNumber: 216,
+                                                                    lineNumber: 224,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                                lineNumber: 206,
+                                                                lineNumber: 212,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
@@ -2877,13 +2909,13 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                                 children: rowData["OurOfferContent"]
                                                             }, void 0, false, {
                                                                 fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                                lineNumber: 218,
+                                                                lineNumber: 226,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                        lineNumber: 205,
+                                                        lineNumber: 211,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2891,29 +2923,29 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                             id: "top_brand",
                                                             className: "btn btn-primary big-btn",
                                                             target: "_blank",
-                                                            onClick: userField === "" ? reg : undefined,
+                                                            onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                             href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                             children: t("proceed")
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                            lineNumber: 221,
+                                                            lineNumber: 229,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                        lineNumber: 220,
+                                                        lineNumber: 228,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, index, true, {
                                                 fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                lineNumber: 204,
+                                                lineNumber: 210,
                                                 columnNumber: 21
                                             }, this)) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("li", {
                                             children: "No matching data found."
                                         }, void 0, false, {
                                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                            lineNumber: 238,
+                                            lineNumber: 248,
                                             columnNumber: 19
                                         }, this),
                                         data ? data.map((rowData, index)=>/*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2925,19 +2957,19 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                                 id: "top_brand",
                                                                 target: "_blank",
-                                                                onClick: userField === "" ? reg : undefined,
+                                                                onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                                 href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                                 children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                                                     src: rowData["LinkImg"],
                                                                     alt: ""
                                                                 }, void 0, false, {
                                                                     fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                                    lineNumber: 254,
+                                                                    lineNumber: 266,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                                lineNumber: 244,
+                                                                lineNumber: 254,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
@@ -2945,13 +2977,13 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                                 children: rowData["OurOfferContent"]
                                                             }, void 0, false, {
                                                                 fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                                lineNumber: 256,
+                                                                lineNumber: 268,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                        lineNumber: 243,
+                                                        lineNumber: 253,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -2959,35 +2991,35 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                             id: "top_brand",
                                                             className: "btn btn-primary big-btn",
                                                             target: "_blank",
-                                                            onClick: userField === "" ? reg : undefined,
+                                                            onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                             href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                             children: t("proceed")
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                            lineNumber: 259,
+                                                            lineNumber: 271,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                        lineNumber: 258,
+                                                        lineNumber: 270,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, index, true, {
                                                 fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                lineNumber: 242,
+                                                lineNumber: 252,
                                                 columnNumber: 21
                                             }, this)) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("li", {
                                             children: "No matching data found."
                                         }, void 0, false, {
                                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                            lineNumber: 276,
+                                            lineNumber: 290,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                    lineNumber: 201,
+                                    lineNumber: 207,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -3001,19 +3033,19 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                             id: "top_brand",
                                                             target: "_blank",
-                                                            onClick: userField === "" ? reg : undefined,
+                                                            onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                             href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                             children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                                                 src: rowData["LinkImg"],
                                                                 alt: ""
                                                             }, void 0, false, {
                                                                 fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                                lineNumber: 295,
+                                                                lineNumber: 309,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                            lineNumber: 285,
+                                                            lineNumber: 299,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
@@ -3021,13 +3053,13 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                             children: rowData["OurOfferContent"]
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                            lineNumber: 297,
+                                                            lineNumber: 311,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                    lineNumber: 284,
+                                                    lineNumber: 298,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -3035,34 +3067,34 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                         id: "top_brand",
                                                         className: "btn btn-primary big-btn",
                                                         target: "_blank",
-                                                        onClick: userField === "" ? reg : undefined,
+                                                        onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                         href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                         children: t("proceed")
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                        lineNumber: 300,
+                                                        lineNumber: 314,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                    lineNumber: 299,
+                                                    lineNumber: 313,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, index, true, {
                                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                            lineNumber: 283,
+                                            lineNumber: 297,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                    lineNumber: 280,
+                                    lineNumber: 294,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                            lineNumber: 199,
+                            lineNumber: 205,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -3076,19 +3108,19 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                     id: "top_brand",
                                                     target: "_blank",
-                                                    onClick: userField === "" ? reg : undefined,
+                                                    onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                     href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                     children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                                         src: rowData["LinkImg"],
                                                         alt: ""
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                        lineNumber: 331,
+                                                        lineNumber: 347,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                    lineNumber: 323,
+                                                    lineNumber: 337,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
@@ -3096,13 +3128,13 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                     children: rowData["OurOfferContent"]
                                                 }, void 0, false, {
                                                     fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                    lineNumber: 333,
+                                                    lineNumber: 349,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                            lineNumber: 322,
+                                            lineNumber: 336,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -3110,51 +3142,51 @@ function TopBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCountr
                                                 id: "top_brand",
                                                 className: "btn btn-primary big-btn",
                                                 target: "_blank",
-                                                onClick: userField === "" ? reg : undefined,
+                                                onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                 href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                 children: t("proceed")
                                             }, void 0, false, {
                                                 fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                                lineNumber: 336,
+                                                lineNumber: 352,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                            lineNumber: 335,
+                                            lineNumber: 351,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                    lineNumber: 321,
+                                    lineNumber: 335,
                                     columnNumber: 17
                                 }, this)) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("li", {
                                 children: "No matching data found."
                             }, void 0, false, {
                                 fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                                lineNumber: 351,
+                                lineNumber: 369,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                            lineNumber: 318,
+                            lineNumber: 332,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                    lineNumber: 197,
+                    lineNumber: 203,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "<[project]/components/topBrands/topBrands.jsx>",
-                lineNumber: 196,
+                lineNumber: 202,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "<[project]/components/topBrands/topBrands.jsx>",
-        lineNumber: 163,
+        lineNumber: 169,
         columnNumber: 5
     }, this);
 }
@@ -3247,11 +3279,17 @@ function OtherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCoun
     const handleUserKeywordChange = (newUserKeyword)=>{
         setUserKeyword(newUserKeyword);
         setTimeout(()=>{
-            window.location.href = `/?keyword=${newUserKeyword}`;
+            window.location.href = `${registrationLink}/?keyword=${newUserKeyword}&source=0&creative_id=MAW`;
         }, 2000);
     };
     function closereg() {
         setModal(false);
+    }
+    const [registrationLink, setRegistrationLink] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"]("");
+    // Остальной код компонента
+    function reg(rowData) {
+        setRegistrationLink(rowData["GoBig"]);
+        setModal(true);
     }
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
         children: otherData.length > 0 && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -3279,18 +3317,18 @@ function OtherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCoun
                                             "stroke-linecap": "round"
                                         }, void 0, false, {
                                             fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                            lineNumber: 134,
+                                            lineNumber: 142,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                        lineNumber: 127,
+                                        lineNumber: 135,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                lineNumber: 122,
+                                lineNumber: 130,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$RegistrationModal$2f$RegistrationModal$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -3299,18 +3337,18 @@ function OtherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCoun
                                 onUserKeywordChange: handleUserKeywordChange
                             }, void 0, false, {
                                 fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                lineNumber: 142,
+                                lineNumber: 150,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                        lineNumber: 121,
+                        lineNumber: 129,
                         columnNumber: 15
                     }, this)
                 }, void 0, false, {
                     fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                    lineNumber: 120,
+                    lineNumber: 128,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("h2", {
@@ -3318,7 +3356,7 @@ function OtherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCoun
                     children: t("consider")
                 }, void 0, false, {
                     fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                    lineNumber: 150,
+                    lineNumber: 158,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -3336,62 +3374,62 @@ function OtherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCoun
                                                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                         id: "usual_suggestions",
                                                         target: "_blank",
-                                                        onClick: userField === "" ? reg : undefined,
+                                                        onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                         href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                         children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("img", {
                                                             src: rowData["LinkImg"],
                                                             alt: ""
                                                         }, void 0, false, {
                                                             fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                                            lineNumber: 169,
+                                                            lineNumber: 179,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                                        lineNumber: 159,
+                                                        lineNumber: 167,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                                                         children: rowData["OurOfferContent"]
                                                     }, void 0, false, {
                                                         fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                                        lineNumber: 171,
+                                                        lineNumber: 181,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                                lineNumber: 158,
+                                                lineNumber: 166,
                                                 columnNumber: 23
                                             }, this),
                                             /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("a", {
                                                 id: "usual_suggestions",
                                                 className: "btn btn-primary",
                                                 target: "_blank",
-                                                onClick: userField === "" ? reg : undefined,
+                                                onClick: ()=>userField === "" ? reg(rowData) : undefined,
                                                 href: userField === "" ? undefined : rowData["GoBig"] + newUrl,
                                                 children: t("getBonus")
                                             }, void 0, false, {
                                                 fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                                lineNumber: 173,
+                                                lineNumber: 183,
                                                 columnNumber: 23
                                             }, this)
                                         ]
                                     }, index, true, {
                                         fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                        lineNumber: 157,
+                                        lineNumber: 165,
                                         columnNumber: 21
                                     }, this)) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("p", {
                                     className: "ti",
                                     children: "No brands available for your country"
                                 }, void 0, false, {
                                     fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                    lineNumber: 189,
+                                    lineNumber: 201,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
                                 fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                lineNumber: 154,
+                                lineNumber: 162,
                                 columnNumber: 15
                             }, this),
                             visibleBrands < otherData.length && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
@@ -3400,29 +3438,29 @@ function OtherBrands({ newUrl, ipDataCode, currentLanguage, source, selectedCoun
                                 children: t("showMore")
                             }, void 0, false, {
                                 fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                                lineNumber: 194,
+                                lineNumber: 206,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                        lineNumber: 152,
+                        lineNumber: 160,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-                    lineNumber: 151,
+                    lineNumber: 159,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-            lineNumber: 118,
+            lineNumber: 126,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "<[project]/components/otherBrands/otherBrands.jsx>",
-        lineNumber: 116,
+        lineNumber: 124,
         columnNumber: 5
     }, this);
 }

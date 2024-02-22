@@ -105,10 +105,20 @@ function DoubleBrands({
     setUserKeyword(newUserKeyword);
     setTimeout(() => {
       window.location.href = `/?keyword=${newUserKeyword}`;
-    }, 2000);
+      const url = `${registrationLink}/?keyword=${newUserKeyword}&source=0&creative_id=MAW`;
+      window.open(url, '_blank');
+    }, 1000);
   };
   function closereg() {
     setModal(false);
+  }
+
+  const [registrationLink, setRegistrationLink] = useState("");
+
+  // Остальной код компонента
+  function reg(rowData) {
+    setRegistrationLink(rowData["GoBig"]);
+    setModal(true);
   }
 
   return (
@@ -157,7 +167,7 @@ function DoubleBrands({
                 <a
                   id="topChoices"
                   target="_blank"
-                  onClick={userField === "" ? reg : undefined}
+                  onClick={() => (userField === "" ? reg(rowData) : undefined)}
                   href={
                     userField === "" ? undefined : rowData["GoBig"] + newUrl
                   }
@@ -170,7 +180,7 @@ function DoubleBrands({
                 id="topChoices"
                 className="btn btn-primary"
                 target="_blank"
-                onClick={userField === "" ? reg : undefined}
+                onClick={() => (userField === "" ? reg(rowData) : undefined)}
                 href={userField === "" ? undefined : rowData["GoBig"] + newUrl}
               >
                 {t("getBonus")}

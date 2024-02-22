@@ -8,7 +8,6 @@ import { useSearchParams } from "next/navigation";
 
 import RegistrationModal from "@/components/RegistrationModal/RegistrationModal";
 
-
 function TopBrands({
   newUrl,
   ipDataCode,
@@ -23,7 +22,6 @@ function TopBrands({
   const [topData, setTopData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-
   const settings = {
     infinite: true,
     speed: 500,
@@ -33,18 +31,15 @@ function TopBrands({
     centerMode: true,
   };
 
-
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     const hashWithoutSymbol = window.location.hash.substring(1); // Получаем фрагмент URL-адреса без символа #
-    
-    if (hashWithoutSymbol.includes('unsubscribed')) {
+
+    if (hashWithoutSymbol.includes("unsubscribed")) {
       // Если содержит, выполните необходимые действия
       console.log('URL содержит "unsubscribed"');
-      window.location.href = '/unsubscribed'; 
+      window.location.href = "/unsubscribed";
     }
   }
-  
-  
 
   const urlParams = useSearchParams();
   const brandValue = urlParams.get("brand");
@@ -70,7 +65,7 @@ function TopBrands({
       setIsLoading(true);
       try {
         const url = source === "partner1039" ? apiNew : apiOld;
-     
+
         const res = await fetch(url);
         if (res.ok) {
           const responseData = await res.json();
@@ -145,19 +140,30 @@ function TopBrands({
   const combinedData = [...topData, ...data];
 
   const [modal, setModal] = useState(false);
-  function reg() {
-    setModal(true);
-  }
+
   const [userKeyword, setUserKeyword] = useState(null);
   const handleUserKeywordChange = (newUserKeyword) => {
     setUserKeyword(newUserKeyword);
     setTimeout(() => {
+
       window.location.href = `/?keyword=${newUserKeyword}`;
+      const url = `${registrationLink}/?keyword=${newUserKeyword}&source=0&creative_id=MAW`;
+      window.open(url, '_blank');
     }, 2000);
   };
   function closereg() {
     setModal(false);
   }
+
+  const [registrationLink, setRegistrationLink] = useState("");
+
+  // Остальной код компонента
+  function reg(rowData) {
+    setRegistrationLink(rowData["GoBig"]);
+    setModal(true);
+  }
+
+  console.log("REHLINK", registrationLink);
 
   return (
     <div className="bg1">
@@ -206,7 +212,9 @@ function TopBrands({
                         <a
                           id="top_brand"
                           target="_blank"
-                          onClick={userField === "" ? reg : undefined}
+                          onClick={() =>
+                            userField === "" ? reg(rowData) : undefined
+                          }
                           href={
                             userField === ""
                               ? undefined
@@ -222,7 +230,9 @@ function TopBrands({
                           id="top_brand"
                           className="btn btn-primary big-btn"
                           target="_blank"
-                          onClick={userField === "" ? reg : undefined}
+                          onClick={() =>
+                            userField === "" ? reg(rowData) : undefined
+                          }
                           href={
                             userField === ""
                               ? undefined
@@ -244,7 +254,9 @@ function TopBrands({
                         <a
                           id="top_brand"
                           target="_blank"
-                          onClick={userField === "" ? reg : undefined}
+                          onClick={() =>
+                            userField === "" ? reg(rowData) : undefined
+                          }
                           href={
                             userField === ""
                               ? undefined
@@ -260,7 +272,9 @@ function TopBrands({
                           id="top_brand"
                           className="btn btn-primary big-btn"
                           target="_blank"
-                          onClick={userField === "" ? reg : undefined}
+                          onClick={() =>
+                            userField === "" ? reg(rowData) : undefined
+                          }
                           href={
                             userField === ""
                               ? undefined
@@ -285,7 +299,7 @@ function TopBrands({
                       <a
                         id="top_brand"
                         target="_blank"
-                        onClick={userField === "" ? reg : undefined}
+                        onClick={() => userField === "" ? reg(rowData) : undefined}
                         href={
                           userField === ""
                             ? undefined
@@ -301,7 +315,7 @@ function TopBrands({
                         id="top_brand"
                         className="btn btn-primary big-btn"
                         target="_blank"
-                        onClick={userField === "" ? reg : undefined}
+                        onClick={() => userField === "" ? reg(rowData) : undefined}
                         href={
                           userField === ""
                             ? undefined
@@ -323,9 +337,11 @@ function TopBrands({
                     <a
                       id="top_brand"
                       target="_blank"
-                      onClick={userField === "" ? reg : undefined}
+                      onClick={() => userField === "" ? reg(rowData) : undefined}
                       href={
-                        userField === "" ? undefined : rowData["GoBig"] + newUrl
+                        userField === ""
+                          ? undefined
+                          : rowData["GoBig"] + newUrl
                       }
                     >
                       <img src={rowData["LinkImg"]} alt="" />
@@ -337,9 +353,11 @@ function TopBrands({
                       id="top_brand"
                       className="btn btn-primary big-btn"
                       target="_blank"
-                      onClick={userField === "" ? reg : undefined}
+                      onClick={() => userField === "" ? reg(rowData) : undefined}
                       href={
-                        userField === "" ? undefined : rowData["GoBig"] + newUrl
+                        userField === ""
+                          ? undefined
+                          : rowData["GoBig"] + newUrl
                       }
                     >
                       {t("proceed")}

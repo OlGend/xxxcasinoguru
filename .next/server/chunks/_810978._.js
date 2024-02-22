@@ -1352,6 +1352,32 @@ function RootLayout({ children }) {
         children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"]("body", {
             children: [
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$script$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                    id: "google-tag-manager",
+                    strategy: "afterInteractive",
+                    src: "https://www.googletagmanager.com/gtag/js?id=G-6R57VFFHHS",
+                    async: true
+                }, void 0, false, {
+                    fileName: "<[project]/app/layout.tsx>",
+                    lineNumber: 24,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$script$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                    id: "google-tag-manager-config",
+                    strategy: "afterInteractive",
+                    dangerouslySetInnerHTML: {
+                        __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-6R57VFFHHS');
+            `
+                    }
+                }, void 0, false, {
+                    fileName: "<[project]/app/layout.tsx>",
+                    lineNumber: 30,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$script$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     id: "customerio",
                     type: "text/javascript",
                     children: `
@@ -1371,18 +1397,18 @@ function RootLayout({ children }) {
           `
                 }, void 0, false, {
                     fileName: "<[project]/app/layout.tsx>",
-                    lineNumber: 24,
+                    lineNumber: 43,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$TheHeader$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TheHeader"], {}, void 0, false, {
                     fileName: "<[project]/app/layout.tsx>",
-                    lineNumber: 41,
+                    lineNumber: 60,
                     columnNumber: 9
                 }, this),
                 children,
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$TheFooter$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TheFooter"], {}, void 0, false, {
                     fileName: "<[project]/app/layout.tsx>",
-                    lineNumber: 45,
+                    lineNumber: 64,
                     columnNumber: 9
                 }, this)
             ]

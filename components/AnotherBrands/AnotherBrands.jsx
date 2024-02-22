@@ -106,10 +106,19 @@ function AnotherBrands({
     setUserKeyword(newUserKeyword);
     setTimeout(() => {
       window.location.href = `/?keyword=${newUserKeyword}`;
-    }, 2000);
+      const url = `${registrationLink}/?keyword=${newUserKeyword}&source=0&creative_id=MAW`;
+      window.open(url, '_blank');
+    }, 1000);
   };
   function closereg() {
     setModal(false);
+  }
+  const [registrationLink, setRegistrationLink] = useState("");
+
+  // Остальной код компонента
+  function reg(rowData) {
+    setRegistrationLink(rowData["GoBig"]);
+    setModal(true);
   }
 
   return (
@@ -181,7 +190,9 @@ function AnotherBrands({
                         <a
                           id="FW_Brands_Main"
                           target="_blank"
-                          onClick={userField === "" ? reg : undefined}
+                          onClick={() =>
+                            userField === "" ? reg(rowData) : undefined
+                          }
                           href={
                             userField === ""
                               ? undefined
@@ -196,7 +207,9 @@ function AnotherBrands({
                         id="FW_Brands_Main"
                         className="btn btn-primary"
                         target="_blank"
-                        onClick={userField === "" ? reg : undefined}
+                        onClick={() =>
+                          userField === "" ? reg(rowData) : undefined
+                        }
                         href={
                           userField === ""
                             ? undefined
