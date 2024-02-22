@@ -38,6 +38,7 @@ export default function RootLayout({
               gtag('config', 'G-6R57VFFHHS');
             `,
           }}
+
         />
       <Script id="customerio" type="text/javascript">
           {`
