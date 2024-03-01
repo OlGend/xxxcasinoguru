@@ -74,5 +74,13 @@
   "subscribe.and": "und",
   "subscribe.policy": "Datenschutzrichtlinie",
   "subscribe.promotional": "Ich stimme zu, Werbe-E-Mails von topbon.us und seinen Partnern zu erhalten",
-  "Registration": "Anmeldung"
+  "Registration": "Anmeldung",
+
+  "How does it work?": "Wie funktioniert es?",
+  "Main Page": "Hauptseite",
+  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Geben Sie Ihre E-Mail-Adresse ein, um Mitglied im VIP-Club zu werden und sofort garantiertes echtes Geld zu gewinnen!",
+  "Email": "E-Mail",
+  "Registration": "Anmeldung",
+  "The input field cannot be empty": "Das Eingabefeld darf nicht leer sein",
+  "Data entered incorrectly": "Daten falsch eingegeben"
 }

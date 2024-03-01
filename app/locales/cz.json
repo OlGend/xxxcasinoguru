@@ -76,5 +76,11 @@
   "subscribe.policy": " Zásadami ochrany soukromí ",
 
   "subscribe.promotional": "Souhlasím s přijímáním propagačních e-mailů od topbon.us a jeho partnerů",
-  "Registration": "Registrace"
+  "Registration": "Registrace",
+
+  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Zadejte svůj e-mail a staňte se členem VIP a ihned vyhrajte zaručené skutečné peníze!",
+  "Email": "E-mail",
+  "Registration": "Registrace",
+  "The input field cannot be empty": "Vstupní pole nesmí být prázdné",
+  "Data entered incorrectly": "Chybně zadaná data"
 }

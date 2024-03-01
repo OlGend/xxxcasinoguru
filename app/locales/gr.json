@@ -74,5 +74,13 @@
   "subscribe.policy": " Πολιτική Απορρήτου ",
 
   "subscribe.promotional": "Συμφωνώ να λαμβάνω προωθητικά emails από το topbon.us και τους συνεργάτες του",
-  "Registration": "Εγγραφή"
+  "Registration": "Εγγραφή",
+
+  "How does it work?": "Πώς λειτουργεί;",
+  "Main Page": "Κύρια Σελίδα",
+  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Εισαγάγετε το email σας για να γίνετε μέλος VIP και να κερδίσετε αμέσως εγγυημένα πραγματικά χρήματα!",
+  "Email": "Email",
+  "Registration": "Εγγραφή",
+  "The input field cannot be empty": "Το πεδίο εισαγωγής δεν μπορεί να είναι κενό",
+  "Data entered incorrectly": "Λανθασμένα εισαγμένα δεδομένα"
 }

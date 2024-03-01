@@ -74,5 +74,13 @@
   "subscribe.policy": " Política de Privacidad ",
 
   "subscribe.promotional": "Acepto recibir correos electrónicos promocionales de topbon.us y sus socios",
-  "Registration": "Registro"
+  "Registration": "Registro",
+
+  "How does it work?": "¿Cómo funciona?",
+  "Main Page": "Página principal",
+  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Ingrese su correo electrónico para convertirse en miembro VIP y ganar dinero real garantizado al instante.",
+  "Email": "Correo electrónico",
+  "Registration": "Registro",
+  "The input field cannot be empty": "El campo de entrada no puede estar vacío",
+  "Data entered incorrectly": "Datos ingresados incorrectamente"
 }

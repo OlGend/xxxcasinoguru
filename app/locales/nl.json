@@ -74,5 +74,11 @@
   "subscribe.policy": " Privacybeleid ",
 
   "subscribe.promotional": "Ik ga ermee akkoord promotionele e-mails te ontvangen van topbon.us en zijn partners",
-  "Registration": "Registratie"
+  "Registration": "Registratie",
+
+  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Voer uw e-mailadres in om een VIP-lid te worden en direct gegarandeerd echt geld te winnen!",
+  "Email": "E-mail",
+  "Registration": "Registratie",
+  "The input field cannot be empty": "Het invoerveld mag niet leeg zijn",
+  "Data entered incorrectly": "Gegevens onjuist ingevoerd"
 }

@@ -72,5 +72,11 @@
   "subscribe.and": "og",
   "subscribe.policy": "Personvernpolitikken",
   "subscribe.promotional": "Jeg samtykker i å motta reklame-e-poster fra topbon.us og dets partnere",
-  "Registration": "Registrering"
+  "Registration": "Registrering",
+
+  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Skriv inn e-posten din for å bli VIP-medlem og vinne garantert ekte penger umiddelbart!",
+  "Email": "E-post",
+  "Registration": "Registrering",
+  "The input field cannot be empty": "Inndatafeltet kan ikke være tomt",
+  "Data entered incorrectly": "Feil inntastet data"
 }

@@ -74,5 +74,12 @@
   "subscribe.policy": " Integritetspolicy ",
 
   "subscribe.promotional": "Jag godkänner att ta emot marknadsföringsmail från topbon.us och dess partner",
-  "Registration": "Registrering"
+  "Registration": "Registrering",
+
+
+  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Ange din e-postadress för att bli en VIP-medlem och vinna garanterade riktiga pengar omedelbart!",
+  "Email": "E-post",
+  "Registration": "Registrering",
+  "The input field cannot be empty": "Inmatningsfältet får inte vara tomt",
+  "Data entered incorrectly": "Felaktiga uppgifter angivna"
 }

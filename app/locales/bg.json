@@ -76,5 +76,15 @@
   "subscribe.policy": " Политика за поверителност ",
 
   "subscribe.promotional": "Съгласен съм да получавам промоционални имейли от topbon.us и неговите партньори",
-  "Registration": "Регистрация"
+  "Registration": "Регистрация",
+
+
+  "How does it work?": "Как работи това?",
+  "Main Page": "Главна страница",
+
+  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Въведете своя имейл, за да станете член на VIP и спечелете гарантиран реален пари веднага!",
+  "Email": "Имейл",
+  "Registration": "Регистрация",
+  "The input field cannot be empty": "Полето за въвеждане не може да бъде празно",
+  "Data entered incorrectly": "Данните са въведени неправилно"
 }
