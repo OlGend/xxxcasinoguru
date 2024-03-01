@@ -3,7 +3,8 @@
   "consider": "Разгледайте други марки за вашия регион",
   "footerText": "Играйте отговорно и с умереност. Не считайте хазарта за начин за печелене на пари и играйте само с пари, които можете да си позволите да загубите. Ако сте загрижени за игровите си навици или сте засегнати от хазарта на някого друг, моля, свържете се с GamCare или Gamblers Anonymous за помощ.",
   "terms": "Общи условия",
-  "copyright": "Авторско право © 2023, xxxcasinoguru.com. Всички права запазени.",
+  "copyright": "Авторско право © 2024 г., ",
+  "copyright2": "Всички права запазени.",
   "proceed": "Продължете и вземете",
   "getBonus": "Вземи бонус",
   "showMore": "Покажи повече",
@@ -51,9 +52,29 @@
   "How does it work?": "Как работи това?",
   "Main Page": "Главна страница",
 
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Въведете своя имейл, за да станете член на VIP и спечелете гарантиран реален пари веднага!",
-  "Email": "Имейл",
-  "Registration": "Регистрация",
-  "The input field cannot be empty": "Полето за въвеждане не може да бъде празно",
-  "Data entered incorrectly": "Данните са въведени неправилно"
+  "Your balances are safe, but temporarily unavailable. Technical work is currently underway. We will definitely notify you as soon as the withdrawal option is restored.": "Вашите баланси са в безопасност, но временно недостъпни. В момента се извършват технически работи. Непременно ще ви уведомим, щом опцията за изтегляне бъде възстановена.",
+
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "Вземете своите фентъзи бонуси преди чудовищата да ги отнемат!",
+  "Get Bonuses Now": "Вземи бонусите си сега",
+  "Monster-Sized Bonuses": "Бонуси с размер на чудовище",
+  "Dare to Win Big": "Издайте се да спечелите голямо",
+  "Play Now": "Играй сега",
+  "No matching data found.": "Не е намерена съответстваща информация.",
+  "Mike Wazowski would approve it": "Майк Вазовски би го одобрил",
+  "More Offers": "Още оферти",
+
+  "subscribe.button": "Абонирай се",
+  "subscribe.email": "Имейл",
+  "subscribe.players": "абонирани играчи",
+  "subscribe.congrats": "Поздравления! Вие се абонирахте за списъка за рассылка.",
+  "subscribe.error1": "Имейлът не може да бъде празен",
+  "subscribe.error2": "Моля, въведете валиден имейл",
+
+  "subscribe.agree": "Съгласен съм с",
+  "subscribe.terms": "Условия и правила",
+  "subscribe.and": "и",
+  "subscribe.policy": " Политика за поверителност ",
+
+  "subscribe.promotional": "Съгласен съм да получавам промоционални имейли от topbon.us и неговите партньори",
+  "Registration": "Регистрация"
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Loader from "@/components/Loader/Loader";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
   const { t } = useTranslation();
@@ -9,7 +10,6 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
   const [userData, setUserData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [visible, setVisible] = useState(true);
-
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -78,7 +78,9 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
       );
 
       if (!response.ok) {
-        throw new Error(`Error sending data to the second server. HTTP Code: ${response.status}`);
+        throw new Error(
+          `Error sending data to the second server. HTTP Code: ${response.status}`
+        );
       }
 
       const responseData = await response.json();
@@ -89,8 +91,8 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
   };
 
   const sendToCustomerIO = async (email, userData) => {
-    const siteId = 'b0e62a74234c966830e3';
-    const apiKey = '8603e3e2dbd3bac74072';
+    const siteId = "b0e62a74234c966830e3";
+    const apiKey = "8603e3e2dbd3bac74072";
 
     const credentials = `${siteId}:${apiKey}`;
     const base64Credentials = btoa(credentials);
@@ -98,43 +100,47 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
     const url = `https://track-eu.customer.io/api/v1/customers/${email}/events`;
 
     const headers = {
-        'Content-Type': 'application/json',
-        'Authorization': `Basic ${base64Credentials}`,
+      "Content-Type": "application/json",
+      Authorization: `Basic ${base64Credentials}`,
     };
 
     const eventPayload = {
-        name: 'NEW USER',
-        data: { 
-          id: userData.id,
-          login: userData.login,
-          balance: userData.balance,
-          country: ipDataCode,
-          tickets: userData.tickets,
-          customer: "GURU"
-        },
+      name: "NEW USER",
+      data: {
+        id: userData.id,
+        login: userData.login,
+        balance: userData.balance,
+        country: ipDataCode,
+        tickets: userData.tickets,
+        customer: "GURU",
+      },
     };
 
     const requestOptions = {
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify(eventPayload),
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(eventPayload),
     };
 
     try {
-        const response = await fetch(url, requestOptions);
+      const response = await fetch(url, requestOptions);
 
-        if (!response.ok) {
-            throw new Error(`CustomerIO error. HTTP Code: ${response.status}, Response: ${await response.text()}`);
-        }
+      if (!response.ok) {
+        throw new Error(
+          `CustomerIO error. HTTP Code: ${
+            response.status
+          }, Response: ${await response.text()}`
+        );
+      }
     } catch (error) {
-        console.error('Error sending data to CustomerIO:', error.message);
+      console.error("Error sending data to CustomerIO:", error.message);
     }
-  }
+  };
 
   const handleSubscribe = async () => {
     setError("");
     setLoading(true);
-  
+
     try {
       const response = await fetch(
         `https://pickbonus.myawardwallet.com/api/registration/readdelete.php?`,
@@ -145,14 +151,14 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
           },
         }
       );
-  
+
       if (!response.ok) {
         throw new Error(`Error fetching data. HTTP Code: ${response.status}`);
       }
-  
+
       const responseData = await response.json();
       setUserData(responseData);
-  
+
       if (!email) {
         setError(t("The input field cannot be empty"));
       } else if (!/\S+@\S+\.\S+/.test(email)) {
@@ -196,6 +202,9 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const [termsAgreed, setTermsAgreed] = useState(false);
+  const [privacyAgreed, setPrivacyAgreed] = useState(false);
+
   return (
     <div>
       {visible && (
@@ -218,7 +227,54 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange }) => {
               onFocus={handleInputFocus}
             />
             {error && <span className="text-red-500 error-text">{error}</span>}
-            <button className="btn btn-primary" onClick={handleSubscribe}>
+            <div className="agreeTerms mb-2 mt-2">
+              <label
+                className={`acceptedTerms mb-2 ${termsAgreed ? "active" : ""}`}
+              >
+                <input
+                  type="checkbox"
+                  checked={termsAgreed}
+                  onChange={() => setTermsAgreed(!termsAgreed)}
+                  className="mr-2"
+                />
+                {t("subscribe.agree")}{" "}
+                <Link
+                  target="_blank"
+                  className="underline text-sky-500"
+                  href={`/terms-and-conditions`}
+                >
+                  {t("subscribe.terms")}
+                </Link>{" "}
+                {t("subscribe.and")}{" "}
+                <Link
+                  target="_blank"
+                  className="underline text-sky-500"
+                  href={`/privacy-policy`}
+                >
+                  {" "}
+                  {t("subscribe.policy")}
+                </Link>
+              </label>
+              <label
+                className={`acceptedTerms mb-2 ${
+                  privacyAgreed ? "active" : ""
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  checked={privacyAgreed}
+                  onChange={() => setPrivacyAgreed(!privacyAgreed)}
+                  className="mr-2"
+                />
+
+                {t("subscribe.promotional")}
+              </label>
+            </div>
+            <button
+              className="btn btn-primary"
+              onClick={handleSubscribe}
+              disabled={!termsAgreed || !privacyAgreed}
+            >
               {t("Registration")}
             </button>
           </div>

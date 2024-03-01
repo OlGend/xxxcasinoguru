@@ -3,7 +3,8 @@
   "consider": "Harkitse muita tuotemerkkejä alueellesi",
   "footerText": "Pelaa vastuullisesti ja maltilla. Älä harkitse uhkapelaamista tapana ansaita rahaa, ja pelaa vain rahalla, jonka voit varaa menettää. Jos olet huolissasi pelaamistavoistasi tai olet vaikuttanut toisen henkilön pelaamiseen, ota yhteyttä GamCareen tai Gamblers Anonymousiin saadaksesi apua.",
   "terms": "Käyttöehdot",
-  "copyright": "Tekijänoikeus © 2023, xxxcasinoguru.com. Kaikki oikeudet pidätetään.",
+  "copyright": "Tekijänoikeus © 2024, ",
+  "copyright2": "Kaikki oikeudet pidätetään.",
   "proceed": "Jatka ja hanki",
   "getBonus": "Hanki bonus",
   "showMore": "Näytä lisää",
@@ -50,9 +51,28 @@
 
   "How does it work?": "Kuinka se toimii?",
   "Main Page": "Pääsivu",
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Syötä sähköpostiosoitteesi tullaksesi VIP-jäseneksi ja voittaaksesi välittömästi taattua oikeaa rahaa!",
-  "Email": "Sähköposti",
-  "Registration": "Rekisteröinti",
-  "The input field cannot be empty": "Syötekenttä ei voi olla tyhjä",
-  "Data entered incorrectly": "Tiedot syötetty väärin"
+
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "Vaadi fantasialiittyvä bonuksesi ennen kuin hirviöt vievät ne mennessään!",
+  "Get Bonuses Now": "Hanki bonuksesi nyt",
+  "Monster-Sized Bonuses": "Hirviömäiset bonukset",
+  "Dare to Win Big": "Uskalla voittaa suuresti",
+  "Play Now": "Pelaa nyt",
+  "No matching data found.": "Ei vastaavia tietoja löytynyt.",
+  "Mike Wazowski would approve it": "Mike Wazowski hyväksyisi sen",
+  "More Offers": "Lisää tarjouksia",
+
+  "subscribe.button": "Tilaa",
+  "subscribe.email": "Sähköposti",
+  "subscribe.players": "pelaajat tilanneet",
+  "subscribe.congrats": "Onneksi olkoon! Olet tilannut postituslistan.",
+  "subscribe.error1": "Sähköposti ei voi olla tyhjä",
+  "subscribe.error2": "Anna voimassa oleva sähköpostiosoite",
+
+  "subscribe.agree": "Olen samaa mieltä",
+  "subscribe.terms": "Ehdot ja Sopimukset",
+  "subscribe.and": "ja",
+  "subscribe.policy": " Tietosuojakäytäntö ",
+
+  "subscribe.promotional": "Suostun vastaanottamaan markkinointiviestejä topbon.us ja sen kumppaneilta",
+  "Registration": "Rekisteröinti"
 }

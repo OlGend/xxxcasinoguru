@@ -3,7 +3,8 @@
   "consider": "Berücksichtigen Sie andere Marken für Ihre Region",
   "footerText": "Spielen Sie verantwortungsbewusst und mit Maß. Betrachten Sie Glücksspiel nicht als Möglichkeit, Geld zu verdienen, und spielen Sie nur mit Geld, das Sie sich leisten können zu verlieren. Wenn Sie sich Sorgen um Ihre Glücksspielgewohnheiten machen oder von den Glücksspielgewohnheiten einer anderen Person betroffen sind, kontaktieren Sie bitte GamCare oder Gamblers Anonymous um Hilfe.",
   "terms": "Geschäftsbedingungen",
-  "copyright": "Copyright © 2023, xxxcasinoguru.com. Alle Rechte vorbehalten.",
+  "copyright": "Urheberrecht © 2024, ",
+  "copyright2": "Alle Rechte vorbehalten.",
   "proceed": "Fortfahren und erhalten",
   "getBonus": "Bonus erhalten",
   "showMore": "Mehr anzeigen",
@@ -50,9 +51,29 @@
 
   "How does it work?": "Wie funktioniert es?",
   "Main Page": "Hauptseite",
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Geben Sie Ihre E-Mail-Adresse ein, um Mitglied im VIP-Club zu werden und sofort garantiertes echtes Geld zu gewinnen!",
-  "Email": "E-Mail",
-  "Registration": "Anmeldung",
-  "The input field cannot be empty": "Das Eingabefeld darf nicht leer sein",
-  "Data entered incorrectly": "Daten falsch eingegeben"
+
+  "Your balances are safe, but temporarily unavailable. Technical work is currently underway. We will definitely notify you as soon as the withdrawal option is restored.": "Ihre Kontostände sind sicher, aber vorübergehend nicht verfügbar. Technische Arbeiten sind derzeit im Gange. Wir werden Sie auf jeden Fall benachrichtigen, sobald die Auszahlungsoption wiederhergestellt ist.",
+
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "Hol dir deine Fantasy-Boni, bevor die Monster sie dir wegnehmen!",
+  "Get Bonuses Now": "Jetzt Boni erhalten",
+  "Monster-Sized Bonuses": "Monstergroße Boni",
+  "Dare to Win Big": "Wage es, groß zu gewinnen",
+  "Play Now": "Jetzt spielen",
+  "No matching data found.": "Keine übereinstimmenden Daten gefunden.",
+  "Mike Wazowski would approve it": "Mike Wazowski würde es genehmigen",
+  "More Offers": "Weitere Angebote",
+
+  "subscribe.button": "Abonnieren",
+  "subscribe.email": "E-Mail",
+  "subscribe.players": "abonnierte Spieler",
+  "subscribe.congrats":
+    "Herzlichen Glückwunsch! Sie haben sich für den Newsletter angemeldet.",
+  "subscribe.error1": "E-Mail darf nicht leer sein",
+  "subscribe.error2": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+  "subscribe.agree": "Ich stimme zu",
+  "subscribe.terms": "Allgemeinen Geschäftsbedingungen",
+  "subscribe.and": "und",
+  "subscribe.policy": "Datenschutzrichtlinie",
+  "subscribe.promotional": "Ich stimme zu, Werbe-E-Mails von topbon.us und seinen Partnern zu erhalten",
+  "Registration": "Anmeldung"
 }

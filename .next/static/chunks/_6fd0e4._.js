@@ -80,9 +80,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Loader$2f$Loader$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/components/Loader/Loader.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$7b$module__evaluation$7d$__ = __turbopack_import__("[project]/node_modules/react-i18next/dist/es/index.js [app-client] (ecmascript) {module evaluation}");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react-i18next/dist/es/useTranslation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/link.js [app-client] (ecmascript)");
 "__TURBOPACK__ecmascript__hoisting__location__";
 ;
 var _s = __turbopack_refresh__.signature();
+;
 ;
 ;
 ;
@@ -155,17 +157,17 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
         }
     };
     const sendToCustomerIO = async (email, userData)=>{
-        const siteId = 'b0e62a74234c966830e3';
-        const apiKey = '8603e3e2dbd3bac74072';
+        const siteId = "b0e62a74234c966830e3";
+        const apiKey = "8603e3e2dbd3bac74072";
         const credentials = `${siteId}:${apiKey}`;
         const base64Credentials = btoa(credentials);
         const url = `https://track-eu.customer.io/api/v1/customers/${email}/events`;
         const headers = {
-            'Content-Type': 'application/json',
-            'Authorization': `Basic ${base64Credentials}`
+            "Content-Type": "application/json",
+            Authorization: `Basic ${base64Credentials}`
         };
         const eventPayload = {
-            name: 'NEW USER',
+            name: "NEW USER",
             data: {
                 id: userData.id,
                 login: userData.login,
@@ -176,7 +178,7 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
             }
         };
         const requestOptions = {
-            method: 'POST',
+            method: "POST",
             headers: headers,
             body: JSON.stringify(eventPayload)
         };
@@ -186,7 +188,7 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                 throw new Error(`CustomerIO error. HTTP Code: ${response.status}, Response: ${await response.text()}`);
             }
         } catch (error) {
-            console.error('Error sending data to CustomerIO:', error.message);
+            console.error("Error sending data to CustomerIO:", error.message);
         }
     };
     const handleSubscribe = async ()=>{
@@ -241,13 +243,15 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
     }, []);
     const [error, setError] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"]("");
     const [loading, setLoading] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"](false);
+    const [termsAgreed, setTermsAgreed] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"](false);
+    const [privacyAgreed, setPrivacyAgreed] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"](false);
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
         children: visible && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
             className: "flex column items-center",
             children: [
                 isLoading && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Loader$2f$Loader$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 203,
+                    lineNumber: 212,
                     columnNumber: 25
                 }, this),
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -256,12 +260,12 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                         children: t("Enter your email to become a VIP member and win guaranteed real money instantly!")
                     }, void 0, false, {
                         fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                        lineNumber: 205,
+                        lineNumber: 214,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 204,
+                    lineNumber: 213,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
@@ -276,7 +280,7 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                             onFocus: handleInputFocus
                         }, void 0, false, {
                             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 212,
+                            lineNumber: 221,
                             columnNumber: 13
                         }, this),
                         error && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("span", {
@@ -284,37 +288,114 @@ const RegistrationModal = ({ ipDataCode, modalState, onUserKeywordChange })=>{
                             children: error
                         }, void 0, false, {
                             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 220,
+                            lineNumber: 229,
                             columnNumber: 23
+                        }, this),
+                        /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                            className: "agreeTerms mb-2 mt-2",
+                            children: [
+                                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("label", {
+                                    className: `acceptedTerms mb-2 ${termsAgreed ? "active" : ""}`,
+                                    children: [
+                                        /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("input", {
+                                            type: "checkbox",
+                                            checked: termsAgreed,
+                                            onChange: ()=>setTermsAgreed(!termsAgreed),
+                                            className: "mr-2"
+                                        }, void 0, false, {
+                                            fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
+                                            lineNumber: 234,
+                                            columnNumber: 17
+                                        }, this),
+                                        t("subscribe.agree"),
+                                        " ",
+                                        /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                            target: "_blank",
+                                            className: "underline text-sky-500",
+                                            href: `/terms-and-conditions`,
+                                            children: t("subscribe.terms")
+                                        }, void 0, false, {
+                                            fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
+                                            lineNumber: 241,
+                                            columnNumber: 17
+                                        }, this),
+                                        " ",
+                                        t("subscribe.and"),
+                                        " ",
+                                        /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                            target: "_blank",
+                                            className: "underline text-sky-500",
+                                            href: `/privacy-policy`,
+                                            children: [
+                                                " ",
+                                                t("subscribe.policy")
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
+                                            lineNumber: 249,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
+                                    lineNumber: 231,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("label", {
+                                    className: `acceptedTerms mb-2 ${privacyAgreed ? "active" : ""}`,
+                                    children: [
+                                        /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("input", {
+                                            type: "checkbox",
+                                            checked: privacyAgreed,
+                                            onChange: ()=>setPrivacyAgreed(!privacyAgreed),
+                                            className: "mr-2"
+                                        }, void 0, false, {
+                                            fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
+                                            lineNumber: 263,
+                                            columnNumber: 17
+                                        }, this),
+                                        t("subscribe.promotional")
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
+                                    lineNumber: 258,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
+                            lineNumber: 230,
+                            columnNumber: 13
                         }, this),
                         /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
                             className: "btn btn-primary",
                             onClick: handleSubscribe,
+                            disabled: !termsAgreed || !privacyAgreed,
                             children: t("Registration")
                         }, void 0, false, {
                             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                            lineNumber: 221,
+                            lineNumber: 273,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-                    lineNumber: 211,
+                    lineNumber: 220,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-            lineNumber: 202,
+            lineNumber: 211,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "<[project]/components/RegistrationModal/RegistrationModal.jsx>",
-        lineNumber: 200,
+        lineNumber: 209,
         columnNumber: 5
     }, this);
 };
-_s(RegistrationModal, "rgLJbUUykB2+eCGR7aj4MZbXK1s=", false, function() {
+_s(RegistrationModal, "H/YMpimrege19EAEMxfn1IvadnU=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"]
     ];

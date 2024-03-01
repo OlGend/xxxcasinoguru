@@ -3,7 +3,8 @@
   "consider": "Λάβετε υπόψη άλλα brands για την περιοχή σας",
   "footerText": "Τυχερά παιχνίδια με ευθύνη και μετριοπάθεια. Μην εξετάζετε τα τυχερά παιχνίδια ως τρόπο κερδοσκοπίας, και παίξτε μόνο με χρήματα που μπορείτε να χάσετε. Εάν ανησυχείτε για τις παιχνιδιακές συνήθειές σας ή επηρεάζεστε από το τυχερό παιχνίδι κάποιου άλλου, επικοινωνήστε με το GamCare ή το Gamblers Anonymous για βοήθεια.",
   "terms": "Όροι και Προϋποθέσεις",
-  "copyright": "Πνευματική ιδιοκτησία © 2023, xxxcasinoguru.com. Με επιφύλαξη παντός δικαιώματος.",
+  "copyright": "Πνευματικά δικαιώματα © 2024, ",
+  "copyright2": "Διατηρούνται όλα τα δικαιώματα.",
   "proceed": "Συνεχίστε και πάρτε",
   "getBonus": "Λάβετε μπόνους",
   "showMore": "Εμφάνιση περισσότερων",
@@ -50,9 +51,28 @@
 
   "How does it work?": "Πώς λειτουργεί;",
   "Main Page": "Κύρια Σελίδα",
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Εισαγάγετε το email σας για να γίνετε μέλος VIP και να κερδίσετε αμέσως εγγυημένα πραγματικά χρήματα!",
-  "Email": "Email",
-  "Registration": "Εγγραφή",
-  "The input field cannot be empty": "Το πεδίο εισαγωγής δεν μπορεί να είναι κενό",
-  "Data entered incorrectly": "Λανθασμένα εισαγμένα δεδομένα"
+
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "Αποκτήστε τα μπόνους φαντασίας σας πριν τα τέρατα τα σαρώσουν μακριά!",
+  "Get Bonuses Now": "Λάβετε μπόνους τώρα",
+  "Monster-Sized Bonuses": "Μπόνους μεγαθήριο",
+  "Dare to Win Big": "Τολμήστε να κερδίσετε μεγάλα",
+  "Play Now": "Παίξτε τώρα",
+  "No matching data found.": "Δεν βρέθηκαν αντίστοιχα δεδομένα.",
+  "Mike Wazowski would approve it": "Ο Mike Wazowski θα το εγκρίνει",
+  "More Offers": "Περισσότερες προσφορές",
+
+  "subscribe.button": "Εγγραφείτε",
+  "subscribe.email": "Email",
+  "subscribe.players": "παίκτες που έχουν εγγραφεί",
+  "subscribe.congrats": "Συγχαρητήρια! Έχετε εγγραφεί στη λίστα αλληλογραφίας.",
+  "subscribe.error1": "Το Email δεν μπορεί να είναι κενό",
+  "subscribe.error2": "Παρακαλώ εισάγετε ένα έγκυρο email",
+
+  "subscribe.agree": "Συμφωνώ με",
+  "subscribe.terms": "Όρους και Προϋποθέσεις",
+  "subscribe.and": "και",
+  "subscribe.policy": " Πολιτική Απορρήτου ",
+
+  "subscribe.promotional": "Συμφωνώ να λαμβάνω προωθητικά emails από το topbon.us και τους συνεργάτες του",
+  "Registration": "Εγγραφή"
 }

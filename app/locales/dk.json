@@ -3,7 +3,8 @@
   "consider": "Overvej andre mærker til din region",
   "footerText": "Spil ansvarligt og med måde. Betragt ikke spil som en måde at tjene penge på, og spil kun med penge, du har råd til at miste. Hvis du er bekymret for dine spillevaner eller påvirket af en andens spil, kontakt venligst GamCare eller Gamblers Anonymous for hjælp.",
   "terms": "Vilkår og betingelser",
-  "copyright": "Copyright © 2023, xxxcasinoguru.com. Alle rettigheder forbeholdes.",
+  "copyright": "Ophavsret © 2024, ",
+  "copyright2": "Alle rettigheder forbeholdes.",
   "proceed": "Fortsæt og få",
   "getBonus": "Få bonus",
   "showMore": "Vis mere",
@@ -51,9 +52,27 @@
   "How does it work?": "Hvordan fungerer det?",
   "Main Page": "Hovedside",
 
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Indtast din e-mail for at blive VIP-medlem og vinde garanterede rigtige penge øjeblikkeligt!",
-  "Email": "E-mail",
-  "Registration": "Registrering",
-  "The input field cannot be empty": "Indtastningsfeltet må ikke være tomt",
-  "Data entered incorrectly": "Data indtastet forkert"
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "Kræv dine fantasybonusser, før monstrene tager dem!",
+  "Get Bonuses Now": "Få bonusser nu",
+  "Monster-Sized Bonuses": "Monsterstore bonusser",
+  "Dare to Win Big": "Vov dig at vinde stort",
+  "Play Now": "Spil nu",
+  "No matching data found.": "Ingen matchende data fundet.",
+  "Mike Wazowski would approve it": "Mike Wazowski ville godkende det",
+  "More Offers": "Flere tilbud",
+
+  "subscribe.button": "Abonner",
+  "subscribe.email": "E-mail",
+  "subscribe.players": "spillere abonneret",
+  "subscribe.congrats": "Tillykke! Du er nu abonneret på mailinglisten.",
+  "subscribe.error1": "E-mail kan ikke være tom",
+  "subscribe.error2": "Indtast venligst en gyldig e-mail",
+
+  "subscribe.agree": "Jeg er enig i",
+  "subscribe.terms": "Vilkår og betingelser",
+  "subscribe.and": "og",
+  "subscribe.policy": " Privatlivspolitik ",
+
+  "subscribe.promotional": "Jeg accepterer at modtage reklamemails fra topbon.us og dets partnere",
+  "Registration": "Registrering"
 }

@@ -3,7 +3,8 @@
   "consider": "Bölgeniz için diğer markaları düşünün",
   "footerText": "Sorumlu ve ölçülü bir şekilde kumar oynayın. Kumarı para kazanmanın bir yolu olarak düşünmeyin ve sadece kaybetmeyi göze alabileceğiniz parayla oynayın. Kumar alışkanlıklarınızdan endişe ediyorsanız veya başka birinin kumarından etkilendiyseniz, lütfen yardım için GamCare veya Gamblers Anonymous ile iletişime geçin.",
   "terms": "Şartlar ve Koşullar",
-  "copyright": "Telif Hakkı © 2023, xxxcasinoguru.com. Tüm hakları saklıdır.",
+  "copyright": "Telif Hakkı © 2024, ",
+  "copyright2": "Tüm hakları saklıdır.",
   "proceed": "Devam et ve al",
   "getBonus": "Bonus al",
   "showMore": "Daha Fazla Göster",
@@ -51,9 +52,27 @@
   "How does it work?": "Nasıl çalışır?",
   "Main Page": "Ana Sayfa",
 
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "VIP üyesi olmak ve hemen garanti gerçek parayı kazanmak için e-postanızı girin!",
-  "Email": "E-posta",
-  "Registration": "Kayıt",
-  "The input field cannot be empty": "Giriş alanı boş olamaz",
-  "Data entered incorrectly": "Yanlış veri girişi"
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "Canavarlar Onları Uzaklaştırmadan Önce Hayalinizdeki Bonusları Talep Edin!",
+  "Get Bonuses Now": "Şimdi bonuslarınızı alın",
+  "Monster-Sized Bonuses": "Canavar Büyüklüğünde Bonuslar",
+  "Dare to Win Big": "Büyük Kazanmaya Cesaret Edin",
+  "Play Now": "Şimdi Oyna",
+  "No matching data found.": "Eşleşen veri bulunamadı.",
+  "Mike Wazowski would approve it": "Mike Wazowski onaylardı",
+  "More Offers": "Daha Fazla Teklif",
+
+  "subscribe.button": "Abone Ol",
+  "subscribe.email": "E-posta",
+  "subscribe.players": "oyuncular abone oldu",
+  "subscribe.congrats": "Tebrikler! Posta listesine abone oldunuz.",
+  "subscribe.error1": "E-posta boş olamaz",
+  "subscribe.error2": "Lütfen geçerli bir e-posta giriniz",
+
+  "subscribe.agree": "Kabul ediyorum",
+  "subscribe.terms": "Şartlar ve Koşullar",
+  "subscribe.and": "ve",
+  "subscribe.policy": " Gizlilik Politikası ",
+
+  "subscribe.promotional": "topbon.us ve ortaklarından promosyon e-postaları almayı kabul ediyorum",
+  "Registration": "Kayıt"
 }

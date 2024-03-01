@@ -3,7 +3,8 @@
   "consider": "Considere otras marcas para su región",
   "footerText": "Juegue de manera responsable y con moderación. No considere el juego como una forma de ganar dinero, y solo juegue con dinero que pueda permitirse perder. Si está preocupado por sus hábitos de juego o se ve afectado por el juego de otra persona, póngase en contacto con GamCare o Jugadores Anónimos para obtener ayuda.",
   "terms": "Términos y condiciones",
-  "copyright": "Copyright © 2023, xxxcasinoguru.com. Todos los derechos reservados.",
+  "copyright": "Derechos de autor © 2024, ",
+  "copyright2": "Todos los derechos reservados.",
   "proceed": "Continuar y obtener",
   "getBonus": "Obtener bono",
   "showMore": "Mostrar más",
@@ -50,9 +51,28 @@
 
   "How does it work?": "¿Cómo funciona?",
   "Main Page": "Página principal",
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Ingrese su correo electrónico para convertirse en miembro VIP y ganar dinero real garantizado al instante.",
-  "Email": "Correo electrónico",
-  "Registration": "Registro",
-  "The input field cannot be empty": "El campo de entrada no puede estar vacío",
-  "Data entered incorrectly": "Datos ingresados incorrectamente"
+
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "¡Reclama tus bonos de fantasía antes de que los monstruos los quiten!",
+  "Get Bonuses Now": "Obtén bonificaciones ahora",
+  "Monster-Sized Bonuses": "Bonos de tamaño monstruo",
+  "Dare to Win Big": "Atrévete a ganar a lo grande",
+  "Play Now": "Juega ahora",
+  "No matching data found.": "No se encontraron datos coincidentes.",
+  "Mike Wazowski would approve it": "Mike Wazowski lo aprobaría",
+  "More Offers": "Más ofertas",
+
+  "subscribe.button": "Suscribirse",
+  "subscribe.email": "Correo electrónico",
+  "subscribe.players": "jugadores suscritos",
+  "subscribe.congrats": "¡Felicidades! Te has suscrito a la lista de correo.",
+  "subscribe.error1": "El correo electrónico no puede estar vacío",
+  "subscribe.error2": "Por favor, introduce un correo electrónico válido",
+
+  "subscribe.agree": "Estoy de acuerdo con",
+  "subscribe.terms": "Términos y Condiciones",
+  "subscribe.and": "y",
+  "subscribe.policy": " Política de Privacidad ",
+
+  "subscribe.promotional": "Acepto recibir correos electrónicos promocionales de topbon.us y sus socios",
+  "Registration": "Registro"
 }

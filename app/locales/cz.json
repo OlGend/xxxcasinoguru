@@ -3,7 +3,8 @@
   "consider": "Zvažte jiné značky pro váš region",
   "footerText": "Hrajte odpovědně a s mírou. Nehledejte hazard jako způsob vydělávání peněz a hrajte pouze s penězi, které si můžete dovolit ztratit. Pokud máte obavy ohledně svých hazardních návyků nebo jste ovlivněni hazardem někoho jiného, obraťte se na GamCare nebo Gamblers Anonymous o pomoc.",
   "terms": "Obchodní podmínky",
-  "copyright": "Copyright © 2023, xxxcasinoguru.com. Všechna práva vyhrazena.",
+  "copyright": "Autorská práva © 2024, ",
+  "copyright2": "Všechna práva vyhrazena.",
   "proceed": "Pokračujte a získejte",
   "getBonus": "Získat bonus",
   "showMore": "Zobrazit více",
@@ -51,9 +52,29 @@
   "How does it work?": "Jak to funguje?",
   "Main Page": "Hlavní stránka",
 
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Zadejte svůj e-mail a staňte se členem VIP a ihned vyhrajte zaručené skutečné peníze!",
-  "Email": "E-mail",
-  "Registration": "Registrace",
-  "The input field cannot be empty": "Vstupní pole nesmí být prázdné",
-  "Data entered incorrectly": "Chybně zadaná data"
+  "Your balances are safe, but temporarily unavailable. Technical work is currently underway. We will definitely notify you as soon as the withdrawal option is restored.": "Vaše zůstatky jsou v bezpečí, ale dočasně nedostupné. Technické práce probíhají. Určitě vás budeme informovat, jakmile bude obnovena možnost výběru.",
+
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "Vyzvedněte si své fantazijní bonusy dříve, než je příšery odnese!",
+  "Get Bonuses Now": "Získejte své bonusy nyní",
+  "Monster-Sized Bonuses": "Obří monstrovské bonusy",
+  "Dare to Win Big": "Odvažte se vyhrát velké",
+  "Play Now": "Hrát nyní",
+  "No matching data found.": "Nebyla nalezena žádná odpovídající data.",
+  "Mike Wazowski would approve it": "Mike Wazowski by to schválil",
+  "More Offers": "Další nabídky",
+
+  "subscribe.button": "Přihlásit se k odběru",
+  "subscribe.email": "E-mail",
+  "subscribe.players": "hráči přihlášeni",
+  "subscribe.congrats": "Gratulujeme! Přihlásili jste se k odběru mailing listu.",
+  "subscribe.error1": "E-mail nemůže být prázdný",
+  "subscribe.error2": "Prosím, zadejte platný e-mail",
+
+  "subscribe.agree": "Souhlasím s",
+  "subscribe.terms": "Obchodními podmínkami",
+  "subscribe.and": "a",
+  "subscribe.policy": " Zásadami ochrany soukromí ",
+
+  "subscribe.promotional": "Souhlasím s přijímáním propagačních e-mailů od topbon.us a jeho partnerů",
+  "Registration": "Registrace"
 }

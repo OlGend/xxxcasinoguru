@@ -3,7 +3,8 @@
   "consider": "Rozważ inne casyna dostępne w Twoim regionie",
   "footerText": "Graj odpowiedzialnie i z umiarem. Nie traktuj hazardu jako sposób na zarabianie pieniędzy i graj tylko tymi środkami, których możesz sobie pozwolić stracić. Jeśli martwisz się swoimi nawykami hazardowymi lub jesteś dotknięty problemem hazardu kogoś innego, skontaktuj się z GamCare lub Gamblers Anonymous, aby uzyskać pomoc.",
   "terms": "Warunki i postanowienia",
-  "copyright": "Prawa autorskie © 2023, xxxcasinoguru.com. Wszelkie prawa zastrzeżone.",
+  "copyright": "Prawa autorskie © 2024, ",
+  "copyright2": "Wszelkie prawa zastrzeżone.",
   "proceed": "Kontynuuj i odbierz",
   "getBonus": "Odbierz bonus",
   "showMore": "Pokaż więcej",
@@ -51,9 +52,27 @@
   "How does it work?": "Jak to działa?",
   "Main Page": "Strona główna",
 
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Wpisz swój adres e-mail, aby zostać członkiem VIP i wygrać gwarantowane prawdziwe pieniądze natychmiast!",
-  "Email": "E-mail",
-  "Registration": "Rejestracja",
-  "The input field cannot be empty": "Pole wprowadzania nie może być puste",
-  "Data entered incorrectly": "Nieprawidłowo wprowadzone dane"
+  "Your balances are safe, but temporarily unavailable. Technical work is currently underway. We will definitely notify you as soon as the withdrawal option is restored.": "Twoje saldo jest bezpieczne, ale tymczasowo niedostępne. Trwają obecnie prace techniczne. Z pewnością powiadomimy cię, gdy opcja wypłaty zostanie przywrócona.",
+
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "Zdobądź swoje fantazyjne bonusy, zanim potwory je wymetną!",
+  "Get Bonuses Now": "Odbierz teraz swoje bonusy",
+  "Monster-Sized Bonuses": "Potężne bonusy jak potwory",
+  "Dare to Win Big": "Odważ się na wielkie wygrane",
+  "Play Now": "Zagraj teraz",
+  "No matching data found.": "Nie znaleziono pasujących danych.",
+  "Mike Wazowski would approve it": "Mike Wazowski by to zatwierdził",
+  "More Offers": "Więcej ofert",
+
+  "subscribe.button": "Subskrybuj",
+  "subscribe.email": "Adres email",
+  "subscribe.players": "zapisanych graczy",
+  "subscribe.congrats": "Gratulacje! Zapisano Cię do listy mailingowej.",
+  "subscribe.error1": "Pole e-mail nie może być puste",
+  "subscribe.error2": "Proszę wprowadzić prawidłowy adres e-mail",
+  "subscribe.agree": "Zgadzam się z",
+  "subscribe.terms": "Regulaminem",
+  "subscribe.and": "i",
+  "subscribe.policy": "Polityką Prywatności",
+  "subscribe.promotional": "Zgadzam się na otrzymywanie wiadomości promocyjnych od topbon.us i jego partnerów",
+  "Registration": "Rejestracja"
 }

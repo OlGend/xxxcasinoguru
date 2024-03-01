@@ -3,7 +3,8 @@
   "consider": "Zvážte iné značky pre vašu oblasť",
   "footerText": "Stavte zodpovedne a s mierou. Neuvažujte o hazardovaní ako o spôsobe zarábania peňazí a hrajte len s peniazmi, ktoré si môžete dovoliť stratiť. Ak máte obavy o svoje hazardné návyky alebo ste ovplyvnení hazardným správaním niekoho iného, kontaktujte GamCare alebo Gamblers Anonymous o pomoc.",
   "terms": "Obchodné podmienky",
-  "copyright": "Copyright © 2023, xxxcasinoguru.com. Všetky práva vyhradené.",
+  "copyright": "Autorské práva © 2024, ",
+  "copyright2": "Všetky práva vyhradené.",
   "proceed": "Pokračovať a získať",
   "getBonus": "Získať bonus",
   "showMore": "Zobraziť viac",
@@ -51,9 +52,26 @@
   "How does it work?": "Ako to funguje?",
   "Main Page": "Hlavná stránka",
 
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Zadajte svoj e-mail a staňte sa členom VIP a vyhrajte okamžite zaručené reálne peniaze!",
-  "Email": "E-mail",
-  "Registration": "Registrácia",
-  "The input field cannot be empty": "Vstupné pole nemôže byť prázdne",
-  "Data entered incorrectly": "Nesprávne zadané údaje"
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "Získajte svoje fantazií bonusy predtým, než ich monštrá odfrčia!",
+  "Get Bonuses Now": "Získajte svoje bonusy teraz",
+  "Monster-Sized Bonuses": "Monštrózne bonusy",
+  "Dare to Win Big": "Odvažte sa vyhrať veľké",
+  "Play Now": "Hrajte teraz",
+  "No matching data found.": "Žiadne zhodné údaje nenájdené.",
+  "Mike Wazowski would approve it": "Mike Wazowski by to schválil",
+  "More Offers": "Viac ponúk",
+  "subscribe.button": "Prihlásiť sa na odber",
+  "subscribe.email": "Email",
+  "subscribe.players": "hráči prihlásení na odber",
+  "subscribe.congrats": "Gratulujeme! Prihlásili ste sa na odber nášho zoznamu.",
+  "subscribe.error1": "Email nemôže byť prázdny",
+  "subscribe.error2": "Prosím, zadajte platný email",
+
+  "subscribe.agree": "Súhlasím s",
+  "subscribe.terms": "Podmienkami a pravidlami",
+  "subscribe.and": "a",
+  "subscribe.policy": " Zásadami ochrany súkromia ",
+
+  "subscribe.promotional": "Súhlasím s prijímaním propagačných emailov od topbon.us a jeho partnerov",
+  "Registration": "Registrácia"
 }

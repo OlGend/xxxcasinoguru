@@ -3,7 +3,8 @@
   "consider": "Överväg andra varumärken för din region",
   "footerText": "Spela ansvarsfullt och med måtta. Betrakta inte spel som ett sätt att tjäna pengar, och spela endast med pengar som du har råd att förlora. Om du är orolig för dina spelvanor eller påverkad av någon annans spelande, kontakta GamCare eller Gamblers Anonymous för hjälp.",
   "terms": "Villkor och bestämmelser",
-  "copyright": "Upphovsrätt © 2023, xxxcasinoguru.com. Alla rättigheter förbehållna.",
+  "copyright": "Upphovsrätt © 2024, ",
+  "copyright2": "Alla rättigheter förbehållna.",
   "proceed": "Fortsätt och hämta",
   "getBonus": "Få bonus",
   "showMore": "Visa mer",
@@ -51,9 +52,27 @@
   "How does it work?": "Hur fungerar det?",
   "Main Page": "Huvudsida",
 
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Ange din e-postadress för att bli en VIP-medlem och vinna garanterade riktiga pengar omedelbart!",
-  "Email": "E-post",
-  "Registration": "Registrering",
-  "The input field cannot be empty": "Inmatningsfältet får inte vara tomt",
-  "Data entered incorrectly": "Felaktiga uppgifter angivna"
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "Hämta dina fantasibonusar innan monstren sveper bort dem!",
+  "Get Bonuses Now": "Hämta dina bonusar nu",
+  "Monster-Sized Bonuses": "Monsterstora bonusar",
+  "Dare to Win Big": "Våga att vinna stort",
+  "Play Now": "Spela nu",
+  "No matching data found.": "Inga matchande data hittades.",
+  "Mike Wazowski would approve it": "Mike Wazowski skulle godkänna det",
+  "More Offers": "Fler erbjudanden",
+
+  "subscribe.button": "Prenumerera",
+  "subscribe.email": "E-post",
+  "subscribe.players": "spelare prenumererade",
+  "subscribe.congrats": "Grattis! Du har prenumererat på e-postlistan.",
+  "subscribe.error1": "E-post kan inte vara tom",
+  "subscribe.error2": "Vänligen ange en giltig e-postadress",
+
+  "subscribe.agree": "Jag godkänner",
+  "subscribe.terms": "Villkor och Bestämmelser",
+  "subscribe.and": "och",
+  "subscribe.policy": " Integritetspolicy ",
+
+  "subscribe.promotional": "Jag godkänner att ta emot marknadsföringsmail från topbon.us och dess partner",
+  "Registration": "Registrering"
 }

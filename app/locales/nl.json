@@ -3,7 +3,8 @@
   "consider": "Overweeg andere merken voor uw regio",
   "footerText": "Speel verantwoord en met mate. Beschouw gokken niet als een manier om geld te verdienen, en speel alleen met geld dat u zich kunt veroorloven te verliezen. Als u zich zorgen maakt over uw gokgewoonten of beïnvloed bent door het gokken van iemand anders, neem dan contact op met GamCare of Gamblers Anonymous voor hulp.",
   "terms": "Algemene voorwaarden",
-  "copyright": "Copyright © 2023, xxxcasinoguru.com. Alle rechten voorbehouden.",
+  "copyright": "Auteursrecht © 2024, ",
+  "copyright2": "Alle rechten voorbehouden.",
   "proceed": "Ga verder en ontvang",
   "getBonus": "Ontvang bonus",
   "showMore": "Toon meer",
@@ -51,9 +52,27 @@
   "How does it work?": "Hoe werkt het?",
   "Main Page": "Hoofdpagina",
 
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Voer uw e-mailadres in om een VIP-lid te worden en direct gegarandeerd echt geld te winnen!",
-  "Email": "E-mail",
-  "Registration": "Registratie",
-  "The input field cannot be empty": "Het invoerveld mag niet leeg zijn",
-  "Data entered incorrectly": "Gegevens onjuist ingevoerd"
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!",
+  "Get Bonuses Now": "Ontvang nu uw bonussen",
+  "Monster-Sized Bonuses": "Monster-Sized Bonuses",
+  "Dare to Win Big": "Durf groot te winnen",
+  "Play Now": "Speel nu",
+  "No matching data found.": "Geen overeenkomende gegevens gevonden.",
+  "Mike Wazowski would approve it": "Mike Wazowski zou het goedkeuren",
+  "More Offers": "Meer Aanbiedingen",
+
+  "subscribe.button": "Abonneren",
+  "subscribe.email": "E-mail",
+  "subscribe.players": "spelers geabonneerd",
+  "subscribe.congrats": "Gefeliciteerd! Je hebt je geabonneerd op de mailinglijst.",
+  "subscribe.error1": "E-mail mag niet leeg zijn",
+  "subscribe.error2": "Voer een geldig e-mailadres in",
+
+  "subscribe.agree": "Ik ga akkoord met",
+  "subscribe.terms": "Algemene Voorwaarden",
+  "subscribe.and": "en",
+  "subscribe.policy": " Privacybeleid ",
+
+  "subscribe.promotional": "Ik ga ermee akkoord promotionele e-mails te ontvangen van topbon.us en zijn partners",
+  "Registration": "Registratie"
 }

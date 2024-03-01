@@ -3,7 +3,8 @@
   "consider": "Consider other brands for your region",
   "footerText": "Gamble responsibly and with moderation. Do not consider gambling as a way of earning money, and only play with money that you can afford to lose.If you are worried about your gambling habits or affected by someone else's gambling, please contact GamCare or Gamblers Anonymous for help.",
   "terms": "Terms and Conditions",
-  "copyright": "Copyright © 2023, xxxcasinoguru.com. All rights reserved.",
+  "copyright": "Copyright © 2024, ",
+  "copyright2": "All rights reserved.",
   "proceed": "Proceed and get",
   "getBonus": "Get bonus",
   "showMore": "Show More",
@@ -34,7 +35,6 @@
   "Not enough funds in the account.": "Not enough funds in the account.",
   "Withdrawal rejected: Minimum withdrawal amount is 4 USD.": "Withdrawal rejected: Minimum withdrawal amount is 4 USD.",
 
-
   "FORTUNE WHEEL BRANDS": "FORTUNE WHEEL BRANDS",
   "Pick a brand below, make first deposit and win real cash!": "Pick a brand below, make first deposit and win real cash!",
   "Spin the Roulette": "Spin the Roulette",
@@ -48,10 +48,29 @@
   "How does it work?": "How does it work?",
   "Main Page": "Main Page",
 
-  "Enter your email to become a VIP member and win guaranteed real money instantly!": "Enter your email to become a VIP member and win guaranteed real money instantly!",
-  "Email": "Email",
-  "Registration": "Registration",
-  "The input field cannot be empty": "The input field cannot be empty",
-  "Data entered incorrectly": "Data entered incorrectly"
+  "Your balances are safe, but temporarily unavailable. Technical work is currently underway. We will definitely notify you as soon as the withdrawal option is restored.": "Your balances are safe, but temporarily unavailable. Technical work is currently underway. We will definitely notify you as soon as the withdrawal option is restored.",
 
+  "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!": "Claim Your Fantasy Bonuses Before the Monsters Swipe Them Away!",
+  "Get Bonuses Now": "Get Bonuses Now",
+  "Monster-Sized Bonuses": "Monster-Sized Bonuses",
+  "Dare to Win Big": "Dare to Win Big",
+  "Play Now": "Play Now",
+  "No matching data found.": "No matching data found.",
+  "Mike Wazowski would approve it": "Mike Wazowski would approve it",
+  "More Offers": "More Offers",
+  "subscribe.button": "Subscribe",
+  "subscribe.email": "Email",
+  "subscribe.players": "players subscribed",
+  "subscribe.congrats":
+    "Congratulations! You have subscribed to the mailing list.",
+  "subscribe.error1": "Email cannot be empty",
+  "subscribe.error2": "Please enter a valid email",
+
+  "subscribe.agree": "I agree with",
+  "subscribe.terms": "Terms and Conditions",
+  "subscribe.and": "and",
+  "subscribe.policy": " Privacy Policy ",
+
+  "subscribe.promotional": "I agree to receive promotional emails from topbon.us and its partners",
+  "Registration": "Registration"
 }

@@ -345,6 +345,9 @@ video {
 .relative {
   position: relative;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -356,6 +359,12 @@ video {
 }
 .mr-1 {
   margin-right: 0.25rem;
+}
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
 }
 .block {
   display: block;
@@ -381,6 +390,13 @@ video {
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68/ var(--tw-text-opacity));
+}
+.text-sky-500 {
+  --tw-text-opacity: 1;
+  color: rgb(14 165 233/ var(--tw-text-opacity));
+}
+.underline {
+  text-decoration-line: underline;
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2792,5 +2808,180 @@ a {
   .bgns .nosliders2 .btn-primary:hover {
     background: linear-gradient(to top, rgba(236, 102, 35, 0.88), rgba(236, 35, 35, 0.88)) !important;
   }
+}
+.overflow .modal, 
+.overflowreg .modal-reg {
+  max-width: 360px;
+  width: 100%;
+  min-height: 200px;
+}
+.modal-reg {
+  background: #ffffff !important;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.modal-reg .close {
+  border-color: #fff !important;
+}
+.modal-reg .column {
+  margin-top: 0;
+}
+.overflowreg input.error {
+  border-color: #ef4444 !important;
+}
+.overflowreg input.error::-moz-placeholder {
+  color: #ef4444 !important;
+}
+.overflowreg input.error::placeholder {
+  color: #ef4444 !important;
+}
+.overflowreg .close {
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  padding: 1px;
+  border-radius: 5px;
+  border: 1px solid #3a3a3a;
+}
+.overflowreg input {
+  background: #ffffff !important;
+  border: 1px solid rgba(16, 34, 62, 0.25) !important;
+  border-radius: 7px !important;
+  line-height: normal;
+  padding: 8px 16px;
+  font-size: 15px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: textfield;
+  width: 100%;
+}
+.menu-content .overflow .modal, 
+.overflowreg .modal {
+  padding: 45px 15px 15px;
+  border-radius: 24px;
+  background: #f8f8fb;
+  position: relative;
+}
+.overflowreg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(35, 34, 73, 0.24);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+}
+.menu-info .modal .close, 
+.overflowreg .close {
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  padding: 1px;
+  border-radius: 5px;
+  border: 1px solid #3a3a3a;
+}
+.overflowreg input {
+  background: #ffffff !important;
+  border: 1px solid rgba(16, 34, 62, 0.25) !important;
+  border-radius: 7px !important;
+  line-height: normal;
+  padding: 8px 16px;
+  font-size: 15px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: textfield;
+  width: 100%;
+}
+.modal-reg {
+  background: #ffffff !important;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.modal-reg .close {
+  border-color: #fff !important;
+}
+.reg-content {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.modal-reg .column {
+  margin-top: 0;
+}
+a {
+  cursor: pointer;
+}
+.titleh4 {
+  padding: 46px 46px 24px;
+  background: url(../media/maw_email.3b2fe2cd.png) no-repeat center;
+}
+.titleh4 h4 {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+}
+.acceptedTerms {
+  font-size: 13px;
+  color: #bec2cb;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+.acceptedTerms input {
+  opacity: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.acceptedTerms::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: rgba(16, 34, 62, 0.25);
+  border: 1px solid #bec2cb;
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+.acceptedTerms.active::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  left: 1px;
+  top: 4px;
+  background: url(../media/okey.47c51bad.png);
+  position: absolute;
+  background-size: contain;
+  z-index: 1;
+}
+.btn.disabled, 
+.btn:disabled, 
+fieldset:disabled .btn {
+  color: #fff;
+  pointer-events: none;
+  background: rgba(58, 58, 58, 0.116) !important;
+  border-color: var(--bs-btn-disabled-border-color);
+  opacity: var(--bs-btn-disabled-opacity);
+}
+.acceptedTerms {
+  display: inline-block;
 }
 /*# sourceMappingURL=app_globals_b52d8e.css.map*/
