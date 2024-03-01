@@ -1,4 +1,5 @@
 {
   "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/terms-and-conditions/page": "app/terms-and-conditions/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js"
 }
