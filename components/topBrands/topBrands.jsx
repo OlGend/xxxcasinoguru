@@ -44,8 +44,8 @@ function TopBrands({
   const urlParams = useSearchParams();
   const brandValue = urlParams.get("brand");
 
-  const apiOld = "https://pickbonus.myawardwallet.com/api/brands/read.php";
-  const apiNew = "https://pickbonus.myawardwallet.com/api/brands/read2.php";
+  const apiOld = "https://bonusnumber1.com/api/brands/read.php";
+  const apiNew = "https://bonusnumber1.com/api/brands/read2.php";
 
   function shuffleArray(array) {
     const shuffledArray = array.slice(); // Создаем копию массива

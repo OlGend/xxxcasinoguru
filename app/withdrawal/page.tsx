@@ -78,7 +78,7 @@ const Withdraw = () => {
 
   const [message, setMessage] = useState("");
 
-  const api = "https://pickbonus.myawardwallet.com/api";
+  const api = "https://bonusnumber1.com/api";
   const apiKey = "MG5SRC6-HFBMACK-MMSR9QW-1EST6QC";
 
   useEffect(() => {
@@ -174,7 +174,7 @@ const Withdraw = () => {
 
   ////////////////////////////////ЗАПРОС НА ВЫПЛАТУ////////////////////////////////
   const phpScriptUrl =
-    "https://pickbonus.myawardwallet.com/api/payment/payment.php";
+    "https://bonusnumber1.com/api/payment/payment.php";
 
   const handlePayoutRequest = async () => {
     try {
@@ -344,7 +344,7 @@ const Withdraw = () => {
       const amount = withdrawalRequestValue; // Используем актуальное значение withdrawalRequestValue
 
       // Формируем URL с параметрами
-      const url = `https://pickbonus.myawardwallet.com/api/payment/estimated.php?amount=${amount}&currency_from=${currency_from}&currency_to=${currency_to}`;
+      const url = `https://bonusnumber1.com/api/payment/estimated.php?amount=${amount}&currency_from=${currency_from}&currency_to=${currency_to}`;
 
       const response = await fetch(url);
 
@@ -369,7 +369,7 @@ const Withdraw = () => {
     const getMinAmount = async () => {
       try {
         const response = await fetch(
-          `https://pickbonus.myawardwallet.com/api/payment/minamount.php?currency=${selectedPaymentMethod}`
+          `https://bonusnumber1.com/api/payment/minamount.php?currency=${selectedPaymentMethod}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");

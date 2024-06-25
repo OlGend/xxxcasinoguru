@@ -27,7 +27,7 @@ $userB = [
 ];
 
 // Отримуємо баланс з апі
-$userApiUrl = "https://pickbonus.myawardwallet.com/api/user/read_one.php?id=" . $userData['id'];
+$userApiUrl = "https://bonusnumber1.com/api/user/read_one.php?id=" . $userData['id'];
 $apiUserData = json_decode(file_get_contents($userApiUrl), true);
 
 if ($apiUserData && isset($apiUserData['balance'])) {
@@ -84,7 +84,7 @@ if ($apiUserData && isset($apiUserData['balance'])) {
             echo json_encode($successResponse);
 
             // Тепер добавим запрос к вашему API обновления баланса пользователя
-            $updateUrl = "https://pickbonus.myawardwallet.com/api/user/update.php?id=" . $userData['id'];
+            $updateUrl = "https://bonusnumber1.com/api/user/update.php?id=" . $userData['id'];
             $updateData = array(
                 'id' => $userData['id'],
                 'tickets' => $apiUserData['tickets'], // Передаем актуальные значения
